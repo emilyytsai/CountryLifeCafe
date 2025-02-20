@@ -16,6 +16,7 @@ public class MoneyScript : MonoBehaviour
 
     public void Start() 
     {
+        money_text = GameObject.Find("Money Text").GetComponent<Text>();
         moneyText.text = "$ " + initial_and_total_money.ToString();
         // customer_served = false;
     }
