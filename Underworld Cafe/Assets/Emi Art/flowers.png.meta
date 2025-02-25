@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 040d6971a4b94574784c8afbf7acee88
+guid: 7a0dcb2016ab96844aebaf98a14292a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5178632791614228969
-    second: serve_purple_0
+      213: -194818066077126744
+    second: flowers_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: serve_purple_0
+      name: flowers_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 251
-        height: 102
+        x: 77
+        y: 461
+        width: 151
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e90b5e16133ed740800000000000000
-      internalID: 5178632791614228969
+      spriteID: 8afe4a7400edb4df0800000000000000
+      internalID: -194818066077126744
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      serve_purple_0: 5178632791614228969
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
