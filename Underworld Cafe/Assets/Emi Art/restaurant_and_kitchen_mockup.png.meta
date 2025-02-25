@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      restaurant_and_kitchen_mockup_0: 4428963803537872468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
