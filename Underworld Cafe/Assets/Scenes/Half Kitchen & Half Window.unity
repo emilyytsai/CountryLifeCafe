@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 798900190}
   - component: {fileID: 798900189}
   - component: {fileID: 798900188}
+  - component: {fileID: 798900191}
   m_Layer: 5
   m_Name: Serve button
   m_TagString: Untagged
@@ -560,7 +561,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1646371574}
         m_TargetAssemblyTypeName: MoneyScript, Assembly-CSharp
-        m_MethodName: CustomerServed
+        m_MethodName: AddFiveTokens
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -570,9 +571,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1646371574}
-        m_TargetAssemblyTypeName: MoneyScript, Assembly-CSharp
-        m_MethodName: AddFiveTokens
+      - m_Target: {fileID: 798900191}
+        m_TargetAssemblyTypeName: Customer, Assembly-CSharp
+        m_MethodName: CustomerServed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -620,6 +621,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798900186}
   m_CullTransparentMesh: 1
+--- !u!114 &798900191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798900186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834103038
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +645,7 @@ GameObject:
   - component: {fileID: 834103041}
   - component: {fileID: 834103040}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Flowers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -654,8 +667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -807, y: 27}
-  m_SizeDelta: {x: 159.445, y: 231.4994}
+  m_AnchoredPosition: {x: -807.5107, y: 29.3917}
+  m_SizeDelta: {x: 161.97, y: 216.8809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834103040
 MonoBehaviour:
@@ -945,6 +958,7 @@ GameObject:
   - component: {fileID: 1298614226}
   - component: {fileID: 1298614225}
   - component: {fileID: 1298614227}
+  - component: {fileID: 1298614228}
   m_Layer: 5
   m_Name: Customer
   m_TagString: Untagged
@@ -1024,7 +1038,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9227d11361d6d7140aa4cf717cba32b5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -1033,6 +1047,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1298614228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298614223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1397615072
 GameObject:
   m_ObjectHideFlags: 0

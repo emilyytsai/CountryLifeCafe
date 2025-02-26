@@ -30,6 +30,18 @@ public class MoneyScript : MonoBehaviour
     {
         customer_served = true;
     }
+
+    public void ResetCustomerServed()
+    {
+        customer_served = false;
+    }
+
+    //allow other scripts to check if the customer has been served
+    public bool IsCustomerServed()
+    {
+        return customer_served;
+    }
+
     public void AddFiveTokens() 
     {
         //initial_and_total_money = initial_and_total_money + five_money;
