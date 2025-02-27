@@ -18,7 +18,7 @@ public class PatienceTimer : MonoBehaviour
     //public TextMeshProUGUI healthText;
     public Image patienceBar;
     
-    public Customer customerScript; //reference customer script variables
+    private Customer customerScript; //reference customer script variables
 
     private float lerpSpeed;
 
