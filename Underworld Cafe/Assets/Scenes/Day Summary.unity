@@ -253,8 +253,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288436254
-  m_fontColor: {r: 0.11764707, g: 0.34509805, b: 0.6117647, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 27b7624d1b5ac1d4e8eacdd004bf258b, type: 3}
+  m_Sprite: {fileID: -6099532858898946875, guid: d6337b59add03d3438789d12d3fae1c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -608,10 +608,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
-    bottomRight: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+    topLeft: {r: 0.8784314, g: 0.89411765, b: 1, a: 1}
+    topRight: {r: 0.8784314, g: 0.89411765, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
