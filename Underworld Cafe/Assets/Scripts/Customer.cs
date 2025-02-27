@@ -6,6 +6,10 @@ public class Customer : MonoBehaviour
     private MoneyScript moneyScript; //reference to money script
     private Animator animator; //reference to animator
 
+    //for patience timer script
+    public float customer_patience = 100;
+    public float max_patience = 100; 
+
     //private bool customer_served = false; *use this bool from the money script
     //referencing this function from money script
     //public void CustomerServed()
