@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: fe01d1a1675cd8140929cbf3642d8f35
+guid: bffc75a6df389d54c99d4ca77a9ddf46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4431877490720405117
-    second: sparkle2_0
+      213: 8200508729750806132
+    second: stars_5_0
   - first:
-      213: 1836844768477645929
-    second: sparkle2_1
+      213: -7927500175358159107
+    second: stars_5_1
   - first:
-      213: 6560680725083741187
-    second: sparkle2_2
+      213: 8481810268392657722
+    second: stars_5_2
+  - first:
+      213: -2558808913951185039
+    second: stars_5_3
+  - first:
+      213: 6910617219983163391
+    second: stars_5_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,35 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sparkle2_0
+      name: stars_5_0
       rect:
         serializedVersion: 2
-        x: 1054
-        y: 1003
-        width: 36
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 1, w: 1}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3898f8d37eece72c0800000000000000
-      internalID: -4431877490720405117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sparkle2_1
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 1003
-        width: 26
-        height: 30
+        x: 0
+        y: 0
+        width: 78
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96c05acb598cd7910800000000000000
-      internalID: 1836844768477645929
+      spriteID: 47e5946dd3f0ec170800000000000000
+      internalID: 8200508729750806132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sparkle2_2
+      name: stars_5_1
       rect:
         serializedVersion: 2
-        x: 1078
-        y: 1003
-        width: 12
-        height: 12
+        x: 30
+        y: 46
+        width: 18
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +149,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30c5e570c583c0b50800000000000000
-      internalID: 6560680725083741187
+      spriteID: df61eea979cdbf190800000000000000
+      internalID: -7927500175358159107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars_5_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 31
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a331ec3208175b570800000000000000
+      internalID: 8481810268392657722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars_5_3
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 29
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17726d399d84d7cd0800000000000000
+      internalID: -2558808913951185039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars_5_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 5
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff3bcf5fb177ef50800000000000000
+      internalID: 6910617219983163391
       vertices: []
       indices: 
       edges: []
@@ -175,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ff23e3cc958b2954eac2920577141351
+    spriteID: d323744e1fb5f5444b7dbff820f67343
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sparkle2_0: -4431877490720405117
-      sparkle2_1: 1836844768477645929
-      sparkle2_2: 6560680725083741187
+      stars_5_0: 8200508729750806132
+      stars_5_1: -7927500175358159107
+      stars_5_2: 8481810268392657722
+      stars_5_3: -2558808913951185039
+      stars_5_4: 6910617219983163391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
