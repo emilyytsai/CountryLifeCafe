@@ -6,6 +6,12 @@ public class Customer : MonoBehaviour
     private MoneyScript moneyScript; //reference to money script
     private Animator animator; //reference to animator
 
+    //things that will spawn when the customer enters
+    public GameObject text_bubble;
+    public GameObject salad_order;
+    public GameObject patience_bar;
+    public GameObject patience_bar_shadow;
+
     //private bool customer_served = false; *use this bool from the money script
     //referencing this function from money script
     //public void CustomerServed()
@@ -16,16 +22,26 @@ public class Customer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //moneyScript = FindObjectOfType<MoneyScript>(); //find the money script
         animator = GetComponent<Animator>();
         moneyScript = FindObjectOfType<MoneyScript>();
         StartCoroutine(StartEnterAnimation()); //2 seconds after scene loads, the custmer will enter
+        StartCoroutine(spawn_order()); //5 sec
     }
     
     IEnumerator StartEnterAnimation()
     {
         yield return new WaitForSeconds(2f); //2 second wait time
         animator.SetTrigger("EnterTrigger");//trigger the "EnterTrigger" in the animator
+    }
+
+    IEnumerator spawn_order()
+    {
+        yield return new WaitForSeconds(5f);
+        //spawn in the text bubble, salad order, & patience bar/shadow
+        text_bubble.SetActive(true);
+        salad_order.SetActive(true);
+        patience_bar.SetActive(true);
+        patience_bar_shadow.SetActive(true);
     }
 
     // Update is called once per frame

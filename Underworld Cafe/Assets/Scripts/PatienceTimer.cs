@@ -13,15 +13,28 @@ public class PatienceTimer : MonoBehaviour
 
 {
     public Image patienceBar;
-    //public Customer customerScript; //reference customer script variables
+    public Image patienceBar2; //this is the shadow of the bar
+
+    //more things related to the timer that will be destroyed when time is up
+    public Image salad_order;
+    public Image text_bubble;
 
     private float lerpSpeed;
     private float timer;
 
     //timer for each day
-    private float day1_time = 30f;
+    //NOTE* for demo purposes day 1 is set to 10 sec temporarily
+    private float day1_time = 10f;
+
+    //private float day1_time = 30f;
     //private float day2_time = 20f;
     //private float day3_time = 12f;
+
+    private void Start()
+    {
+        //intialize w/ day 1 time
+        timer = day1_time;
+    }
 
     private void Update()
     {
@@ -54,6 +67,12 @@ public class PatienceTimer : MonoBehaviour
         if (timer <= 0f)
         {
             timer = 0f;
+            Destroy(patienceBar);
+            //destroy the patience bar shadow, salad order, & text bubble
+            Destroy(patienceBar2);
+            Destroy(salad_order);
+            Destroy(text_bubble);
+            Debug.Log("gone");
         }
     }
 
