@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 439cfb87df25d57429aa524ee99d3159
+guid: a4cf1572272e4224b97382128cf7f290
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6898905279689962287
-    second: text_bubble_shadow_0
+      213: -7687866329459055350
+    second: mini_salad2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: text_bubble_shadow_0
+      name: mini_salad2_0
       rect:
         serializedVersion: 2
-        x: 119
-        y: 25
-        width: 648
-        height: 478
+        x: 347
+        y: 143
+        width: 207
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1dc4309333a2240a0800000000000000
-      internalID: -6898905279689962287
+      spriteID: a0528ef2e463f4590800000000000000
+      internalID: -7687866329459055350
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      text_bubble_shadow_0: -6898905279689962287
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

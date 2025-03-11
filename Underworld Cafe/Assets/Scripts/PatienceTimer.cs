@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.UI; 
 using TMPro;
 
-//customer's patience timer will be based off an old player health indicator i made
-//change player -> customer
 //change lerpSpeed to the according customer patience per day
 //day 1 timer = 30 seconds, day 2 timer = 20 seconds, day 3 timer = 12 seconds
 
@@ -11,75 +9,64 @@ using TMPro;
 //(50% left = neutral face, 15% left = angry face)
 //**note** this task can be implemented in timer script or customer script but use unity animator
 
-//UNCOMMENT LINES WITH "//" IN FRONT AFTER THIS LINE
 public class PatienceTimer : MonoBehaviour
 
 {
-    //public TextMeshProUGUI healthText;
-    //public Image healthRing;
     public Image patienceBar;
+    //public Customer customerScript; //reference customer script variables
 
-    //public PlayerScript player;
-    public Customer customerScript; //reference customer script variables
-
-    //private float lerpSpeed;
     private float lerpSpeed;
- //private void Start()
-    //{
-    private void Start()
-    {
-        ////find player in the scene
-        //player = FindObjectOfType<PlayerScript>();
-    //}
-       // customer = FindObjectOfType<customer>();
-    }
-  //private void Update()
-    //{
+    private float timer;
+
+    //timer for each day
+    private float day1_time = 30f;
+    //private float day2_time = 20f;
+    //private float day3_time = 12f;
+
     private void Update()
     {
-        ////speed that the health indicator gets filled
+        ////speed that the bar gets filled
         //lerpSpeed = 3f * Time.deltaTime;
-        lerpSpeed += Time.deltaTime;
+        
+        //lerpSpeed += Time.deltaTime;
 
-        //healthText.text = " " + player.PlayerHealth.ToString();
-
-        //HealthFiller(); //call here to also update the filler
-        //ColorChanger(); //updates color
-    //}
         BarFiller(); //call here to also update the filler
         ColorChanger(); //updates color
     }
 
 
-    //void HealthFiller()
-    //{
     void BarFiller()
     {
-        ////dividing health by max health since max fill amount is 1 so now value of health = between 0 and 1
-        //////also convert the int to float for the division
-        //float currentHealth = (float)player.PlayerHealth / player.MaxPlayerHealth;
-        //float current_patience = (float)customer.customer_patience / customer.max_patience;
-
         ////reference: https://docs.unity3d.com/ScriptReference/Mathf.Lerp.html
         //////https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/
-        //healthRing.fillAmount = Mathf.Lerp(healthRing.fillAmount, currentHealth, lerpSpeed);
-    //}
-        patienceBar.fillAmount -= 1.0f / 30f * Time.deltaTime;
+
+        //patienceBar.fillAmount -= 1.0f / 30f * Time.deltaTime;
+
+        //reduce time on timer
+        timer -= Time.deltaTime;
+
+        //bar fill amount based off current timer and max patience
+        float current_patience = Mathf.Clamp(timer / day1_time, 0f, 1f);
+
+        patienceBar.fillAmount = current_patience;
+
+        //stop decreasxing at 0 sec
+        if (timer <= 0f)
+        {
+            timer = 0f;
+        }
     }
 
 
-    //void ColorChanger()
-    //{
-        //float currentHealth = (float)player.PlayerHealth / player.MaxPlayerHealth;
     void ColorChanger()
     {
         //float current_patience = (float)customer.customer_patience / customer.max_patience;
-
         ////https://docs.unity3d.com/ScriptReference/Color.Lerp.html
-        //Color healthColor = Color.Lerp(Color.red, Color.green, currentHealth);
-        //healthRing.color = healthColor;
-    //}
-        Color bar_color = Color.Lerp(Color.green, Color.red, lerpSpeed/30f);
+
+        //
+        float patience_ratio = Mathf.Clamp(timer / day1_time, 0f, 1f);
+
+        Color bar_color = Color.Lerp(Color.green, Color.red, 1f - patience_ratio); //lerpspeed is now based off the ratio
         patienceBar.color = bar_color;
     }
 }

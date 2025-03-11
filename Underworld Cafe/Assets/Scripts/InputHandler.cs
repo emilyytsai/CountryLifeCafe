@@ -5,7 +5,7 @@ public class InputHandler : MonoBehaviour
 {
     private Camera _mainCamera;
 
-    private GameObject last_selected;
+    public GameObject last_selected;
     private Color initial_color;
 
     private void Awake()
@@ -21,6 +21,14 @@ public class InputHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
         GameObject selected_object = rayHit.collider.gameObject;
+
+        //check for null
+        if (selected_object == null || string.IsNullOrEmpty(selected_object.name))
+        {
+            Debug.LogWarning("null object");
+            return;
+        }
+
         Debug.Log(selected_object.name);
 
         if (last_selected == selected_object)
@@ -46,7 +54,7 @@ public class InputHandler : MonoBehaviour
 
         if (renderer != null)
         {
-            //store the initial color (which should be nothing bc not highlighted yet)
+            //store the initial color (color of the object)
             initial_color = renderer.color;
 
             //switch the color to white
