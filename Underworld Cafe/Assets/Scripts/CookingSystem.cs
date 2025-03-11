@@ -11,11 +11,8 @@ public class CookingSystem : MonoBehaviour
     public GameObject tomato_bowl;
     public GameObject lettuce_bowl;
 
-    void AddIngredientToBowl()
+    public void AddIngredientToBowl(GameObject ingredient)
     {
-        if (input_handler.last_selected == null) return; //check if player selected an ingredient
-        ingredient = input_handler.last_selected;
-
         if (ingredient != null && bowl != null) // If ingredient and bowl are assigned and contain references to GameObjects
         {
             string ingredient_name = ingredient.name; //get the name of the ingredient
@@ -28,11 +25,12 @@ public class CookingSystem : MonoBehaviour
             //ingredient.transform.localPosition = new Vector3(0, 100f, 0); // Lower the Y-axis (e.g., -0.5)
             // ingredient.transform.localPosition = Vector3.zero; // Reset the local position of the ingredient GameObject to the origin (0, 0, 0) relative to its parent (the bowl)
 
-            //destroy the ingredient fromt he shelf after u add it
-            Destroy(ingredient);
             //NOTE* for future reference add the ingredient to a "current recipe" list to check if the recipe is right + add if condition so only the right ingredient is added
             
             trigger_ingredient_sprite(ingredient_name); //add the sprite that looks like the ingredients are actaully in the bowl
+        
+            //destroy the ingredient from the shelf after u add it
+            Destroy(ingredient);
         }
     }
 
@@ -62,10 +60,6 @@ public class CookingSystem : MonoBehaviour
             tomato_bowl.SetActive(true); //enable the tomato
             Debug.Log("tomato in bowl");
         }
-        else
-        {
-            Debug.Log("no tomato in bowl");
-        }
     }
 
     void enable_lettuce()
@@ -75,18 +69,5 @@ public class CookingSystem : MonoBehaviour
             lettuce_bowl.SetActive(true);
             Debug.Log("lettuce in bowl");
         }
-        else
-        {
-            Debug.Log("no lettuve in bowl");
-        }
     }
-
-    //when player clicks on the last ingredient and then the bowl
-     void OnTriggerEnter2D(Collider2D other)
-     {
-        if (input_handler.last_selected || other.CompareTag("Bowl"))
-        {
-            AddIngredientToBowl();
-        }
-     }
 }

@@ -8,6 +8,8 @@ public class InputHandler : MonoBehaviour
     public GameObject last_selected;
     private Color initial_color;
 
+    public CookingSystem cooking_system; //cooking sys script
+
     private void Awake()
     {
         _mainCamera = Camera.main;
@@ -21,28 +23,34 @@ public class InputHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
         GameObject selected_object = rayHit.collider.gameObject;
-
-        //check for null
-        if (selected_object == null || string.IsNullOrEmpty(selected_object.name))
-        {
-            Debug.LogWarning("null object");
-            return;
-        }
-
         Debug.Log(selected_object.name);
 
-        if (last_selected == selected_object)
+        //for cooking sys to work, the bowl cannot be the last_selected, so compare tags
+        if (selected_object.CompareTag("Bowl"))
         {
-            reset();
-            last_selected = null; //deselecting the object
+            if (last_selected != null) //check if an ingredienet is selected
+            {
+                cooking_system.AddIngredientToBowl(last_selected); //add the last selected ingredient
+                last_selected = null; //reset the last selected
+            }
             return;
         }
 
-        if (last_selected != null)
+        //ingredient selection
+        if (selected_object.CompareTag("Ingredient"))
         {
-            reset();
-        }
+            if (last_selected == selected_object)
+            {
+                reset();
+                last_selected = null; //deselecting the object
+                return;
+            }
 
+            if (last_selected != null)
+            {
+                reset();
+            }
+        }
         highlight(selected_object); //hihglight the last object that was clicked on
 
         last_selected = selected_object;
