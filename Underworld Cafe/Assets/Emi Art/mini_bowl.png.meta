@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 328a9ea2166afb74cac991e03d9cec2a
+guid: be0ee5327bfd0da4986fc1abb9f278e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4782792366085711104
-    second: girl_1_happy 1_0
-  - first:
-      213: 2152929551229453541
-    second: girl_1_happy 1_1
+      213: -680436045099534179
+    second: mini_bowl_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl_1_happy 1_0
+      name: mini_bowl_0
       rect:
         serializedVersion: 2
-        x: 219
-        y: 480
-        width: 450
-        height: 450
+        x: 347
+        y: 143
+        width: 207
+        height: 154
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0052dfe0154ef5240800000000000000
-      internalID: 4782792366085711104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: girl_1_happy 1_1
-      rect:
-        serializedVersion: 2
-        x: 1027
-        y: 602
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e40977250eb0ed10800000000000000
-      internalID: 2152929551229453541
+      spriteID: d987877a50b9e86f0800000000000000
+      internalID: -680436045099534179
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 26a5606b5240d7b4ea5993421ecab81d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      girl_1_happy 1_0: 4782792366085711104
-      girl_1_happy 1_1: 2152929551229453541
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
