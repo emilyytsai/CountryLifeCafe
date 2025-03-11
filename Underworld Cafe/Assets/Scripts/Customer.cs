@@ -6,11 +6,14 @@ public class Customer : MonoBehaviour
     private MoneyScript moneyScript; //reference to money script
     private Animator animator; //reference to animator
 
-    //things that will spawn when the customer enters
+    //things that will spawn/be destroyed when the customer enters
     public GameObject text_bubble;
     public GameObject salad_order;
     public GameObject patience_bar;
     public GameObject patience_bar_shadow;
+
+    public GameObject tomato_bowl;
+    public GameObject lettuce_bowl;
 
     //private bool customer_served = false; *use this bool from the money script
     //referencing this function from money script
@@ -57,6 +60,18 @@ public class Customer : MonoBehaviour
     public void CustomerServed()
     {
         moneyScript.CustomerServed(); //set bool to true
+
+        //destroy the patience bar/shadow, salad order, & text bubble after serving customer
+        Destroy(patience_bar);
+        Destroy(patience_bar_shadow);
+        Destroy(salad_order);
+        Destroy(text_bubble);
+        Debug.Log("gone");
+
+        //also need to destroy the ingredients that got added to the bowl
+        Destroy(tomato_bowl);
+        Destroy(lettuce_bowl);
+        Debug.Log("salad reset");
     }
 
     private void Leave()

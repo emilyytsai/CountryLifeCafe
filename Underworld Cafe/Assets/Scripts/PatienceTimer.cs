@@ -15,6 +15,10 @@ public class PatienceTimer : MonoBehaviour
     public Image patienceBar;
     public Image patienceBar2; //this is the shadow of the bar
 
+    //custom colors for the bar
+    private Color start_color = new Color(0.5f, 0.9f, 0.5f); //R,G,B, (optional) alpha 
+    private Color end_color = new Color(0.9f, 0.5f, 0.5f);
+
     //more things related to the timer that will be destroyed when time is up
     public Image salad_order;
     public Image text_bubble;
@@ -85,7 +89,7 @@ public class PatienceTimer : MonoBehaviour
         //
         float patience_ratio = Mathf.Clamp(timer / day1_time, 0f, 1f);
 
-        Color bar_color = Color.Lerp(Color.green, Color.red, 1f - patience_ratio); //lerpspeed is now based off the ratio
+        Color bar_color = Color.Lerp(start_color, end_color, 1f - patience_ratio); //lerpspeed is now based off the ratio
         patienceBar.color = bar_color;
     }
 }

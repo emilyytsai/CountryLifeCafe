@@ -619,15 +619,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427388368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9715.919}
-  m_LocalScale: {x: 108, y: 108, z: 108}
+  m_LocalPosition: {x: 0, y: 0, z: 0.03778839}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2107428216}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 462.25842, y: -213.71948}
+  m_AnchoredPosition: {x: 4.280182, y: -1.9788818}
   m_SizeDelta: {x: 4.3, y: 2.8102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427388372
@@ -799,6 +799,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1208152470}
+  - {fileID: 2143425352}
   - {fileID: 1646371575}
   - {fileID: 103843970}
   m_Father: {fileID: 0}
@@ -1133,7 +1134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 798900191}
+      - m_Target: {fileID: 2143425353}
         m_TargetAssemblyTypeName: Customer, Assembly-CSharp
         m_MethodName: CustomerServed
         m_Mode: 1
@@ -1199,6 +1200,8 @@ MonoBehaviour:
   salad_order: {fileID: 1424466842}
   patience_bar: {fileID: 1007577400}
   patience_bar_shadow: {fileID: 1136598480}
+  tomato_bowl: {fileID: 707657352}
+  lettuce_bowl: {fileID: 1294243957}
 --- !u!1 &834103038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.877411, y: -3.5314636}
+  m_AnchoredPosition: {x: -3.828, y: -3.414}
   m_SizeDelta: {x: 233.44, y: 19.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136598482
@@ -2115,6 +2118,8 @@ MonoBehaviour:
   salad_order: {fileID: 1424466842}
   patience_bar: {fileID: 0}
   patience_bar_shadow: {fileID: 0}
+  tomato_bowl: {fileID: 0}
+  lettuce_bowl: {fileID: 0}
 --- !u!212 &1298614229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2589,7 +2594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.72, y: -26.1}
+  m_AnchoredPosition: {x: 4.72, y: -5.2}
   m_SizeDelta: {x: 176.8, y: 156.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1424466844
@@ -2640,7 +2645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504666533}
   m_Layer: 0
-  m_Name: Customer Salad Orders
+  m_Name: Text Bubble/Salad Orders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2774,6 +2779,8 @@ MonoBehaviour:
   salad_order: {fileID: 1424466842}
   patience_bar: {fileID: 1007577400}
   patience_bar_shadow: {fileID: 1136598480}
+  tomato_bowl: {fileID: 0}
+  lettuce_bowl: {fileID: 0}
 --- !u!95 &1510411942
 Animator:
   serializedVersion: 7
@@ -3194,7 +3201,6 @@ RectTransform:
   - {fileID: 736833218}
   - {fileID: 1504666533}
   - {fileID: 2087075530}
-  - {fileID: 427388369}
   - {fileID: 550347373}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3314,6 +3320,8 @@ MonoBehaviour:
   salad_order: {fileID: 0}
   patience_bar: {fileID: 0}
   patience_bar_shadow: {fileID: 0}
+  tomato_bowl: {fileID: 0}
+  lettuce_bowl: {fileID: 0}
 --- !u!95 &2142137996
 Animator:
   serializedVersion: 7
@@ -3374,11 +3382,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142137992}
   m_CullTransparentMesh: 1
+--- !u!1 &2143425351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143425352}
+  - component: {fileID: 2143425353}
+  - component: {fileID: 2143425354}
+  m_Layer: 0
+  m_Name: Customer System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2143425352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143425351}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.1556273, y: -0.12830342, z: 64.69834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 467014854}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2143425353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143425351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text_bubble: {fileID: 1352634214}
+  salad_order: {fileID: 1424466842}
+  patience_bar: {fileID: 1007577400}
+  patience_bar_shadow: {fileID: 1136598480}
+  tomato_bowl: {fileID: 707657352}
+  lettuce_bowl: {fileID: 1294243957}
+--- !u!95 &2143425354
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143425351}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9227d11361d6d7140aa4cf717cba32b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 900253306}
   - {fileID: 2107428216}
+  - {fileID: 427388369}
   - {fileID: 1718311239}
   - {fileID: 467014854}
