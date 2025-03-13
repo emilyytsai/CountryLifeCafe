@@ -26,7 +26,7 @@ public class Customer : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        moneyScript = FindObjectOfType<MoneyScript>();
+        moneyScript = FindAnyObjectByType<MoneyScript>();
         StartCoroutine(StartEnterAnimation()); //2 seconds after scene loads, the custmer will enter
         StartCoroutine(spawn_order()); //5 sec
     }

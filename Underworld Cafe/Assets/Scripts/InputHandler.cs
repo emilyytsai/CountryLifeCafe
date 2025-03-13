@@ -41,14 +41,14 @@ public class InputHandler : MonoBehaviour
         {
             if (last_selected == selected_object)
             {
-                reset();
+                Reset();
                 last_selected = null; //deselecting the object
                 return;
             }
 
             if (last_selected != null)
             {
-                reset();
+                Reset();
             }
         }
         highlight(selected_object); //hihglight the last object that was clicked on
@@ -70,7 +70,7 @@ public class InputHandler : MonoBehaviour
         }
     }
 
-    private void reset()
+    private void Reset()
     {
         if (last_selected != null)
         {

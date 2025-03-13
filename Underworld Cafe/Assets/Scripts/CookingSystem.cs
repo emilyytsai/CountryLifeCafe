@@ -11,6 +11,8 @@ public class CookingSystem : MonoBehaviour
     public GameObject tomato_bowl;
     public GameObject lettuce_bowl;
 
+    public List<string> current_recipe = new List<string>();
+
     public void AddIngredientToBowl(GameObject ingredient)
     {
         if (ingredient != null && bowl != null) // If ingredient and bowl are assigned and contain references to GameObjects
@@ -58,6 +60,8 @@ public class CookingSystem : MonoBehaviour
         if (tomato_bowl != null)
         {
             tomato_bowl.SetActive(true); //enable the tomato
+            current_recipe.Add("Tomato");
+            Debug.Log(current_recipe[1]);
             Debug.Log("tomato in bowl");
         }
     }
@@ -67,6 +71,8 @@ public class CookingSystem : MonoBehaviour
         if (lettuce_bowl != null)
         {
             lettuce_bowl.SetActive(true);
+            current_recipe.Add("Lettuce");
+            Debug.Log(current_recipe[0]);
             Debug.Log("lettuce in bowl");
         }
     }
