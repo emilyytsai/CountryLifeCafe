@@ -5,13 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField]
-    private string Name;
+    private string Name; // Name of the scene to load
+    private AudioManager audio_manager;
+
+    private void Start()
+    {
+        audio_manager = FindAnyObjectByType<AudioManager>();
+    }
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(Name); // will load the game/change scenes when button is pressed
+        StartCoroutine(WaitAndChangeScene()); // Start the coroutine to wait before changing the scene
     }
 
+    public void click_sound()
+    {
+        audio_manager.Play("Button Click"); // Play the button click sound effect
+    }
+
+    public IEnumerator WaitAndChangeScene()
+    {
+        click_sound(); // Play the sound effect
+        yield return new WaitForSeconds(0.3f); // Wait for 0.3 seconds
+        SceneManager.LoadScene(Name); // Load the new scene after the delay
+    }
 }
