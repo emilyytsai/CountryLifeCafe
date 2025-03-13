@@ -1192,6 +1192,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 123252325}
+        m_TargetAssemblyTypeName: Day1, Assembly-CSharp
+        m_MethodName: FirstCustomer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1266,6 +1269,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 798900186}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834103038
 GameObject:
   m_ObjectHideFlags: 0
