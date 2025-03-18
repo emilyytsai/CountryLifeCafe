@@ -50,16 +50,13 @@ public class Customer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moneyScript.IsCustomerServed()) //trigger leave animation after customer served
-        {
-            Leave();
-            moneyScript.CustomerServed(); //reset bool
-        }
+
     }
 
     public void CustomerServed()
     {
         moneyScript.CustomerServed(); //set bool to true
+        Leave();
 
         //destroy the patience bar/shadow, salad order, & text bubble after serving customer
         Destroy(patience_bar);
@@ -82,6 +79,7 @@ public class Customer : MonoBehaviour
             animator.SetTrigger("LeaveTrigger");
         }
         StartCoroutine(NextCustomer());  //spawn next customerr
+        Debug.Log("Customer has left");
     }
 
     IEnumerator NextCustomer()

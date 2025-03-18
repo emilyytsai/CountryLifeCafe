@@ -1354,7 +1354,6 @@ GameObject:
   - component: {fileID: 798900189}
   - component: {fileID: 798900188}
   - component: {fileID: 798900191}
-  - component: {fileID: 798900192}
   - component: {fileID: 798900193}
   m_Layer: 5
   m_Name: Serve button
@@ -1440,18 +1439,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1646371574}
         m_TargetAssemblyTypeName: MoneyScript, Assembly-CSharp
-        m_MethodName: CustomerServed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1646371574}
-        m_TargetAssemblyTypeName: MoneyScript, Assembly-CSharp
         m_MethodName: AddFiveTokens
         m_Mode: 1
         m_Arguments:
@@ -1465,18 +1452,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2143425353}
         m_TargetAssemblyTypeName: Customer, Assembly-CSharp
         m_MethodName: CustomerServed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 123252325}
-        m_TargetAssemblyTypeName: Day1, Assembly-CSharp
-        m_MethodName: FirstCustomer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1542,18 +1517,6 @@ MonoBehaviour:
   patience_bar_shadow: {fileID: 1136598480}
   tomato_bowl: {fileID: 707657352}
   lettuce_bowl: {fileID: 1294243957}
---- !u!114 &798900192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798900186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &798900193
 MonoBehaviour:
   m_ObjectHideFlags: 0
