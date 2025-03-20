@@ -61,7 +61,7 @@ public class CookingSystem : MonoBehaviour
         {
             tomato_bowl.SetActive(true); //enable the tomato
             current_recipe.Add("Tomato");
-            Debug.Log(current_recipe[1]);
+            Debug.Log(current_recipe[0]); //idk y but when this is at index 1 it creates a duplicate tomato
             Debug.Log("tomato in bowl");
         }
     }
