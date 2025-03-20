@@ -10,6 +10,7 @@ public class Customer : MonoBehaviour
     //things that will spawn/be destroyed when the customer enters
     public GameObject text_bubble;
     public GameObject salad_order;
+    public GameObject feedback;
     public GameObject patience_bar;
     public GameObject patience_bar_shadow;
 
@@ -51,13 +52,13 @@ public class Customer : MonoBehaviour
     public void CustomerServed()
     {
         moneyScript.CustomerServed(); //set bool to true
-        Leave();
+        feedback.SetActive(true);
+        StartCoroutine(Leave());
 
         //destroy the patience bar/shadow, salad order, & text bubble after serving customer
         Destroy(patience_bar);
         Destroy(patience_bar_shadow);
         Destroy(salad_order);
-        Destroy(text_bubble);
         Debug.Log("gone");
 
         //also need to destroy the ingredients that got added to the bowl
@@ -66,8 +67,10 @@ public class Customer : MonoBehaviour
         Debug.Log("salad reset");
     }
 
-    private void Leave()
+    IEnumerator Leave()
     {
+        yield return new WaitForSeconds(3f);
+        Destroy(text_bubble);
         //trigger the "LeaveTrigger" in the animator to play the leaving animation
         if (animator != null)
         {
