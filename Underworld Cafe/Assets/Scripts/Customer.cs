@@ -5,6 +5,7 @@ public class Customer : MonoBehaviour
 {
     private MoneyScript moneyScript; //reference to money script
     private Animator animator; //reference to animator
+    public GameObject customer;
 
     //things that will spawn/be destroyed when the customer enters
     public GameObject text_bubble;
@@ -25,7 +26,7 @@ public class Customer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
         moneyScript = FindAnyObjectByType<MoneyScript>();
         StartCoroutine(StartEnterAnimation()); //2 seconds after scene loads, the custmer will enter
         StartCoroutine(spawn_order()); //5 sec
@@ -45,12 +46,6 @@ public class Customer : MonoBehaviour
         salad_order.SetActive(true);
         patience_bar.SetActive(true);
         patience_bar_shadow.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void CustomerServed()
@@ -78,15 +73,22 @@ public class Customer : MonoBehaviour
         {
             animator.SetTrigger("LeaveTrigger");
         }
-        StartCoroutine(NextCustomer());  //spawn next customerr
+        //StartCoroutine(NextCustomer());  //spawn next customerr
         Debug.Log("Customer has left");
+        StartCoroutine(DestroyCustomer());
     }
 
-    IEnumerator NextCustomer()
+    IEnumerator DestroyCustomer()
     {
-        yield return new WaitForSeconds(4f); //wait 3 secs for the leave animation + 1 sec transition
-        //customer_served bool is set back to false using money script's reset function
-        moneyScript.ResetCustomerServed(); //must be reset to avoid leave loop
-        animator.SetTrigger("EnterTrigger");//trigger the "EnterTrigger" in the animator; for demo purposes this part is creating an infinite loop
+        yield return new WaitForSeconds(3f); //wait 3 secs for the leave animation
+        Destroy(customer);
     }
+
+    //IEnumerator NextCustomer()
+    //{
+        //yield return new WaitForSeconds(4f); //wait 3 secs for the leave animation + 1 sec transition
+        //customer_served bool is set back to false using money script's reset function
+        //moneyScript.ResetCustomerServed(); //must be reset to avoid leave loop
+        //animator.SetTrigger("EnterTrigger");//trigger the "EnterTrigger" in the animator; for demo purposes this part is creating an infinite loop
+    //}
 }

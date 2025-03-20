@@ -1113,7 +1113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &707657353
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1130,8 +1130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.104, y: -5.1689}
-  m_SizeDelta: {x: 370.6952, y: 246.3096}
+  m_AnchoredPosition: {x: -0.1393, y: -5.1689}
+  m_SizeDelta: {x: 378.3118, y: 246.3096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707657354
 MonoBehaviour:
@@ -1461,6 +1461,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1646371574}
+        m_TargetAssemblyTypeName: MoneyScript, Assembly-CSharp
+        m_MethodName: CustomerServed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &798900189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,6 +1523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customer: {fileID: 1510411938}
   text_bubble: {fileID: 1352634214}
   salad_order: {fileID: 1424466842}
   patience_bar: {fileID: 1007577400}
@@ -2637,6 +2650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customer: {fileID: 1298614223}
   text_bubble: {fileID: 1352634214}
   salad_order: {fileID: 1424466842}
   patience_bar: {fileID: 0}
@@ -3435,12 +3449,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customer: {fileID: 1510411938}
   text_bubble: {fileID: 1352634214}
   salad_order: {fileID: 1424466842}
   patience_bar: {fileID: 1007577400}
   patience_bar_shadow: {fileID: 1136598480}
-  tomato_bowl: {fileID: 0}
-  lettuce_bowl: {fileID: 0}
+  tomato_bowl: {fileID: 707657352}
+  lettuce_bowl: {fileID: 1294243957}
 --- !u!95 &1510411942
 Animator:
   serializedVersion: 7
@@ -4444,6 +4459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customer: {fileID: 2142137992}
   text_bubble: {fileID: 0}
   salad_order: {fileID: 0}
   patience_bar: {fileID: 0}
@@ -4555,6 +4571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customer: {fileID: 1510411938}
   text_bubble: {fileID: 1352634214}
   salad_order: {fileID: 1424466842}
   patience_bar: {fileID: 1007577400}
