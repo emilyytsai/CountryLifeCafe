@@ -45,12 +45,12 @@ public class MoneyScript : MonoBehaviour
     public void AddFiveTokens() 
     {
         //initial_and_total_money = initial_and_total_money + five_money;
-        if (customer_served) //added if statement so money is added only if customer served bool = true
-        {                    //later, this will be a nested if statement when salads & recipes get implemented
+        // if (customer_served) //added if statement so money is added only if customer served bool = true
+        // {                    //later, this will be a nested if statement when salads & recipes get implemented
             initial_and_total_money += five_money; //ex: if(correct_recipe), then the money will be added
             UpdateMoneyText();
             customer_served = false; //reset bool back to false so money isnt continously added
-        }
+        // }
     }
 
     //UNCOMMENT FOLLOWING CODE WHEN SALADS & RECIPES ARE IMPLEMENTED
