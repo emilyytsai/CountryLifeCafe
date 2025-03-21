@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mini_salad3_0: 5563076750490914062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

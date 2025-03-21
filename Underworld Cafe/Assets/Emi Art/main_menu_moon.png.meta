@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 770f264b5218f1c41a5a3fe977502e07
+guid: 527d7b9d425e8e543823691e08f2e6e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1476140979647752040
-    second: lettuce_0
+      213: -8370749688137111713
+    second: main_menu_moon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lettuce_0
+      name: main_menu_moon_0
       rect:
         serializedVersion: 2
-        x: 1476
-        y: 858
-        width: 213
-        height: 176
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8672d4a666e4c7410800000000000000
-      internalID: 1476140979647752040
+      spriteID: f5720ee328f15db80800000000000000
+      internalID: -8370749688137111713
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lettuce_0: 1476140979647752040
+      main_menu_moon_0: -8370749688137111713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
