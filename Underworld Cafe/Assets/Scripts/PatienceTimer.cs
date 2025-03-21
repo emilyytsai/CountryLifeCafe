@@ -67,7 +67,12 @@ public class PatienceTimer : MonoBehaviour
 
         patienceBar.fillAmount = current_patience;
 
-        //stop decreasxing at 0 sec
+        //stop decreasing at 0 sec
+        destroy_patience_bar();
+    }
+
+    public void destroy_patience_bar()
+    {
         if (timer <= 0f)
         {
             timer = 0f;
@@ -75,7 +80,7 @@ public class PatienceTimer : MonoBehaviour
             //destroy the patience bar shadow, salad order, & text bubble
             Destroy(patienceBar2);
             Destroy(salad_order);
-            Destroy(text_bubble);
+            //Destroy(text_bubble);
             Debug.Log("gone");
         }
     }

@@ -5,6 +5,7 @@ public class Customer : MonoBehaviour
 {
     private MoneyScript moneyScript; //reference to money script
     private Animator animator; //reference to animator
+    private PatienceTimer patience; //patience script
     public GameObject customer;
 
     //things that will spawn/be destroyed when the customer enters
@@ -55,11 +56,13 @@ public class Customer : MonoBehaviour
         feedback.SetActive(true);
         StartCoroutine(Leave());
 
-        //destroy the patience bar/shadow, salad order, & text bubble after serving customer
-        Destroy(patience_bar);
-        Destroy(patience_bar_shadow);
-        Destroy(salad_order);
-        Debug.Log("gone");
+        // //destroy the patience bar/shadow, salad order, & text bubble after serving customer
+        // Destroy(patience_bar);
+        // Destroy(patience_bar_shadow);
+        // Destroy(salad_order);
+        // Debug.Log("gone");
+        // vv call destroy patience from patience script instead vv
+        patience.destroy_patience_bar();
 
         //also need to destroy the ingredients that got added to the bowl
         Destroy(tomato_bowl);
@@ -69,7 +72,7 @@ public class Customer : MonoBehaviour
 
     IEnumerator Leave()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         Destroy(text_bubble);
         //trigger the "LeaveTrigger" in the animator to play the leaving animation
         if (animator != null)
