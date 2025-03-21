@@ -69,7 +69,7 @@ public class Customer : MonoBehaviour
 
     IEnumerator Leave()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         Destroy(text_bubble);
         //trigger the "LeaveTrigger" in the animator to play the leaving animation
         if (animator != null)
