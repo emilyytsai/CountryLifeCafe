@@ -5,15 +5,21 @@ public class Customer : MonoBehaviour
 {
     private MoneyScript moneyScript; //reference to money script
     private Animator animator; //reference to animator
+    private CustomerManager customer_manager; //customer manager script
+
+    //for defining which specific animator/customer
     public GameObject customer;
 
-    //things that will spawn/be destroyed when the customer enters
+    //things that will be active when the customer enters
     public GameObject text_bubble;
-    public GameObject salad_order;
     public GameObject feedback;
     public GameObject patience_bar;
     public GameObject patience_bar_shadow;
 
+    //note** manually assign the salad order
+    public GameObject salad_order;
+
+    //for ingredients to show up inside bowl
     public GameObject tomato_bowl;
     public GameObject lettuce_bowl;
 
@@ -29,6 +35,8 @@ public class Customer : MonoBehaviour
     {
         animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
         moneyScript = FindAnyObjectByType<MoneyScript>();
+        customer_manager = FindAnyObjectByType<CustomerManager>();
+
         StartCoroutine(StartEnterAnimation()); //2 seconds after scene loads, the custmer will enter
         StartCoroutine(spawn_order()); //5 sec
     }
@@ -56,21 +64,23 @@ public class Customer : MonoBehaviour
         StartCoroutine(Leave());
 
         //destroy the patience bar/shadow, salad order, & text bubble after serving customer
-        Destroy(patience_bar);
-        Destroy(patience_bar_shadow);
-        Destroy(salad_order);
+        ////instead of destroying -> setactive(false) so these things can be reused
+        patience_bar.SetActive(false);
+        patience_bar_shadow.SetActive(false);
+        salad_order.SetActive(false);
         Debug.Log("gone");
 
         //also need to destroy the ingredients that got added to the bowl
-        Destroy(tomato_bowl);
-        Destroy(lettuce_bowl);
+        ////destroy -> setactive(false)
+        tomato_bowl.SetActive(false);
+        lettuce_bowl.SetActive(false);
         Debug.Log("salad reset");
     }
 
     IEnumerator Leave()
     {
         yield return new WaitForSeconds(2f);
-        Destroy(text_bubble);
+        text_bubble.SetActive(false);
         //trigger the "LeaveTrigger" in the animator to play the leaving animation
         if (animator != null)
         {
@@ -84,7 +94,12 @@ public class Customer : MonoBehaviour
     IEnumerator DestroyCustomer()
     {
         yield return new WaitForSeconds(3f); //wait 3 secs for the leave animation
-        Destroy(customer);
+
+        Destroy(gameObject); //used to be customer, but customer in this context is the animator
+        customer_manager.next_customer(); //go thru customer array -> spawm next customer
+
+        moneyScript.ResetCustomerServed(); //reset bool so next customer can be served
+        Debug.Log("customer served bool reset");
     }
 
     //IEnumerator NextCustomer()
