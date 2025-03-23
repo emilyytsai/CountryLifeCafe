@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: f3057b6b4fc6f9d48b381ef4acf3fc03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8878942223557388205
+    second: main_menu_lights3_0
+  - first:
+      213: 8987961645293468072
+    second: main_menu_lights3_1
+  - first:
+      213: 5349217815221923710
+    second: main_menu_lights3_2
+  - first:
+      213: -3219754043712003361
+    second: main_menu_lights3_3
+  - first:
+      213: -1774031575633681617
+    second: main_menu_lights3_4
+  - first:
+      213: -1468571763177349991
+    second: main_menu_lights3_5
+  - first:
+      213: 5622326675756447009
+    second: main_menu_lights3_6
+  - first:
+      213: 1227998675722389245
+    second: main_menu_lights3_7
+  - first:
+      213: 2382477051089306559
+    second: main_menu_lights3_8
+  - first:
+      213: 2039904521983179332
+    second: main_menu_lights3_9
+  - first:
+      213: 5302374576094094691
+    second: main_menu_lights3_10
+  - first:
+      213: 7587022107029888476
+    second: main_menu_lights3_11
+  - first:
+      213: 7414472362662947837
+    second: main_menu_lights3_12
+  - first:
+      213: 7870997414183061377
+    second: main_menu_lights3_13
+  - first:
+      213: 8072843190861236031
+    second: main_menu_lights3_14
+  - first:
+      213: 6632396118105278281
+    second: main_menu_lights3_15
+  - first:
+      213: -7522995493614935465
+    second: main_menu_lights3_16
+  - first:
+      213: -7684981487002870005
+    second: main_menu_lights3_17
+  - first:
+      213: 9062744623576097123
+    second: main_menu_lights3_18
+  - first:
+      213: 2227639307207563869
+    second: main_menu_lights3_19
+  - first:
+      213: 2402692321041415619
+    second: main_menu_lights3_20
+  - first:
+      213: -5840855999563000650
+    second: main_menu_lights3_21
+  - first:
+      213: -5587618938892100534
+    second: main_menu_lights3_22
+  - first:
+      213: -1050050977253822741
+    second: main_menu_lights3_23
+  - first:
+      213: 4794481528872216499
+    second: main_menu_lights3_24
+  - first:
+      213: 3909125924426470092
+    second: main_menu_lights3_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: main_menu_lights3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35815af1719a7c480800000000000000
+      internalID: -8878942223557388205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_1
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 913
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a97d820f77abbc70800000000000000
+      internalID: 8987961645293468072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_2
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 920
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f6e76f24d3c3a40800000000000000
+      internalID: 5349217815221923710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_3
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 917
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd22b6891c22153d0800000000000000
+      internalID: -3219754043712003361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_4
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 920
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2327026eaf5167e0800000000000000
+      internalID: -1774031575633681617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_5
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 912
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c15a023c59e9be0800000000000000
+      internalID: -1468571763177349991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_6
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 856
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1257aafb254860e40800000000000000
+      internalID: 5622326675756447009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_7
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 864
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df645131a4aba0110800000000000000
+      internalID: 1227998675722389245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_8
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 792
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3c2bb4142401120800000000000000
+      internalID: 2382477051089306559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_9
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 793
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a3588da523f4c10800000000000000
+      internalID: 2039904521983179332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_10
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 716
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365a6227591d59940800000000000000
+      internalID: 5302374576094094691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_11
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 718
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd5d8898648a4960800000000000000
+      internalID: 7587022107029888476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_12
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 679
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbe97d845f75e660800000000000000
+      internalID: 7414472362662947837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_13
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 660
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187466422766b3d60800000000000000
+      internalID: 7870997414183061377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_14
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 663
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3707be3c10880070800000000000000
+      internalID: 8072843190861236031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_15
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 658
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947485521210b0c50800000000000000
+      internalID: 6632396118105278281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_16
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 666
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752a7340573f89790800000000000000
+      internalID: -7522995493614935465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_17
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 665
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f9db9ed06795590800000000000000
+      internalID: -7684981487002870005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_18
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 681
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361a55af73655cd70800000000000000
+      internalID: 9062744623576097123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_19
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 454
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5addc9b52a2aee10800000000000000
+      internalID: 2227639307207563869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_20
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 420
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd7b3c9fe3185120800000000000000
+      internalID: 2402692321041415619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_21
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 424
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b496d12a6c11fea0800000000000000
+      internalID: -5840855999563000650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_22
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 420
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c5717fd2ac472b0800000000000000
+      internalID: -5587618938892100534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_23
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 424
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beeebb813387d61f0800000000000000
+      internalID: -1050050977253822741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_24
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 420
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b7a99a5c8b698240800000000000000
+      internalID: 4794481528872216499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_menu_lights3_25
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 426
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2d5bb1151004630800000000000000
+      internalID: 3909125924426470092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5f043eaaa28bf9448b387a436a48f005
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      main_menu_lights3_0: -8878942223557388205
+      main_menu_lights3_1: 8987961645293468072
+      main_menu_lights3_10: 5302374576094094691
+      main_menu_lights3_11: 7587022107029888476
+      main_menu_lights3_12: 7414472362662947837
+      main_menu_lights3_13: 7870997414183061377
+      main_menu_lights3_14: 8072843190861236031
+      main_menu_lights3_15: 6632396118105278281
+      main_menu_lights3_16: -7522995493614935465
+      main_menu_lights3_17: -7684981487002870005
+      main_menu_lights3_18: 9062744623576097123
+      main_menu_lights3_19: 2227639307207563869
+      main_menu_lights3_2: 5349217815221923710
+      main_menu_lights3_20: 2402692321041415619
+      main_menu_lights3_21: -5840855999563000650
+      main_menu_lights3_22: -5587618938892100534
+      main_menu_lights3_23: -1050050977253822741
+      main_menu_lights3_24: 4794481528872216499
+      main_menu_lights3_25: 3909125924426470092
+      main_menu_lights3_3: -3219754043712003361
+      main_menu_lights3_4: -1774031575633681617
+      main_menu_lights3_5: -1468571763177349991
+      main_menu_lights3_6: 5622326675756447009
+      main_menu_lights3_7: 1227998675722389245
+      main_menu_lights3_8: 2382477051089306559
+      main_menu_lights3_9: 2039904521983179332
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

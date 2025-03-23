@@ -85,6 +85,7 @@ public class Customer : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("LeaveTrigger");
+            Debug.Log(customer.name + "left");
         }
         //StartCoroutine(NextCustomer());  //spawn next customerr
         Debug.Log("Customer has left");
