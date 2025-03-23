@@ -14,5 +14,6 @@ Main Menu:
 ![Main Menu Short](https://github.com/user-attachments/assets/4ee23704-98be-40b4-8861-2275a2397f45)
 
 Restaurant + Kitchen Scene:
-![image](https://github.com/user-attachments/assets/9f0603a6-58fa-4338-9dc6-f20b2c7feff3)
+![image](https://github.com/user-attachments/assets/959d46f5-eb71-4458-9c94-a487ea776ada)
+
 
