@@ -12,8 +12,10 @@ using TMPro;
 public class PatienceTimer : MonoBehaviour
 
 {
+    private Customer customer; //reference to customer script
     public Image patienceBar;
     public Image patienceBar2; //this is the shadow of the bar
+    public GameObject feedback;
 
     //custom colors for the bar
     private Color start_color = new Color(0.5f, 0.9f, 0.5f); //R,G,B, (optional) alpha 
@@ -38,6 +40,7 @@ public class PatienceTimer : MonoBehaviour
     {
         //intialize w/ day 1 time
         timer = day1_time;
+        customer = FindAnyObjectByType<Customer>();
     }
 
     private void Update()
@@ -71,11 +74,13 @@ public class PatienceTimer : MonoBehaviour
         if (timer <= 0f)
         {
             timer = 0f;
+            feedback.SetActive(true);
+            StartCoroutine(customer.Leave());
+
+            //destroy the patience bar/shadow, salad order, & text bubble after serving customer
             Destroy(patienceBar);
-            //destroy the patience bar shadow, salad order, & text bubble
             Destroy(patienceBar2);
             Destroy(salad_order);
-            Destroy(text_bubble);
             Debug.Log("gone");
         }
     }
