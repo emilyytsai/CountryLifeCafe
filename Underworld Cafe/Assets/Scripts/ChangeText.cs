@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 public class ChangeText : MonoBehaviour
 {
     public TextMeshProUGUI text;
+    private Day1 day1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        day1 = FindAnyObjectByType<Day1>();
         // Check the current scene name
         if (SceneManager.GetActiveScene().name == "DaySummary")
         {
@@ -23,7 +25,15 @@ public class ChangeText : MonoBehaviour
         {
             // Perform actions specific to "AnotherScene"
             Debug.Log("Running actions for Kitchen");
-            text.text = "Thanks for the salad!";        
+            text.text = "You're taking too long, I'm leaving!";     
+            if (day1.orderCorrect)
+            {
+                text.text = "Thanks for the salad!";     
+            }
+            else 
+            {
+                text.text = "This isn't my order.";
+            }
         }
     }
 

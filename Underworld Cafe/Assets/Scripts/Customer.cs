@@ -77,7 +77,7 @@ public class Customer : MonoBehaviour
         Debug.Log("salad reset");
     }
 
-    IEnumerator Leave()
+    public IEnumerator Leave()
     {
         yield return new WaitForSeconds(2f);
         text_bubble.SetActive(false);

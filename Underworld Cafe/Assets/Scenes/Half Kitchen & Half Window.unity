@@ -2958,6 +2958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patienceBar: {fileID: 1007577403}
   patienceBar2: {fileID: 1136598482}
+  feedback: {fileID: 37975014}
   salad_order: {fileID: 1424466844}
   text_bubble: {fileID: 1352634216}
 --- !u!114 &1007577403

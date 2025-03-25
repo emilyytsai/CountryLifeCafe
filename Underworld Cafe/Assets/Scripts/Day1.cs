@@ -9,7 +9,7 @@ public class Day1 : MonoBehaviour
     private MoneyScript moneyScript; //reference to money script
     private Customer customer; //reference to customer script
 
-    private bool orderCorrect = true;
+    public bool orderCorrect = true;
 
 
 
