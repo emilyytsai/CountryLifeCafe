@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      retro_cafe_main_menu__0: 7614215939403726942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

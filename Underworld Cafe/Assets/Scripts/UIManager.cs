@@ -5,8 +5,10 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class ChangeText : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
+    //Day 1 Manager Script//
+    
     public TextMeshProUGUI text;
     private Day1 day1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

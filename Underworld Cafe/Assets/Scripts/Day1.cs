@@ -4,14 +4,22 @@ using Unity.VisualScripting;   //  The library System.Collections.Generic is nee
 
 public class Day1 : MonoBehaviour
 {
+    //Day 1 Manager Script//
+
+    //script references
     private Recipes recipe; //reference to recipes script
     private CookingSystem cookingSystem; //reference to cooking system script
     private MoneyScript moneyScript; //reference to money script
     private Customer customer; //reference to customer script
 
+    //customer container
+    ////array of customer game objects
+    public GameObject[] customers;
+    //customer counter
+    private int current_customer_index = 0;
+
+    //track if order is correct
     public bool orderCorrect = true;
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +28,16 @@ public class Day1 : MonoBehaviour
         moneyScript = FindAnyObjectByType<MoneyScript>();
         recipe = FindAnyObjectByType<Recipes>();
         customer = FindAnyObjectByType<Customer>();
+        
+        //move thru the array of customers
+        next_customer();
     }
+
+    //code flow//
+    //FirstCustomer()
+    //SecondCustomer()
+    //ThirdCustomer()
+    //next_customer()
 
     public void FirstCustomer() //orders a 5 token salad
     {
@@ -44,9 +61,18 @@ public class Day1 : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    //move thru the array only when this function is called
+    public void next_customer()
     {
-        
+        if (current_customer_index < customers.Length)
+        {
+            customers[current_customer_index].SetActive(true); //spawn the current customer
+            current_customer_index++;
+        }
+        else //once counter is 3
+        {
+            Debug.Log("day 1 complete");
+            //later this is where the day summary will be setactive
+        }
     }
 }
