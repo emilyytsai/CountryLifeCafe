@@ -13,6 +13,9 @@ public class CookingSystem : MonoBehaviour
 
     public List<string> current_recipe = new List<string>();
 
+    //must track if ingrdient was added to bowl; if added, then it will be added to current recipe list
+    private bool ingredient_added = false;
+
     public void AddIngredientToBowl(GameObject ingredient)
     {
         if (ingredient != null && bowl != null) // If ingredient and bowl are assigned and contain references to GameObjects
@@ -30,7 +33,9 @@ public class CookingSystem : MonoBehaviour
             //NOTE* for future reference add the ingredient to a "current recipe" list to check if the recipe is right + add if condition so only the right ingredient is added
             
             trigger_ingredient_sprite(ingredient_name); //add the sprite that looks like the ingredients are actaully in the bowl
-        
+
+            ingredient_added = true;
+
             //destroy the ingredient from the shelf after u add it
             Destroy(ingredient);
         }
@@ -60,9 +65,17 @@ public class CookingSystem : MonoBehaviour
         if (tomato_bowl != null)
         {
             tomato_bowl.SetActive(true); //enable the tomato
-            current_recipe.Add("Tomato");
-            Debug.Log(current_recipe[0]); //idk y but when this is at index 1 it creates a duplicate tomato
             Debug.Log("tomato in bowl");
+
+            //activeInHierarchy = boolean property of a game obj; true if active
+            //this is needed bc before it would still check the tomato in current recipe
+            if (tomato_bowl.activeInHierarchy && !current_recipe.Contains("Tomato"))
+            {
+                current_recipe.Add("Tomato");
+                Debug.Log(current_recipe[0]); //idk y but when this is at index 1 it creates a duplicate tomato
+            }
+
+            ingredient_added = true;
         }
     }
 
@@ -71,9 +84,15 @@ public class CookingSystem : MonoBehaviour
         if (lettuce_bowl != null)
         {
             lettuce_bowl.SetActive(true);
-            current_recipe.Add("Lettuce");
-            Debug.Log(current_recipe[0]);
             Debug.Log("lettuce in bowl");
+
+            if (lettuce_bowl.activeInHierarchy && !current_recipe.Contains("Lettuce"))
+            {
+                current_recipe.Add("Lettuce");
+                Debug.Log(current_recipe[0]);
+            }
+            
+            ingredient_added = true;
         }
     }
 }

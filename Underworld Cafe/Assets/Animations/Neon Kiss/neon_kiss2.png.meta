@@ -121,11 +121,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: neon_kiss2_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e15c0a64990814e825a4dddce63a09
+      internalID: -1961533200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1ffdbc36aefbbce40bffdc877a01a951
+    spriteID: 07d6e4f0eb6ab374faa25bcbd474d07d
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +157,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      neon_kiss2_0: 5632799019352893179
+      neon_kiss2_1: -1961533200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

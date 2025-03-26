@@ -103,12 +103,12 @@ TextureImporter:
       name: title_glow2_0
       rect:
         serializedVersion: 2
-        x: 797
-        y: 708
-        width: 378
-        height: 195
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e5490493e068b664a9a32faa797f5f65
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      title_glow2_0: 8119389336367988241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

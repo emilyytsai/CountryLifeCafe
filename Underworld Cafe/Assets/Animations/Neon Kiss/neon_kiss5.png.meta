@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9be22ac7d8e59ce42b0cd363adc5d118
+guid: 93ce56c237e6fc942b4d4a5b56f3adc7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8435760497288893896
-    second: title_glow3_0
+      213: -4251998490958024594
+    second: neon_kiss5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: title_glow3_0
+      name: neon_kiss5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c55d2b4a77d11570800000000000000
-      internalID: 8435760497288893896
+      spriteID: e6033f886edddf4c0800000000000000
+      internalID: -4251998490958024594
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 066b1e3b36d942d49a5239de5b19c022
+    spriteID: 5426dc4e41cc6f24e910fa17dd619f72
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      title_glow3_0: 8435760497288893896
+      neon_kiss5_0: -4251998490958024594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

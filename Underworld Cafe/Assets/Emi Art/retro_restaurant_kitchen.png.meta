@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9be22ac7d8e59ce42b0cd363adc5d118
+guid: 9e16bbe43e199e3499dbd18c153ff460
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8435760497288893896
-    second: title_glow3_0
+      213: 240696177116072192
+    second: retro_restaurant_kitchen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: title_glow3_0
+      name: retro_restaurant_kitchen_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,15 +108,15 @@ TextureImporter:
         width: 1920
         height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c55d2b4a77d11570800000000000000
-      internalID: 8435760497288893896
+      spriteID: 0094cc7d5ef175300800000000000000
+      internalID: 240696177116072192
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 066b1e3b36d942d49a5239de5b19c022
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      title_glow3_0: 8435760497288893896
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
