@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 9316346c956cfa34984d55e9824ad84f
+guid: 117d23603119ea54dbfc93ae4075a634
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7614215939403726942
-    second: retro_cafe_main_menu__0
+      213: 7327539606559570222
+    second: neon_glow1_0
+  - first:
+      213: 1828424310319364177
+    second: neon_glow1_1
+  - first:
+      213: -5590136911938483033
+    second: neon_glow1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: retro_cafe_main_menu__0
+      name: neon_glow1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,15 +114,59 @@ TextureImporter:
         width: 1920
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e50c6471e012ba960800000000000000
-      internalID: 7614215939403726942
+      spriteID: e29b69ef276a0b560800000000000000
+      internalID: 7327539606559570222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neon_glow1_1
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 245
+        width: 369
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158364b093edf5910800000000000000
+      internalID: 1828424310319364177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neon_glow1_2
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 305
+        width: 158
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac8b1ea818db62b0800000000000000
+      internalID: -5590136911938483033
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4fc18923910379842931019c60cb61d4
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      retro_cafe_main_menu__0: 7614215939403726942
+      neon_glow1_0: 7327539606559570222
+      neon_glow1_1: 1828424310319364177
+      neon_glow1_2: -5590136911938483033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
