@@ -90,7 +90,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    private string sceneName; // Name of the scene to load
+    private string Name; // Name of the scene to load
     private AudioManager audio_manager;
     [SerializeField] RectTransform fader;
 
@@ -163,6 +163,6 @@ public class MainMenu : MonoBehaviour
     {
         click_sound(); // Play the sound effect
         yield return new WaitForSeconds(0.9f); // Wait 0.1 seconds
-        SceneManager.LoadScene(sceneName); // Load the new scene after the delay
+        SceneManager.LoadScene(Name); // Load the new scene after the delay
     }
 }
