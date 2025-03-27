@@ -5481,7 +5481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Main Menu
+  Name: Main Menu
   fader: {fileID: 1227370646}
 --- !u!114 &736225059
 MonoBehaviour:
@@ -6532,7 +6532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Half Kitchen & Half Window
+  Name: 
   fader: {fileID: 0}
 --- !u!1 &1900854923
 GameObject:
@@ -6869,4 +6869,3 @@ SceneRoots:
   - {fileID: 2125028050}
   - {fileID: 219022108}
   - {fileID: 548757464}
-  - {fileID: 1203435873}

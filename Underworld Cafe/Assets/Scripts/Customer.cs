@@ -3,7 +3,10 @@ using System.Collections; //for IEnum
 
 public class Customer : MonoBehaviour
 {
-    private Animator animator; //reference to animator
+    //Customer Manager Script//
+    //*deals with customer animations
+
+    public Animator animator; //reference to animator
 
     //**customer_manager -> day1 (day 1 game manager)
     private Day1 game_manager1;
@@ -17,7 +20,7 @@ public class Customer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
+        //animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
         game_manager1 = FindAnyObjectByType<Day1>();
 
         //customer enters//

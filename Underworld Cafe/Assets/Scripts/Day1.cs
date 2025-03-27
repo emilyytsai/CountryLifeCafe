@@ -21,6 +21,9 @@ public class Day1 : MonoBehaviour
     //track if order is correct
     public bool orderCorrect = false;
 
+    public GameObject customer_prefab;
+    private GameObject current_customer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,7 +33,8 @@ public class Day1 : MonoBehaviour
         customer = FindAnyObjectByType<Customer>();
         
         //move thru the array of customers
-        next_customer();
+        //next customer is already being called in customer; dont call again here
+        //next_customer()
     }
 
     //code flow//
@@ -40,24 +44,25 @@ public class Day1 : MonoBehaviour
     //next_customer()
 
     public void FirstCustomer() //orders a 5 token salad
-    {   
-        customer.CustomerServed(); //calls the Customer script's CustomerServed function (which is a function overload of moneyScript's)
+    {
+        customer.CustomerServed();
         if (cookingSystem.current_recipe.Count != recipe.first_five_token_recipe.Count) //checks if the number of elements are equal
         {
             Debug.Log("Salad is insufficient");
             orderCorrect = false;
         }
-        for (int i = 0; i < cookingSystem.current_recipe.Count; i++) //for loop to check if elements are equal; order matters
+        else
         {
-            if (cookingSystem.current_recipe[i] == recipe.first_five_token_recipe[i])
+            for (int i = 0; i < cookingSystem.current_recipe.Count; i++) //for loop to check if elements are equal; order matters
             {
-                orderCorrect = true;
+                if (cookingSystem.current_recipe[i] != recipe.first_five_token_recipe[i])
+                {
+                    Debug.Log("Salad is wrong order");
+                    orderCorrect = false;
+                    return;
+                }
             }
-            else
-            {
-                Debug.Log("Salad is wrong order");
-                orderCorrect = false;
-            }
+            orderCorrect = true;
         }
         if (orderCorrect) 
         {
@@ -71,7 +76,9 @@ public class Day1 : MonoBehaviour
     {
         if (current_customer_index < customers.Length)
         {
-            customers[current_customer_index].SetActive(true); //spawn the current customer
+            //customers[current_customer_index].SetActive(true); //spawn the current customer
+            //instead of setting active, spawn the new prefab
+            current_customer = Instantiate(customer_prefab, new Vector3(0, 0, 0), Quaternion.identity);
             current_customer_index++;
         }
         else //once counter is 3
