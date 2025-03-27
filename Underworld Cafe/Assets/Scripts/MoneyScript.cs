@@ -14,8 +14,6 @@ public class MoneyScript : MonoBehaviour
     public float ten_money = 10f;
     public float fifteen_money = 15f;
 
-    private bool customer_served = false; //changed to private bool so only this script can modify it for now
-
     public void Start() 
     {
         UpdateMoneyText();
@@ -25,23 +23,7 @@ public class MoneyScript : MonoBehaviour
     {
         moneyText.text = "$ " + initial_and_total_money.ToString();
     }
-
-    public void CustomerServed()
-    {
-        customer_served = true;
-    }
-
-    public void ResetCustomerServed()
-    {
-        customer_served = false;
-    }
-
-    //allow other scripts to check if the customer has been served
-    public bool IsCustomerServed()
-    {
-        return customer_served;
-    }
-
+    
     public void AddFiveTokens() 
     {
         //initial_and_total_money = initial_and_total_money + five_money;
@@ -49,7 +31,7 @@ public class MoneyScript : MonoBehaviour
         // {                    //later, this will be a nested if statement when salads & recipes get implemented
             initial_and_total_money += five_money; //ex: if(correct_recipe), then the money will be added
             UpdateMoneyText();
-            customer_served = false; //reset bool back to false so money isnt continously added
+            //customer_served = false; //reset bool back to false so money isnt continously added
         // }
     }
 
