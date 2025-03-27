@@ -1052,6 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Main Menu
+  fader: {fileID: 0}
 --- !u!114 &1033511455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1984,6 +1985,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  persistentGroupA:
+  - Main Menu
+  - Game Objective
+  persistentGroupB:
+  - Farm
+  - Half Kitchen & Half Window
 --- !u!1 &1566588521
 GameObject:
   m_ObjectHideFlags: 0
