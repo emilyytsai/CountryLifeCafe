@@ -410,20 +410,20 @@ public class AudioManager : MonoBehaviour
         // ensure that track "Sigma Slide - The Soundlings" is playing.
         if (persistentGroupA.Contains(scene.name))
         {
-            if (!IsPlaying("Sigma Slide-The Soundlings"))
+            if (!IsPlaying("Main & Game Obj")) //**see sounds list in the inspector
             {
                 StopAllMusic();
-                Play("Sigma Slide-The Soundlings");
+                Play("Main & Game Obj");
             }
         }
         // If the loaded scene is part of persistent Group B,
         // ensure that track "Farm and Half Kitchen Music" is playing.
         else if (persistentGroupB.Contains(scene.name))
         {
-            if (!IsPlaying("Kung Fu Love Tree-Quincas Moreira.mp3"))
+            if (!IsPlaying("Farm & Kitchen"))
             {
                 StopAllMusic();
-                Play("Kung Fu Love Tree-Quincas Moreira.mp3");
+                Play("Farm & Kitchen");
             }
         }
         else
@@ -433,7 +433,7 @@ public class AudioManager : MonoBehaviour
             // Optionally, play scene-specific music. For example:
             if (scene.name == "Credits")
             {
-                Play("Party Waltz-Sir Cubworth.mp3");
+                Play("Credits");
             }
         }
     }
