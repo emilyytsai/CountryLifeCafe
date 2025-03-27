@@ -59,3 +59,60 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(Name); // Load the new scene after the delay
     }
 }
+// using System.Collections;
+// using UnityEngine;
+// using UnityEngine.SceneManagement;
+
+// public class MainMenu : MonoBehaviour
+// {
+//     [SerializeField]
+//     private string Name; // Name of the scene to load
+
+//     private AudioManager audio_manager;
+
+//     [SerializeField] 
+//     RectTransform fader;
+
+//     private void Start()
+//     {
+//         audio_manager = FindAnyObjectByType<AudioManager>();
+
+//         if (audio_manager == null)
+//         {
+//             Debug.LogWarning("AudioManager not found in the scene.");
+//         }
+//         else
+//         {
+//             Debug.Log("AudioManager found: " + audio_manager.name);
+//         }
+//     }
+
+//     // This is the function you call from your button's OnClick event.
+//     public void ChangeScene()
+//     {
+//         Debug.Log("ChangeScene() called. Preparing to load scene: " + Name);
+//         StartCoroutine(WaitAndChangeScene());
+//     }
+
+//     public void click_sound()
+//     {
+//         if (audio_manager != null)
+//         {
+//             audio_manager.Play("Button Click"); // Play the button click sound effect
+//         }
+//         else
+//         {
+//             Debug.LogWarning("AudioManager is null. Cannot play click sound.");
+//         }
+//     }
+
+//     public IEnumerator WaitAndChangeScene()
+//     {
+//         click_sound(); // Play the sound effect
+//         yield return new WaitForSeconds(0.1f); // Wait for a short period
+
+//         // Log the scene change attempt.
+//         Debug.Log("Loading scene: " + Name);
+//         SceneManager.LoadScene(Name); // Load the new scene after delay
+//     }
+// }
