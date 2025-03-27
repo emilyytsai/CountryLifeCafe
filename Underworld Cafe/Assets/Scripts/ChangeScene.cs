@@ -28,14 +28,24 @@ public class MainMenu : MonoBehaviour
     // }
 
     public void OpenCreditsScene() {
-    fader.gameObject.SetActive(true);
-    LeanTween.scale(fader, new Vector3(1, 1, 1), 0f); // Start at full size
-    LeanTween.scale(fader, Vector3.zero, 0.2f) // Shrink to zero
-        .setEase(LeanTweenType.easeInOutQuad)
-        .setOnComplete(() => {
-            // Perform any actions after the animation completes
-        });
-}
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0f); // Start at full size
+        LeanTween.scale(fader, Vector3.zero, 0.2f) // Shrink to zero
+            .setEase(LeanTweenType.easeInOutQuad)
+            .setOnComplete(() => {
+                // Perform any actions after the animation completes
+            });
+    }
+
+    public void OpenGameObjectiveScene() {
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0f); // Start at full size
+        LeanTween.scale(fader, Vector3.zero, 0.2f) // Shrink to zero
+            .setEase(LeanTweenType.easeInOutQuad)
+            .setOnComplete(() => {
+                // Perform any actions after the animation completes
+            });
+    }
 
     public void click_sound()
     {
