@@ -19,7 +19,7 @@ public class Day1 : MonoBehaviour
     private int current_customer_index = 0;
 
     //track if order is correct
-    public bool orderCorrect = true;
+    public bool orderCorrect = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,7 +40,7 @@ public class Day1 : MonoBehaviour
     //next_customer()
 
     public void FirstCustomer() //orders a 5 token salad
-    {
+    {   
         customer.CustomerServed(); //calls the Customer script's CustomerServed function (which is a function overload of moneyScript's)
         if (cookingSystem.current_recipe.Count != recipe.first_five_token_recipe.Count) //checks if the number of elements are equal
         {
@@ -49,13 +49,18 @@ public class Day1 : MonoBehaviour
         }
         for (int i = 0; i < cookingSystem.current_recipe.Count; i++) //for loop to check if elements are equal; order matters
         {
-            if (cookingSystem.current_recipe[i] != recipe.first_five_token_recipe[i])
+            if (cookingSystem.current_recipe[i] == recipe.first_five_token_recipe[i])
+            {
+                orderCorrect = true;
+            }
+            else
             {
                 Debug.Log("Salad is wrong order");
                 orderCorrect = false;
             }
         }
-        if (orderCorrect) {
+        if (orderCorrect) 
+        {
             Debug.Log("Salad is correct");
             moneyScript.AddFiveTokens();
         }
