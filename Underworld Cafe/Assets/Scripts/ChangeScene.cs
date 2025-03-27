@@ -96,12 +96,14 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        // Find the AudioManager in the scene.
         audio_manager = FindAnyObjectByType<AudioManager>();
     }
 
     public void ChangeScene()
     {
-        StartCoroutine(WaitAndChangeScene()); // Start the coroutine to wait before changing the scene
+        // This is the function you'll attach to your button OnClick.
+        StartCoroutine(WaitAndChangeScene());
     }
 
     public void OpenScene()
@@ -156,7 +158,8 @@ public class MainMenu : MonoBehaviour
 
     public void click_sound()
     {
-        audio_manager.Play("Button Click"); // Play the button click sound effect
+        // This calls the AudioManager to play your "Button Click" sound.
+        audio_manager.Play("Button Click");
     }
 
     public IEnumerator WaitAndChangeScene()
