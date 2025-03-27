@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      credits_neon_off_0: 3020026717234673304
+      credits_neon_off_1: 1302820979121588494
+      credits_neon_off_2: 7141978259195012943
+      credits_neon_off_3: 422804211730510299
+      credits_neon_off_4: -5518432887191008422
+      credits_neon_off_5: -9036364338268506512
+      credits_neon_off_6: 5108610381761665504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

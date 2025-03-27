@@ -5,7 +5,9 @@ public class Customer : MonoBehaviour
 {
     private MoneyScript moneyScript; //reference to money script
     private Animator animator; //reference to animator
-    private CustomerManager customer_manager; //customer manager script
+    //private CustomerManager customer_manager; //customer manager script
+    //**customer_manager -> day1 (day 1 game manager)
+    private Day1 game_manager1;
 
     //for defining which specific animator/customer
     public GameObject customer;
@@ -35,7 +37,7 @@ public class Customer : MonoBehaviour
     {
         animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
         moneyScript = FindAnyObjectByType<MoneyScript>();
-        customer_manager = FindAnyObjectByType<CustomerManager>();
+        game_manager1 = FindAnyObjectByType<Day1>();
 
         StartCoroutine(StartEnterAnimation()); //2 seconds after scene loads, the custmer will enter
         StartCoroutine(spawn_order()); //5 sec
@@ -97,7 +99,7 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(3f); //wait 3 secs for the leave animation
 
         Destroy(gameObject); //used to be customer, but customer in this context is the animator
-        customer_manager.next_customer(); //go thru customer array -> spawm next customer
+        game_manager1.next_customer(); //go thru customer array -> spawm next customer
 
         moneyScript.ResetCustomerServed(); //reset bool so next customer can be served
         Debug.Log("customer served bool reset");

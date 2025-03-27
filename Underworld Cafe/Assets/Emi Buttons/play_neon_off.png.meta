@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      play_neon_off_0: -2449415846960521184
+      play_neon_off_1: 948222885591885305
+      play_neon_off_2: 970676880487079584
+      play_neon_off_3: 3732911402853448915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

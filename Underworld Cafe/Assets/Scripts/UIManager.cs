@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    //Day 1 Manager Script//
+    //UI Manager Script//
     
     public TextMeshProUGUI text;
     private Day1 day1;

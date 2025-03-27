@@ -4,7 +4,7 @@ using Unity.VisualScripting;   //  The library System.Collections.Generic is nee
 
 public class Day1 : MonoBehaviour
 {
-    //Day 1 Manager Script//
+    //Day 1 Game Manager Script//
 
     //script references
     private Recipes recipe; //reference to recipes script

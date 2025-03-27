@@ -131,7 +131,7 @@ TextureImporter:
       name: life_glow1_1
       rect:
         serializedVersion: 2
-        x: 823
+        x: 829
         y: 736
         width: 56
         height: 88
@@ -153,7 +153,7 @@ TextureImporter:
       name: life_glow1_2
       rect:
         serializedVersion: 2
-        x: 884
+        x: 886
         y: 735
         width: 56
         height: 89
@@ -175,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 93d8d61fc0b72604b93aadf130298abb
+    spriteID: aec3b7ff28f7f9c4396895575f23864d
     internalID: 0
     vertices: []
     indices: 
