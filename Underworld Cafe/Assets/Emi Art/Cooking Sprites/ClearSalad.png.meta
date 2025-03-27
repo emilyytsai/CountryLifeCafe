@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7bffc6e4fde91ab4487e7a898032a84b
+guid: ddf6926a18f0a4e4bac479490aaa05f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4222557089706531253
-    second: _main_menu_0
+      213: -2758036034998127
+    second: ClearSalad_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _main_menu_0
+      name: ClearSalad_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 1190
+        y: 178
+        width: 469
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b9d3cf0d49899a30800000000000000
-      internalID: 4222557089706531253
+      spriteID: 1903bd1b49336fff0800000000000000
+      internalID: -2758036034998127
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      _main_menu_0: 4222557089706531253
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
