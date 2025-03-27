@@ -5349,7 +5349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Credits
+  sceneName: Credits
   fader: {fileID: 2111224526}
 --- !u!114 &305630849
 MonoBehaviour:
@@ -5521,7 +5521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  sceneName: 
   fader: {fileID: 0}
 --- !u!114 &325709096
 MonoBehaviour:
@@ -6735,7 +6735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Game Objective
+  sceneName: 
   fader: {fileID: 0}
 --- !u!114 &1108450617
 MonoBehaviour:
@@ -7004,7 +7004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Game Objective
+  sceneName: Game Objective
   fader: {fileID: 1588912944}
 --- !u!114 &1164672653
 MonoBehaviour:
@@ -7088,7 +7088,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1164672652}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OpenCreditsScene
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7493,7 +7493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  sceneName: 
   fader: {fileID: 0}
 --- !u!1 &1498323420
 GameObject:
@@ -7584,7 +7584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Credits
+  sceneName: 
   fader: {fileID: 0}
 --- !u!114 &1559516856
 MonoBehaviour:
@@ -7824,8 +7824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.54200006, y: 0.5}
   m_AnchorMax: {x: 0.54200006, y: 0.5}
-  m_AnchoredPosition: {x: -80.640076, y: 0}
-  m_SizeDelta: {x: 590.82, y: 573.33}
+  m_AnchoredPosition: {x: -80.64, y: 0}
+  m_SizeDelta: {x: 2794.97, y: 2136.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588912945
 MonoBehaviour:
@@ -7840,7 +7840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

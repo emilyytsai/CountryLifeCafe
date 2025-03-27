@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Half Kitchen & Half Window
+  sceneName: Half Kitchen & Half Window
   fader: {fileID: 0}
 --- !u!1 &1225439381
 GameObject:

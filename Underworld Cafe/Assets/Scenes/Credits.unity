@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Main Menu
+  sceneName: Main Menu
   fader: {fileID: 0}
 --- !u!114 &1033511455
 MonoBehaviour:

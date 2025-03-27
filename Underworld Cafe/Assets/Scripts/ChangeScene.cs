@@ -20,22 +20,45 @@
 //         StartCoroutine(WaitAndChangeScene()); // Start the coroutine to wait before changing the scene
 //     }
 
+// public void OpenCreditsScene() {
+//     // Activate the fader so it's visible
+//     fader.gameObject.SetActive(true);
+    
+//     // Instantly set the scale to zero (hidden)
+//     LeanTween.scale(fader, Vector3.zero, 0f);
+    
+//     // Scale the fader to (1,1,1) over 1 second with an ease in/out quad effect.
+//     LeanTween.scale(fader, new Vector3(1, 1, 1), 1.0f)
+//              .setEase(LeanTweenType.easeInOutQuad)
+//              .setOnComplete(() => {
+//                  // Additional delay example: after scaling is done, wait another second before changing scene.
+//                  Invoke("WaitAndChangeScene", 1.0f);
+//              });
+// }
+
 //     // public void OpenCreditsScene() {
 //     //     fader.gameObject.SetActive(true);
-//     //     LeanTween.scale(fader, Vector3.zero, 0f);
-//     //     LeanTween.scale(fader, new Vector3 (1, 1, 1), 0.1f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
-//     //     });
+//     //     // Instantly set to zero so it's not visible
+//     //     fader.transform.localScale = Vector3.zero;
+
+//     //     // Animate from scale (0,0,0) to (1,1,1) over 1 second.
+//     //     // Ensure your fader's RectTransform is set up to cover the screen at (1,1,1).
+//     //     LeanTween.scale(fader.gameObject, Vector3.one, 0.5f)
+//     //          .setEase(LeanTweenType.easeInOutQuad)
+//     //          .setOnComplete(() => {
+//     //              // Additional code after animation completes.
+//     //          });
 //     // }
 
-//     public void OpenCreditsScene() {
-//         fader.gameObject.SetActive(true);
-//         LeanTween.scale(fader, new Vector3(1, 1, 1), 0f); // Start at full size
-//         LeanTween.scale(fader, Vector3.zero, 0.2f) // Shrink to zero
-//             .setEase(LeanTweenType.easeInOutQuad)
-//             .setOnComplete(() => {
-//                 // Perform any actions after the animation completes
-//             });
-//     }
+//     // public void OpenCreditsScene() {
+//     //     fader.gameObject.SetActive(true);
+//     //     LeanTween.scale(fader, new Vector3(1, 1, 1), 0f); // Start at full size
+//     //     LeanTween.scale(fader, Vector3.zero, 0.2f) // Shrink to zero
+//     //         .setEase(LeanTweenType.easeInOutQuad)
+//     //         .setOnComplete(() => {
+//     //             // Perform any actions after the animation completes
+//     //         });
+//     // }
 
 //     public void OpenGameObjectiveScene() {
 //         fader.gameObject.SetActive(true);
@@ -61,7 +84,6 @@
 // }
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -84,25 +106,54 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(WaitAndChangeScene());
     }
 
-    // Optional fader animations for Credits and Game Objective scenes.
-    public void OpenCreditsScene() {
+    public void OpenScene()
+    {
+        // Activate the fader so it's visible
         fader.gameObject.SetActive(true);
-        LeanTween.scale(fader, new Vector3(1, 1, 1), 0f); // Fader starts fully scaled
-        LeanTween.scale(fader, Vector3.zero, 0.2f) // Shrinks to zero in 0.2 seconds
-            .setEase(LeanTweenType.easeInOutQuad)
-            .setOnComplete(() => {
-                // Additional actions can be placed here after the animation.
-            });
+        // Instantly set the scale to zero (hidden)
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        // Scale the fader to (1,1,1) over 1 second with an ease in/out quad effect.
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 1.0f)
+                 .setEase(LeanTweenType.easeInOutQuad)
+                 .setOnComplete(() => {
+                     // After scaling, wait another second before changing the scene.
+                     Invoke("DelayedChangeScene", 1.0f);
+                 });
     }
 
-    public void OpenGameObjectiveScene() {
+    public void OpenCreditsScene()
+    {
+        // Activate the fader so it's visible
         fader.gameObject.SetActive(true);
+        // Instantly set the scale to zero (hidden)
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        // Scale the fader to (1,1,1) over 1 second with an ease in/out quad effect.
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 1.0f)
+                 .setEase(LeanTweenType.easeInOutQuad)
+                 .setOnComplete(() => {
+                     // After scaling, wait another second before changing the scene.
+                     Invoke("DelayedChangeScene", 1.0f);
+                 });
+    }
+
+
+    // New helper method for invoking the scene change
+    private void DelayedChangeScene()
+    {
+        StartCoroutine(WaitAndChangeScene());
+    }
+
+    public void OpenGameObjectiveScene()
+    {
+        fader.gameObject.SetActive(true);
+        // Instantly set to full size
         LeanTween.scale(fader, new Vector3(1, 1, 1), 0f);
+        // Shrink to zero over 0.2f seconds
         LeanTween.scale(fader, Vector3.zero, 0.2f)
-            .setEase(LeanTweenType.easeInOutQuad)
-            .setOnComplete(() => {
-                // Additional actions can be placed here after the animation.
-            });
+                 .setEase(LeanTweenType.easeInOutQuad)
+                 .setOnComplete(() => {
+                     // Perform any actions after the animation completes
+                 });
     }
 
     public void click_sound()
@@ -113,11 +164,8 @@ public class MainMenu : MonoBehaviour
 
     public IEnumerator WaitAndChangeScene()
     {
-        // Play the click sound.
-        click_sound();
-        // Wait a short period (0.1 sec); gives the sound time to start.
-        yield return new WaitForSeconds(0.1f);
-        // Then load the scene specified by the Name field.
-        SceneManager.LoadScene(Name);
+        click_sound(); // Play the sound effect
+        yield return new WaitForSeconds(0.9f); // Wait 0.1 seconds
+        SceneManager.LoadScene(Name); // Load the new scene after the delay
     }
 }
