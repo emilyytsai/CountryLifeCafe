@@ -104,6 +104,21 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(WaitAndChangeScene()); // Start the coroutine to wait before changing the scene
     }
 
+    public void OpenScene()
+    {
+        // Activate the fader so it's visible
+        fader.gameObject.SetActive(true);
+        // Instantly set the scale to zero (hidden)
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        // Scale the fader to (1,1,1) over 1 second with an ease in/out quad effect.
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 1.0f)
+                 .setEase(LeanTweenType.easeInOutQuad)
+                 .setOnComplete(() => {
+                     // After scaling, wait another second before changing the scene.
+                     Invoke("DelayedChangeScene", 1.0f);
+                 });
+    }
+
     public void OpenCreditsScene()
     {
         // Activate the fader so it's visible
@@ -118,6 +133,7 @@ public class MainMenu : MonoBehaviour
                      Invoke("DelayedChangeScene", 1.0f);
                  });
     }
+
 
     // New helper method for invoking the scene change
     private void DelayedChangeScene()
@@ -146,7 +162,7 @@ public class MainMenu : MonoBehaviour
     public IEnumerator WaitAndChangeScene()
     {
         click_sound(); // Play the sound effect
-        yield return new WaitForSeconds(0.1f); // Wait 0.1 seconds
+        yield return new WaitForSeconds(0.9f); // Wait 0.1 seconds
         SceneManager.LoadScene(sceneName); // Load the new scene after the delay
     }
 }
