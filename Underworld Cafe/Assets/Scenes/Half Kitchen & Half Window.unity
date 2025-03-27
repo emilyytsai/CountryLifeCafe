@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 37975015}
   - component: {fileID: 37975017}
   - component: {fileID: 37975016}
-  - component: {fileID: 37975018}
   m_Layer: 5
   m_Name: Feedback
   m_TagString: Untagged
@@ -354,19 +353,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37975014}
   m_CullTransparentMesh: 1
---- !u!114 &37975018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37975014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de9ca41e2a46fe84ba57e02564819933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 37975016}
 --- !u!1 &41061384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,13 +2640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customer: {fileID: 1510411938}
-  text_bubble: {fileID: 1352634214}
-  feedback: {fileID: 37975014}
-  patience_bar: {fileID: 1007577400}
-  patience_bar_shadow: {fileID: 1136598480}
-  salad_order: {fileID: 1424466842}
-  tomato_bowl: {fileID: 707657352}
-  lettuce_bowl: {fileID: 1294243957}
+  customer_served: 0
 --- !u!114 &798900193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2674,6 +2654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  fader: {fileID: 0}
 --- !u!114 &798900194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2903,6 +2884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Half Kitchen & Half Window
+  fader: {fileID: 0}
 --- !u!114 &855304614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3373,6 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Farm
+  fader: {fileID: 0}
 --- !u!1 &1054723268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,7 +3517,7 @@ GameObject:
   - component: {fileID: 1136598483}
   - component: {fileID: 1136598482}
   m_Layer: 5
-  m_Name: Patience Bar (1)
+  m_Name: Patience Bar Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3997,7 +3980,6 @@ GameObject:
   - component: {fileID: 1298614226}
   - component: {fileID: 1298614225}
   - component: {fileID: 1298614227}
-  - component: {fileID: 1298614228}
   - component: {fileID: 1298614229}
   m_Layer: 5
   m_Name: Customer
@@ -4085,26 +4067,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1298614228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298614223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customer: {fileID: 1298614223}
-  text_bubble: {fileID: 1352634214}
-  feedback: {fileID: 37975014}
-  patience_bar: {fileID: 1136598480}
-  patience_bar_shadow: {fileID: 1007577400}
-  salad_order: {fileID: 1424466842}
-  tomato_bowl: {fileID: 707657352}
-  lettuce_bowl: {fileID: 1294243957}
 --- !u!212 &1298614229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4563,7 +4525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1424466843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4666,7 +4628,6 @@ GameObject:
   - component: {fileID: 1510411944}
   - component: {fileID: 1510411943}
   - component: {fileID: 1510411942}
-  - component: {fileID: 1510411941}
   - component: {fileID: 1510411940}
   m_Layer: 5
   m_Name: Customer (2)
@@ -4749,26 +4710,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1510411941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510411938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customer: {fileID: 1510411938}
-  text_bubble: {fileID: 1352634214}
-  feedback: {fileID: 37975014}
-  patience_bar: {fileID: 1136598480}
-  patience_bar_shadow: {fileID: 1007577400}
-  salad_order: {fileID: 1424466842}
-  tomato_bowl: {fileID: 707657352}
-  lettuce_bowl: {fileID: 1294243957}
 --- !u!95 &1510411942
 Animator:
   serializedVersion: 7
@@ -5009,7 +4950,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9ca41e2a46fe84ba57e02564819933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 37975016}
+  text_bubble: {fileID: 1352634214}
+  patience_bar: {fileID: 1007577400}
+  patience_bar_shadow: {fileID: 1136598480}
+  salad_order: {fileID: 1424466842}
+  tomato_bowl: {fileID: 707657352}
+  lettuce_bowl: {fileID: 1294243957}
+  feedback_text: {fileID: 37975016}
 --- !u!1 &1613081379
 GameObject:
   m_ObjectHideFlags: 0
@@ -5388,7 +5335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9ca41e2a46fe84ba57e02564819933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+  text_bubble: {fileID: 0}
+  patience_bar: {fileID: 0}
+  patience_bar_shadow: {fileID: 0}
+  salad_order: {fileID: 0}
+  tomato_bowl: {fileID: 0}
+  lettuce_bowl: {fileID: 0}
+  feedback_text: {fileID: 0}
 --- !u!114 &1864709137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10438,7 +10391,6 @@ GameObject:
   - component: {fileID: 2142137998}
   - component: {fileID: 2142137997}
   - component: {fileID: 2142137996}
-  - component: {fileID: 2142137995}
   - component: {fileID: 2142137994}
   m_Layer: 5
   m_Name: Customer (1)
@@ -10521,26 +10473,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2142137995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142137992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customer: {fileID: 2142137992}
-  text_bubble: {fileID: 1352634214}
-  feedback: {fileID: 37975014}
-  patience_bar: {fileID: 1136598480}
-  patience_bar_shadow: {fileID: 1007577400}
-  salad_order: {fileID: 1424466842}
-  tomato_bowl: {fileID: 707657352}
-  lettuce_bowl: {fileID: 1294243957}
 --- !u!95 &2142137996
 Animator:
   serializedVersion: 7
@@ -10646,14 +10578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customer: {fileID: 1510411938}
-  text_bubble: {fileID: 1352634214}
-  feedback: {fileID: 37975014}
-  patience_bar: {fileID: 1007577400}
-  patience_bar_shadow: {fileID: 1136598480}
-  salad_order: {fileID: 1424466842}
-  tomato_bowl: {fileID: 707657352}
-  lettuce_bowl: {fileID: 1294243957}
+  customer: {fileID: 1298614223}
+  customer_served: 0
 --- !u!95 &2143425354
 Animator:
   serializedVersion: 7
