@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Feedback will go here
+  m_text: You're taking too long, I'm leaving!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f82ebfa1e350a746a2c55da888f0864, type: 2}
   m_sharedMaterial: {fileID: 8926724407714530597, guid: 2f82ebfa1e350a746a2c55da888f0864, type: 2}
@@ -720,7 +720,6 @@ MonoBehaviour:
   - {fileID: 1217227730}
   - {fileID: 54515065}
   orderCorrect: 0
-  customer_prefab: {fileID: 5659872125256351023, guid: e8a2f6044483b5842ac044c10e22dbce, type: 3}
 --- !u!4 &123252326
 Transform:
   m_ObjectHideFlags: 0
@@ -748,8 +747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8ab975f417fed4790ce1205bb7faa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  customer: {fileID: 5659872125256351023, guid: e8a2f6044483b5842ac044c10e22dbce, type: 3}
+  animator: {fileID: 1298614225}
+  customer: {fileID: 1298614223}
   customer_served: 0
 --- !u!1 &135106589
 GameObject:
@@ -2742,18 +2741,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1646371574}
-        m_TargetAssemblyTypeName: MoneyScript, Assembly-CSharp
-        m_MethodName: AddFiveTokens
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 798900197}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: click_sound
@@ -2818,7 +2805,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customers: []
   orderCorrect: 1
-  customer_prefab: {fileID: 0}
 --- !u!114 &798900195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4089,6 +4075,11 @@ GameObject:
 --- !u!224 &1298614224 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3601221035588373996, guid: e8a2f6044483b5842ac044c10e22dbce, type: 3}
+  m_PrefabInstance: {fileID: 530104017232327924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1298614225 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4913485623322766906, guid: e8a2f6044483b5842ac044c10e22dbce, type: 3}
   m_PrefabInstance: {fileID: 530104017232327924}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331110715

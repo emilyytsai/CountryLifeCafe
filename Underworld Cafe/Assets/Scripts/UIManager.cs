@@ -59,27 +59,27 @@ public class UIManager : MonoBehaviour
     {
         day1 = FindAnyObjectByType<Day1>();
         // Check the current scene name
-        if (SceneManager.GetActiveScene().name == "DaySummary")
-        {
-            // Perform actions specific to "MyScene"
-            Debug.Log("Running actions for Day Summary");
-            feedback_text.text = "Good job! Here are your statistics for the day!/nMoney earned:/nCustomers served:n/Customers unhappy";        
+        // if (SceneManager.GetActiveScene().name == "DaySummary")
+        // {
+        //     // Perform actions specific to "MyScene"
+        //     Debug.Log("Running actions for Day Summary");
+        //     feedback_text.text = "Good job! Here are your statistics for the day!/nMoney earned:/nCustomers served:n/Customers unhappy";        
 
-        }
-        else if (SceneManager.GetActiveScene().name == "Half Kitchen & Half Window")
-        {
-            // Perform actions specific to "AnotherScene"
-            Debug.Log("Running actions for Kitchen");
-            //**when we fix the timer -> feedback_text.text = "You're taking too long, I'm leaving!";     
-            if (day1.orderCorrect)
-            {
-                feedback_text.text = "Thanks for the salad!";     
-            }
-            else 
-            {
-                feedback_text.text = "This isn't my order.";
-            }
-        }
+        // }
+        // else if (SceneManager.GetActiveScene().name == "Half Kitchen & Half Window")
+        // {
+        //     // Perform actions specific to "AnotherScene"
+        //     Debug.Log("Running actions for Kitchen");
+        //     //**when we fix the timer -> feedback_text.text = "You're taking too long, I'm leaving!";     
+        //     if (day1.orderCorrect)
+        //     {
+        //         feedback_text.text = "Thanks for the salad!";     
+        //     }
+        //     else 
+        //     {
+        //         feedback_text.text = "This isn't my order.";
+        //     }
+        // }
 
         //for serve button
         serve_button.onClick.AddListener(serve_pressed);

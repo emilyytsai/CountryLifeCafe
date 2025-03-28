@@ -20,7 +20,7 @@ public class Customer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
+        animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
         game_manager1 = FindAnyObjectByType<Day1>();
 
         //customer enters//
@@ -67,7 +67,6 @@ public class Customer : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("LeaveTrigger");
-            Debug.Log(customer.name + "left");
         }
 
         Debug.Log("Customer has left");

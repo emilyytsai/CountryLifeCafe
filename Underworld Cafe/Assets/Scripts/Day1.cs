@@ -14,7 +14,7 @@ public class Day1 : MonoBehaviour
     private Customer customer; //reference to customer script
 
     //customer container
-    ////array of customer game objects
+    ////array of customer game objects (which are prefabs of image/sprite and an animator)
     public GameObject[] customers;
     //customer counter
     private int current_customer_index = 0;
@@ -22,7 +22,7 @@ public class Day1 : MonoBehaviour
     //track if order is correct
     public bool orderCorrect = false;
 
-    public GameObject customer_prefab;
+    //public GameObject customer_prefab;
     private GameObject current_customer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,7 +35,7 @@ public class Day1 : MonoBehaviour
         
         //move thru the array of customers
         //next customer is already being called in customer; dont call again here
-        //next_customer()
+        next_customer();
     }
 
     //code flow//
@@ -48,6 +48,14 @@ public class Day1 : MonoBehaviour
     {
         customer.CustomerServed();
 
+        //if the player presses serve w/o putting anything int he bowl
+        if (cookingSystem.current_recipe.Count == 0)
+        {
+            UIManager.Instance.show_feedback("Um, where is my salad?");
+            orderCorrect = false;
+            return;
+        }
+
         //now uses sequence equal method to directly compare first recipe (at index 0) of the 5 token recipe lists to the current
         //no longer uses for loop
         if (cookingSystem.current_recipe.SequenceEqual(recipe.five_token_recipes[0]))
@@ -55,11 +63,13 @@ public class Day1 : MonoBehaviour
             Debug.Log("Salad is correct");
             recipe.recipe_value(cookingSystem.current_recipe); //increment player money
             orderCorrect = true;
+            UIManager.Instance.show_feedback("Thanks for the salad!");
         }
         else
         {
             Debug.Log("Salad is wrong order");
             orderCorrect = false;
+            UIManager.Instance.show_feedback("This isn't my order.");
         }
     }
 
@@ -70,7 +80,15 @@ public class Day1 : MonoBehaviour
         {
             //customers[current_customer_index].SetActive(true); //spawn the current customer
             //instead of setting active, spawn the new prefab
-            current_customer = Instantiate(customer_prefab, new Vector3(0, 0, 0), Quaternion.identity);
+            current_customer = Instantiate(customers[current_customer_index], new Vector3(-12, 2, 0), Quaternion.identity);
+            
+            //animator is now dynamically assigned once customer spawns/gets instantiated
+            Animator customer_animator = current_customer.GetComponent<Animator>();
+            if (customer_animator != null)
+            {
+                current_customer.GetComponent<Customer>().animator = customer_animator;
+            }
+            
             current_customer_index++;
         }
         else //once counter is 3
