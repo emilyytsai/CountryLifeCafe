@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;   //  The library System.Collections.Generic is needed for list
+using System.Linq;  //for SequenceEqual
 
 public class Day1 : MonoBehaviour
 {
@@ -46,28 +47,19 @@ public class Day1 : MonoBehaviour
     public void FirstCustomer() //orders a 5 token salad
     {
         customer.CustomerServed();
-        if (cookingSystem.current_recipe.Count != recipe.first_five_token_recipe.Count) //checks if the number of elements are equal
+
+        //now uses sequence equal method to directly compare first recipe (at index 0) of the 5 token recipe lists to the current
+        //no longer uses for loop
+        if (cookingSystem.current_recipe.SequenceEqual(recipe.five_token_recipes[0]))
         {
-            Debug.Log("Salad is insufficient");
-            orderCorrect = false;
+            Debug.Log("Salad is correct");
+            recipe.recipe_value(cookingSystem.current_recipe); //increment player money
+            orderCorrect = true;
         }
         else
         {
-            for (int i = 0; i < cookingSystem.current_recipe.Count; i++) //for loop to check if elements are equal; order matters
-            {
-                if (cookingSystem.current_recipe[i] != recipe.first_five_token_recipe[i])
-                {
-                    Debug.Log("Salad is wrong order");
-                    orderCorrect = false;
-                    return;
-                }
-            }
-            orderCorrect = true;
-        }
-        if (orderCorrect) 
-        {
-            Debug.Log("Salad is correct");
-            moneyScript.AddFiveTokens();
+            Debug.Log("Salad is wrong order");
+            orderCorrect = false;
         }
     }
 

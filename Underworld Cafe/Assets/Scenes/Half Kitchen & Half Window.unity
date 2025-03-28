@@ -2832,10 +2832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1397615075}
-  initial_and_total_money: 0
-  five_money: 5
-  ten_money: 10
-  fifteen_money: 15
+  tokens: 0
 --- !u!114 &798900196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2848,30 +2845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c857f3ed223034594071efcf8a48a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  first_five_token_recipe:
-  - Lettuce
-  - Tomato
-  second_five_token_recipe:
-  - Strawberries
-  - Grapes
-  first_ten_token_recipe:
-  - Lettuce
-  - Tomato
-  - Carrots
-  second_ten_token_recipe:
-  - Strawberries
-  - Grapes
-  - Blueberries
-  first_fifteen_token_recipe:
-  - Lettuce
-  - Tomato
-  - Carrots
-  - Cucumbers
-  second_fifteen_token_recipe:
-  - Strawberries
-  - Grapes
-  - Blueberries
-  - Cucumbers
 --- !u!114 &798900197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,6 +2859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   fader: {fileID: 0}
+  glow_effect: {fileID: 0}
 --- !u!1 &808596915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,6 +3023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   fader: {fileID: 0}
+  glow_effect: {fileID: 0}
 --- !u!114 &855304614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3520,6 +3495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Farm
   fader: {fileID: 0}
+  glow_effect: {fileID: 0}
 --- !u!1 &1136598480
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,6 +4926,8 @@ MonoBehaviour:
   tomato_bowl: {fileID: 707657352}
   lettuce_bowl: {fileID: 1294243957}
   feedback_text: {fileID: 37975016}
+  serve_button: {fileID: 798900188}
+  money: {fileID: 1397615075}
 --- !u!1 &1613081379
 GameObject:
   m_ObjectHideFlags: 0
@@ -5078,10 +5056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1397615075}
-  initial_and_total_money: 0
-  five_money: 5
-  ten_money: 10
-  fifteen_money: 15
+  tokens: 0
 --- !u!4 &1646371575
 Transform:
   m_ObjectHideFlags: 0
@@ -5340,6 +5315,8 @@ MonoBehaviour:
   tomato_bowl: {fileID: 0}
   lettuce_bowl: {fileID: 0}
   feedback_text: {fileID: 0}
+  serve_button: {fileID: 0}
+  money: {fileID: 0}
 --- !u!114 &1864709137
 MonoBehaviour:
   m_ObjectHideFlags: 0

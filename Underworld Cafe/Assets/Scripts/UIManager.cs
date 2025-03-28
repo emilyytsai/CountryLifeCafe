@@ -26,12 +26,22 @@ public class UIManager : MonoBehaviour
     //feedback text
     public TextMeshProUGUI feedback_text;
 
-    //game manager script
+    //for serve button logic implementation
+	[SerializeField]
+	private Button serve_button = null;
+
+    //make the money persistent**
+    [SerializeField]
+    public TextMeshProUGUI money = null;
+
+    //script references
+    //game manager 
     private Day1 day1;
 
     //singleton pattern implementation = only one instance of the ui manager that can be used in any script
     //prevents multiple copies of ui managers to be made
     //reference this in other scripts using "UIManager.Instance.'method name'();"
+    //now any ui from the kitchen will be persistent when u switch back and forth from the farm
     private void Awake()
     {
         if (Instance == null)
@@ -70,6 +80,9 @@ public class UIManager : MonoBehaviour
                 feedback_text.text = "This isn't my order.";
             }
         }
+
+        //for serve button
+        serve_button.onClick.AddListener(serve_pressed);
     }
 
     //methods for showing and hiding ui//
@@ -114,5 +127,12 @@ public class UIManager : MonoBehaviour
     {
         tomato_bowl.SetActive(false);
         lettuce_bowl.SetActive(false);
+    }
+
+    ///////////////////////////////////////////////////////////////
+    //serve button logic - what is gonna happen when we press serve
+    private void serve_pressed()
+    {
+        day1.FirstCustomer();
     }
 }
