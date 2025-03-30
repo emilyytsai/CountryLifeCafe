@@ -2093,7 +2093,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "   Programmer, \t\t\t    Programmer, Writer\n Audio Manager\n\n\n"
+  m_text: "    Programmer, \t\t\t    Programmer, Writer\nAudio/Transition \n     
+    Manager\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f82ebfa1e350a746a2c55da888f0864, type: 2}
   m_sharedMaterial: {fileID: 8926724407714530597, guid: 2f82ebfa1e350a746a2c55da888f0864, type: 2}
