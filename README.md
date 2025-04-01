@@ -12,13 +12,14 @@ Country Life Cafe was made using Unity Version 6000.0.35f1
 
 Main Menu:
 
-![Main_Menu](https://github.com/user-attachments/assets/2273e093-6310-424c-a868-190e5073a84c)
-
+![Main Menu #2](https://github.com/user-attachments/assets/9c9b8623-626c-4fb7-b681-b94fe0d62663)
 
 
 Restaurant + Kitchen Scene:
+(Sped-up gameplay)
 
-![Restaurant_Kitchen](https://github.com/user-attachments/assets/0dbfed32-64c7-4de7-9078-b35c4e13b69a)
+![Restaurant Kitchen #2](https://github.com/user-attachments/assets/6de7f4b8-12cf-4f6a-99c7-1714b8df6caa)
+
 
 
 
