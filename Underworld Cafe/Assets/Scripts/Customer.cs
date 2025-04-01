@@ -18,8 +18,10 @@ public class Customer : MonoBehaviour
     //for defining which specific animator/customer
     public GameObject customer;
 
+    //flags
     //**customer_served bool moved to here
     public bool customer_served = false;
+    private bool IsLeaving = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,7 +30,6 @@ public class Customer : MonoBehaviour
 
         //customer enters//
         StartCoroutine(Enter()); //2 seconds after scene loads, the custmer will enter
-        StartCoroutine(spawn_order()); //5 sec
     }
     
     public void CustomerServed()
@@ -43,8 +44,6 @@ public class Customer : MonoBehaviour
 
         UIManager.Instance.show_feedback(feedback_message);
 
-        StartCoroutine(Leave());
-
         //destroy the patience bar/shadow & salad order after serving customer
         ////instead of destroying -> setactive(false) so these things can be reused
         UIManager.Instance.hide_order();
@@ -54,12 +53,26 @@ public class Customer : MonoBehaviour
         ////destroy -> setactive(false)
         UIManager.Instance.clear_salad();
         Debug.Log("salad reset");
+
+        //customer leaves//
+        //only call Leave once** so there are no double customer jumps
+        if (!IsLeaving)
+        {
+            IsLeaving = true;
+            StartCoroutine(Leave());
+        }
     }
     
     public IEnumerator Enter()
     {
+        StartCoroutine(spawn_order()); //after 5 sec
+
+        //reset prev triggers
+        animator.Rebind();
+        animator.Update(0);
+
         animator.SetTrigger("EnterTrigger");//trigger the "EnterTrigger" in the animator
-        yield return new WaitForSeconds(2.5f); //2 second wait time
+        yield return new WaitForSeconds(2.2f); //2 second wait time
         animator.SetTrigger("IdleTrigger"); //trigger the "IdleTrigger" in the animator
     }
 
@@ -76,7 +89,6 @@ public class Customer : MonoBehaviour
         Debug.Log("Customer has left");
         //StartCoroutine(DestroyCustomer());
         yield return new WaitForSeconds(3f); //wait 3 secs for the leave animation
-        customer_manager.next_customer();
 
         //spawn next customer
         customer_manager.next_customer();

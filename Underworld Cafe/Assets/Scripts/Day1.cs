@@ -64,13 +64,13 @@ public class Day1 : MonoBehaviour
             Debug.Log("Salad is correct");
             recipe.recipe_value(cookingSystem.current_recipe); //increment player money
             orderCorrect = true;
-            //UIManager.Instance.show_feedback("Thanks for the salad!");
+            UIManager.Instance.show_feedback("Thanks for the salad!");
         }
         else
         {
             Debug.Log("Salad is wrong order");
             orderCorrect = false;
-            //UIManager.Instance.show_feedback("This isn't my order.");
+            UIManager.Instance.show_feedback("This isn't my order.");
         }
     }
 
