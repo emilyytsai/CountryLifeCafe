@@ -41,7 +41,7 @@ public class CustomerManager : MonoBehaviour
             customer_script.animator.Rebind();
             customer_script.animator.Update(0);
 
-            //restart the enter->idle->leave loop
+            //start/restart the enter->idle->leave loop
             StartCoroutine(start_animations());//restart animations
         }
         else //once counter is 3

@@ -9,6 +9,12 @@ public class Recipes : MonoBehaviour
     //optimized code -> i turned the lists into structured lists, so ex: the individual 5 token recipes lists are now in a list
     //also made a function that check the recipe value to increment player money accordingly
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        moneyScript = FindAnyObjectByType<MoneyScript>(); 
+    }
+
     ///////////////////////
     //five token recipes//
     public List<List<string>> five_token_recipes = new List<List<string>>()
@@ -34,26 +40,20 @@ public class Recipes : MonoBehaviour
     };
     /////////////////////////
 
-    //check if the recipe is x amt of tokens
-    //also resource abt the lambda operator used:
-    //https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-operator
-
     public void recipe_value(List<string> salad)
     {
-        if (five_token_recipes.Any(recipe => recipe.SequenceEqual(salad)))
+        //new simple approach -> increment tokens based on number of ingredients
+        if (salad.Count == 2)
         {
             moneyScript.AddFiveTokens();
-            return;
         }
-        if (ten_token_recipes.Any(recipe => recipe.SequenceEqual(salad)))
+        else if (salad.Count == 3)
         {
             moneyScript.AddTenTokens();
-            return;
         }
-        if (fifteen_token_recipes.Any(recipe => recipe.SequenceEqual(salad)))
+        else if (salad.Count >= 4)
         {
             moneyScript.AddFifteenTokens();
-            return;
         }
-    }
+    } 
 }

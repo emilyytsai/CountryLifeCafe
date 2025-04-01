@@ -25,19 +25,13 @@ public class CookingSystem : MonoBehaviour
             // Logic to "add" the ingredient to the bowl
             Debug.Log($"Added {ingredient.name} to the bowl!"); // Output "Added *ingredient name* to the bowl" to the console during gameplay
 
-            // Optionally, you can parent the ingredient to the bowl or move it
-            //ingredient.transform.parent = bowl.transform;   // Change the parent-child relationship between the ingredient GameObject and the bowl GameObject
-            //ingredient.transform.localPosition = new Vector3(0, 100f, 0); // Lower the Y-axis (e.g., -0.5)
-            // ingredient.transform.localPosition = Vector3.zero; // Reset the local position of the ingredient GameObject to the origin (0, 0, 0) relative to its parent (the bowl)
-
-            //NOTE* for future reference add the ingredient to a "current recipe" list to check if the recipe is right + add if condition so only the right ingredient is added
-            
             trigger_ingredient_sprite(ingredient_name); //add the sprite that looks like the ingredients are actaully in the bowl
 
             ingredient_added = true;
 
+            //UNCOMMENT THIS AFTER FARM**
             //destroy the ingredient from the shelf after u add it
-            Destroy(ingredient);
+            //Destroy(ingredient);
         }
     }
 

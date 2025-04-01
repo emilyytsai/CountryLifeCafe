@@ -26,9 +26,12 @@ public class UIManager : MonoBehaviour
     //feedback text
     public TextMeshProUGUI feedback_text;
 
-    //for serve button logic implementation
+    //buttons - arent interactable until customer order spawns
+    //for serve button logic implementation as well
 	[SerializeField]
 	private Button serve_button = null;
+    [SerializeField]
+	private Button farm_button = null;
 
     //make the money persistent**
     [SerializeField]
@@ -52,6 +55,10 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        //becomes interactable after the order is shown
+        serve_button.interactable = false;
+        farm_button.interactable = false;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -81,6 +88,10 @@ public class UIManager : MonoBehaviour
         //     }
         // }
 
+        //still not interactable at start -> only after order is shown
+        serve_button.interactable = false;
+        farm_button.interactable = false;
+
         //for serve button
         serve_button.onClick.AddListener(serve_pressed);
     }
@@ -95,6 +106,10 @@ public class UIManager : MonoBehaviour
         salad_order.SetActive(true);
         patience_bar.SetActive(true);
         patience_bar_shadow.SetActive(true);
+
+        //u can now use the buttons
+        serve_button.interactable = true;
+        farm_button.interactable = true;
     }
 
     public void hide_order()

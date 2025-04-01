@@ -23,9 +23,6 @@ public class Day1 : MonoBehaviour
     //track if order is correct
     public bool orderCorrect = false;
 
-    //public GameObject customer_prefab;
-    private GameObject current_customer;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,14 +54,25 @@ public class Day1 : MonoBehaviour
             return;
         }
 
-        //now uses sequence equal method to directly compare first recipe (at index 0) of the 5 token recipe lists to the current
-        //no longer uses for loop
-        if (cookingSystem.current_recipe.SequenceEqual(recipe.five_token_recipes[0]))
+        //convert salad to a hashset -> order of salad no longer matters
+        //https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1.setequals?view=net-9.0
+
+        HashSet<string> recipe_set = new HashSet<string>(cookingSystem.current_recipe);
+
+        //for handling ten token salads -> use any and setequals
+        if (recipe.five_token_recipes.Any(r => new HashSet<string>(r).SetEquals(cookingSystem.current_recipe)))
         {
-            Debug.Log("Salad is correct");
-            recipe.recipe_value(cookingSystem.current_recipe); //increment player money
+            recipe.recipe_value(cookingSystem.current_recipe); // Increment player money
             orderCorrect = true;
             UIManager.Instance.show_feedback("Thanks for the salad!");
+            orderCorrect = false;
+        }
+        else if (recipe.ten_token_recipes.Any(r => new HashSet<string>(r).SetEquals(cookingSystem.current_recipe)))
+        {
+            recipe.recipe_value(cookingSystem.current_recipe);
+            orderCorrect = true;
+            UIManager.Instance.show_feedback("Wow! Thanks for the great salad!");
+            orderCorrect = false;
         }
         else
         {
@@ -73,29 +81,4 @@ public class Day1 : MonoBehaviour
             UIManager.Instance.show_feedback("This isn't my order.");
         }
     }
-
-    // //move thru the array only when this function is called
-    // public void next_customer()
-    // {
-    //     if (current_customer_index < customers.Length)
-    //     {
-    //         //customers[current_customer_index].SetActive(true); //spawn the current customer
-    //         //instead of setting active, spawn the new prefab
-    //         current_customer = Instantiate(customers[current_customer_index], new Vector3(-12, 2, 0), Quaternion.identity);
-            
-    //         //animator is now dynamically assigned once customer spawns/gets instantiated
-    //         Animator customer_animator = current_customer.GetComponent<Animator>();
-    //         if (customer_animator != null)
-    //         {
-    //             current_customer.GetComponent<Customer>().animator = customer_animator;
-    //         }
-            
-    //         current_customer_index++;
-    //     }
-    //     else //once counter is 3
-    //     {
-    //         Debug.Log("day 1 complete");
-    //         //later this is where the day summary will be setactive
-    //     }
-    // }
 }

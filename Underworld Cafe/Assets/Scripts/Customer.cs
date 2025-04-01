@@ -14,6 +14,8 @@ public class Customer : MonoBehaviour
     private Day1 game_manager1;
     [SerializeField]
     private CustomerManager customer_manager;
+    [SerializeField]
+    private CookingSystem cooking_system;
 
     //for defining which specific animator/customer
     public GameObject customer;
@@ -27,9 +29,6 @@ public class Customer : MonoBehaviour
     void Start()
     {
         animator = customer.GetComponent<Animator>(); //must specify u want the customer animator
-
-        //customer enters//
-        StartCoroutine(Enter()); //2 seconds after scene loads, the custmer will enter
     }
     
     public void CustomerServed()
@@ -90,6 +89,12 @@ public class Customer : MonoBehaviour
         //StartCoroutine(DestroyCustomer());
         yield return new WaitForSeconds(3f); //wait 3 secs for the leave animation
 
+        //reset flag
+        IsLeaving = false;
+
+        //reset the current_recipe list
+        cooking_system.current_recipe.Clear();
+
         //spawn next customer
         customer_manager.next_customer();
     }
@@ -100,15 +105,4 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(3f);
         UIManager.Instance.show_order();
     }
-
-    // IEnumerator DestroyCustomer()
-    // {
-    //     yield return new WaitForSeconds(3f); //wait 3 secs for the leave animation
-
-    //     Destroy(gameObject); //used to be customer, but customer in this context is the animator
-    //     game_manager1.next_customer(); //go thru customer array -> spawm next customer
-
-    //     customer_served = false; //reset bool so next customer can be served
-    //     Debug.Log("customer served bool reset");
-    // }
 }
