@@ -13,11 +13,12 @@ public class Day1 : MonoBehaviour
     private MoneyScript moneyScript; //reference to money script
     private Customer customer; //reference to customer script
 
-    //customer container
-    ////array of customer game objects (which are prefabs of image/sprite and an animator)
-    public GameObject[] customers;
-    //customer counter
-    private int current_customer_index = 0;
+    //note** i moved this stuff into a sep customer manager script
+    // //customer container
+    // ////array of customer game objects (which are prefabs of image/sprite and an animator)
+    // public GameObject[] customers;
+    // //customer counter
+    // private int current_customer = 0;
 
     //track if order is correct
     public bool orderCorrect = false;
@@ -35,7 +36,7 @@ public class Day1 : MonoBehaviour
         
         //move thru the array of customers
         //next customer is already being called in customer; dont call again here
-        next_customer();
+        //next_customer();
     }
 
     //code flow//
@@ -63,38 +64,38 @@ public class Day1 : MonoBehaviour
             Debug.Log("Salad is correct");
             recipe.recipe_value(cookingSystem.current_recipe); //increment player money
             orderCorrect = true;
-            UIManager.Instance.show_feedback("Thanks for the salad!");
+            //UIManager.Instance.show_feedback("Thanks for the salad!");
         }
         else
         {
             Debug.Log("Salad is wrong order");
             orderCorrect = false;
-            UIManager.Instance.show_feedback("This isn't my order.");
+            //UIManager.Instance.show_feedback("This isn't my order.");
         }
     }
 
-    //move thru the array only when this function is called
-    public void next_customer()
-    {
-        if (current_customer_index < customers.Length)
-        {
-            //customers[current_customer_index].SetActive(true); //spawn the current customer
-            //instead of setting active, spawn the new prefab
-            current_customer = Instantiate(customers[current_customer_index], new Vector3(-12, 2, 0), Quaternion.identity);
+    // //move thru the array only when this function is called
+    // public void next_customer()
+    // {
+    //     if (current_customer_index < customers.Length)
+    //     {
+    //         //customers[current_customer_index].SetActive(true); //spawn the current customer
+    //         //instead of setting active, spawn the new prefab
+    //         current_customer = Instantiate(customers[current_customer_index], new Vector3(-12, 2, 0), Quaternion.identity);
             
-            //animator is now dynamically assigned once customer spawns/gets instantiated
-            Animator customer_animator = current_customer.GetComponent<Animator>();
-            if (customer_animator != null)
-            {
-                current_customer.GetComponent<Customer>().animator = customer_animator;
-            }
+    //         //animator is now dynamically assigned once customer spawns/gets instantiated
+    //         Animator customer_animator = current_customer.GetComponent<Animator>();
+    //         if (customer_animator != null)
+    //         {
+    //             current_customer.GetComponent<Customer>().animator = customer_animator;
+    //         }
             
-            current_customer_index++;
-        }
-        else //once counter is 3
-        {
-            Debug.Log("day 1 complete");
-            //later this is where the day summary will be setactive
-        }
-    }
+    //         current_customer_index++;
+    //     }
+    //     else //once counter is 3
+    //     {
+    //         Debug.Log("day 1 complete");
+    //         //later this is where the day summary will be setactive
+    //     }
+    // }
 }
