@@ -12,6 +12,12 @@ public class MainMenu : MonoBehaviour
     //to stop the moon/sun glow particle effect during the salad transition
     public GameObject glow_effect;
 
+    // Left & Right Curtain Transition
+    public RectTransform left_curtain;
+    public RectTransform right_curtain;
+    public float slide_distance = 1920f;
+    public float slide_duration = 1.0f;
+
     private void Start()
     {
         // Find the AudioManager in the scene.
@@ -44,17 +50,35 @@ public class MainMenu : MonoBehaviour
 
     public void OpenCreditsScene()
     {
-        // Activate the fader so it's visible
-        fader.gameObject.SetActive(true);
-        // Instantly set the scale to zero (hidden)
-        LeanTween.scale(fader, Vector3.zero, 0f);
-        // Scale the fader to (1,1,1) over 1 second with an ease in/out quad effect.
-        LeanTween.scale(fader, new Vector3(1, 1, 1), 1.0f)
+        // // Activate the fader so it's visible
+        // fader.gameObject.SetActive(true);
+        // // Instantly set the scale to zero (hidden)
+        // LeanTween.scale(fader, Vector3.zero, 0f);
+        // // Scale the fader to (1,1,1) over 1 second with an ease in/out quad effect.
+        // LeanTween.scale(fader, new Vector3(1, 1, 1), 1.0f)
+        //          .setEase(LeanTweenType.easeInOutQuad)
+        //          .setOnComplete(() => {
+        //              // After scaling, wait another second before changing the scene.
+        //              Invoke("DelayedChangeScene", 1.0f);
+        //          });
+
+        // Make sure the left and right curtains are active
+        left_curtain.gameObject.SetActive(true);
+        right_curtain.gameObject.SetActive(true);
+
+        // Animate the left curtain to move to the left
+        LeanTween.moveLocalX(left_curtain.gameObject, -slide_distance, slide_duration)
+                 .setEase(LeanTweenType.easeInOutQuad);
+
+        // Animate the right curtain to move to the right
+        LeanTween.moveLocalX(right_curtain.gameObject, slide_distance, slide_duration)
                  .setEase(LeanTweenType.easeInOutQuad)
-                 .setOnComplete(() => {
-                     // After scaling, wait another second before changing the scene.
-                     Invoke("DelayedChangeScene", 1.0f);
+                 .setOnComplete(() =>
+                 {
+                    // After sliding, wait another second before changing the scene
+                    Invoke("DelayedChangeScene", 1.0f);
                  });
+
     }
 
 
