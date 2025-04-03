@@ -1514,6 +1514,10 @@ MonoBehaviour:
   Name: Half Kitchen & Half Window
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  left_curtain: {fileID: 0}
+  right_curtain: {fileID: 0}
+  slide_distance: 1920
+  slide_duration: 1
 --- !u!1 &1225439381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1907,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!1 &1595459750
 GameObject:

@@ -23,6 +23,13 @@ public class CustomerManager : MonoBehaviour
     public GameObject day_summary;
     public GameObject prev_scene;
 
+    //every customer gets their own timer
+    // public GameObject timer_prefab; 
+    // public Transform patience_bar_shadow;
+    // [SerializeField]
+    // private GameObject current_timer;
+    // private GameObject new_timer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +47,16 @@ public class CustomerManager : MonoBehaviour
             //prevent stuck animations
             customer_script.animator.Rebind();
             customer_script.animator.Update(0);
+
+            // //get rid of old timer
+            // if (current_timer != null)
+            // {
+            //     Destroy(current_timer);
+            // }
+
+            // //create a new patience timer for each new customer
+            // new_timer = Instantiate(timer_prefab, patience_bar_shadow);
+            // new_timer.SetActive(true);
 
             //start/restart the enter->idle->leave loop
             StartCoroutine(start_animations());//restart animations

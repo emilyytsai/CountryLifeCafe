@@ -33,9 +33,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
 	private Button farm_button = null;
 
-    //make the money persistent**
+    //disable ingredient interaction before game start
     [SerializeField]
-    public TextMeshProUGUI money = null;
+	private GameObject input;
 
     //script references
     //game manager 
@@ -59,38 +59,25 @@ public class UIManager : MonoBehaviour
         //becomes interactable after the order is shown
         serve_button.interactable = false;
         farm_button.interactable = false;
+        input.SetActive(false);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        day1 = FindAnyObjectByType<Day1>();
-        // Check the current scene name
-        // if (SceneManager.GetActiveScene().name == "DaySummary")
-        // {
-        //     // Perform actions specific to "MyScene"
-        //     Debug.Log("Running actions for Day Summary");
-        //     feedback_text.text = "Good job! Here are your statistics for the day!/nMoney earned:/nCustomers served:n/Customers unhappy";        
+        //make srue money is persistent
+        if (MoneyScript.Instance != null)
+        {
+            MoneyScript.Instance.moneyText = GameObject.Find("Money Text").GetComponent<TextMeshProUGUI>();
+            MoneyScript.Instance.UpdateMoneyText();
+        }
 
-        // }
-        // else if (SceneManager.GetActiveScene().name == "Half Kitchen & Half Window")
-        // {
-        //     // Perform actions specific to "AnotherScene"
-        //     Debug.Log("Running actions for Kitchen");
-        //     //**when we fix the timer -> feedback_text.text = "You're taking too long, I'm leaving!";     
-        //     if (day1.orderCorrect)
-        //     {
-        //         feedback_text.text = "Thanks for the salad!";     
-        //     }
-        //     else 
-        //     {
-        //         feedback_text.text = "This isn't my order.";
-        //     }
-        // }
+        day1 = FindAnyObjectByType<Day1>();
 
         //still not interactable at start -> only after order is shown
         serve_button.interactable = false;
         farm_button.interactable = false;
+        input.SetActive(false);
 
         //for serve button
         serve_button.onClick.AddListener(serve_pressed);
@@ -107,9 +94,10 @@ public class UIManager : MonoBehaviour
         patience_bar.SetActive(true);
         patience_bar_shadow.SetActive(true);
 
-        //u can now use the buttons
+        //u can now use the buttons/ingredients
         serve_button.interactable = true;
         farm_button.interactable = true;
+        input.SetActive(true);
     }
 
     public void hide_order()
@@ -117,6 +105,8 @@ public class UIManager : MonoBehaviour
         salad_order.SetActive(false);
         patience_bar.SetActive(false);
         patience_bar_shadow.SetActive(false);
+        serve_button.interactable = false;
+        input.SetActive(false);
     }
     ///////////////////////////////////////
 

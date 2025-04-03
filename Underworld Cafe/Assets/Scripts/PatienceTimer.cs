@@ -21,10 +21,6 @@ public class PatienceTimer : MonoBehaviour
     private Color start_color = new Color(0.5f, 0.9f, 0.5f); //R,G,B, (optional) alpha 
     private Color end_color = new Color(0.9f, 0.5f, 0.5f);
 
-    //more things related to the timer that will be destroyed when time is up
-    public Image salad_order;
-    public Image text_bubble;
-
     private float lerpSpeed;
     private float timer;
 
@@ -70,7 +66,7 @@ public class PatienceTimer : MonoBehaviour
 
         patienceBar.fillAmount = current_patience;
 
-        //stop decreasxing at 0 sec
+        //stop decreasing at 0 sec
         if (timer <= 0f)
         {
             timer = 0f;
@@ -78,10 +74,7 @@ public class PatienceTimer : MonoBehaviour
             StartCoroutine(customer.Leave());
 
             //destroy the patience bar/shadow, salad order, & text bubble after serving customer
-            Destroy(patienceBar);
-            Destroy(patienceBar2);
-            Destroy(salad_order);
-            Debug.Log("gone");
+            UIManager.Instance.hide_order();
         }
     }
 

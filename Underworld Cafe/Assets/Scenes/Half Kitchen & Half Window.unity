@@ -1393,6 +1393,50 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &416637146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416637147}
+  - component: {fileID: 416637148}
+  m_Layer: 0
+  m_Name: Scene Persistence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &416637147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416637146}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.249707, y: -1.4442803, z: -25.303635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 467014854}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416637148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416637146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f8015d9b176404faac411e9d7fac9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &424653942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,15 +1837,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459214500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 89.95906}
-  m_LocalScale: {x: 1.5162699, y: 1.7625698, z: 0.00926}
+  m_LocalPosition: {x: 0, y: 0, z: 90.35512}
+  m_LocalScale: {x: 1.5162699, y: 1.7625699, z: 0.00926}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 556795109}
+  m_Father: {fileID: 736833218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.426, y: 0.9889}
+  m_AnchoredPosition: {x: -6.825948, y: 0.41988236}
   m_SizeDelta: {x: 0.9602, y: 1.1565}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &459214503
@@ -1900,6 +1944,7 @@ Transform:
   - {fileID: 1646371575}
   - {fileID: 103843970}
   - {fileID: 641736288}
+  - {fileID: 416637147}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &528395399
@@ -2063,7 +2108,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1088534181}
-  - {fileID: 459214501}
   m_Father: {fileID: 2107428216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606494512
@@ -2543,6 +2587,7 @@ Transform:
   - {fileID: 764981324}
   - {fileID: 1331110716}
   - {fileID: 427388369}
+  - {fileID: 459214501}
   m_Father: {fileID: 2107428216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &764981323
@@ -2801,6 +2846,10 @@ MonoBehaviour:
   Name: 
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  left_curtain: {fileID: 0}
+  right_curtain: {fileID: 0}
+  slide_distance: 1920
+  slide_duration: 1
 --- !u!1 &808596915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,6 +2938,10 @@ MonoBehaviour:
   Name: Day 2
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  left_curtain: {fileID: 0}
+  right_curtain: {fileID: 0}
+  slide_distance: 1920
+  slide_duration: 1
 --- !u!114 &855304614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3128,8 +3181,6 @@ MonoBehaviour:
   patienceBar: {fileID: 1007577403}
   patienceBar2: {fileID: 1136598482}
   feedback: {fileID: 37975014}
-  salad_order: {fileID: 1424466844}
-  text_bubble: {fileID: 1352634216}
 --- !u!114 &1007577403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3362,6 +3413,10 @@ MonoBehaviour:
   Name: Farm
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  left_curtain: {fileID: 0}
+  right_curtain: {fileID: 0}
+  slide_distance: 1920
+  slide_duration: 1
 --- !u!1001 &1088534179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4642,7 +4697,7 @@ MonoBehaviour:
   feedback_text: {fileID: 37975016}
   serve_button: {fileID: 798900188}
   farm_button: {fileID: 1035306889}
-  money: {fileID: 1397615075}
+  input: {fileID: 103843967}
 --- !u!1 &1613081379
 GameObject:
   m_ObjectHideFlags: 0

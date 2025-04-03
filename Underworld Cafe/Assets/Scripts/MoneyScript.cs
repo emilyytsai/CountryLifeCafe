@@ -5,6 +5,8 @@ using TMPro;
 
 public class MoneyScript : MonoBehaviour
 {
+    public static MoneyScript Instance { get; private set; } //singleton so money stays persistent
+
     [SerializeField]
     public TextMeshProUGUI moneyText;
 
@@ -14,7 +16,24 @@ public class MoneyScript : MonoBehaviour
     // public int ten_tokens = 10;
     // public int fifteen_tokens = 15;
 
-    private void UpdateMoneyText() //made this a function for cleaner code
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else //destroy duplicate instance if found
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        UpdateMoneyText();
+    }
+
+    public void UpdateMoneyText() //made this a function for cleaner code
     {
         moneyText.text = "$ " + tokens.ToString();
     }
