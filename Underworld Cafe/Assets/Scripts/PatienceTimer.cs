@@ -50,7 +50,6 @@ public class PatienceTimer : MonoBehaviour
         ColorChanger(); //updates color
     }
 
-
     void BarFiller()
     {
         ////reference: https://docs.unity3d.com/ScriptReference/Mathf.Lerp.html
@@ -78,7 +77,6 @@ public class PatienceTimer : MonoBehaviour
         }
     }
 
-
     void ColorChanger()
     {
         ////https://docs.unity3d.com/ScriptReference/Color.Lerp.html
@@ -87,5 +85,15 @@ public class PatienceTimer : MonoBehaviour
 
         Color bar_color = Color.Lerp(start_color, end_color, 1f - patience_ratio); //lerpspeed is now based off the ratio
         patienceBar.color = bar_color;
+    }
+
+    public void reset_timer()
+    {
+        timer = day1_time;
+        
+        patienceBar.fillAmount = 1f;
+        patienceBar.color = start_color;
+        
+        feedback.SetActive(false);
     }
 }

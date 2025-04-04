@@ -41,6 +41,8 @@ public class UIManager : MonoBehaviour
     //game manager
     [SerializeField]
     private GameManager game_manager;
+    [SerializeField]
+    private PatienceTimer patience_timer;
 
     //singleton pattern implementation = only one instance of the ui manager that can be used in any script
     //prevents multiple copies of ui managers to be made
@@ -98,6 +100,9 @@ public class UIManager : MonoBehaviour
         serve_button.interactable = true;
         farm_button.interactable = true;
         input.SetActive(true);
+
+        //reset timer for next customer
+        patience_timer.reset_timer();
     }
 
     public void hide_order()

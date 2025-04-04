@@ -862,7 +862,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipe: {fileID: 641736289}
   cookingSystem: {fileID: 1208152471}
-  moneyScript: {fileID: 1646371574}
   customer: {fileID: 1088534182}
 --- !u!4 &123252326
 Transform:
@@ -8864,6 +8863,7 @@ MonoBehaviour:
   farm_button: {fileID: 1035306889}
   input: {fileID: 103843967}
   game_manager: {fileID: 123252325}
+  patience_timer: {fileID: 1007577402}
 --- !u!1 &1595442612
 GameObject:
   m_ObjectHideFlags: 0
