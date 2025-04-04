@@ -21,16 +21,14 @@ public class MoneyScript : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            transform.SetParent(null);
+            DontDestroyOnLoad(gameObject);
         }
         else //destroy duplicate instance if found
         {
+            moneyText = GameObject.Find("Money Text")?.GetComponent<TextMeshProUGUI>();
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        UpdateMoneyText();
     }
 
     public void UpdateMoneyText() //made this a function for cleaner code
@@ -56,8 +54,15 @@ public class MoneyScript : MonoBehaviour
         UpdateMoneyText();
     }
 
-    public int get_tokens()
+    //triggered whenever a scene is loaded
+    private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
     {
-        return tokens;
+        //find/update money text reference in new scene
+        moneyText = GameObject.Find("Money Text")?.GetComponent<TextMeshProUGUI>();
+        
+        if (moneyText != null)
+        {
+            UpdateMoneyText();
+        }
     }
 }

@@ -13,9 +13,6 @@ public class CookingSystem : MonoBehaviour
 
     public List<string> current_recipe = new List<string>();
 
-    //must track if ingrdient was added to bowl; if added, then it will be added to current recipe list
-    private bool ingredient_added = false;
-
     public void AddIngredientToBowl(GameObject ingredient)
     {
         if (ingredient != null && bowl != null) // If ingredient and bowl are assigned and contain references to GameObjects
@@ -26,8 +23,6 @@ public class CookingSystem : MonoBehaviour
             Debug.Log($"Added {ingredient.name} to the bowl!"); // Output "Added *ingredient name* to the bowl" to the console during gameplay
 
             trigger_ingredient_sprite(ingredient_name); //add the sprite that looks like the ingredients are actaully in the bowl
-
-            ingredient_added = true;
 
             //UNCOMMENT THIS AFTER FARM**
             //destroy the ingredient from the shelf after u add it
@@ -68,8 +63,6 @@ public class CookingSystem : MonoBehaviour
                 current_recipe.Add("Tomato");
                 Debug.Log(current_recipe[0]); //idk y but when this is at index 1 it creates a duplicate tomato
             }
-
-            ingredient_added = true;
         }
     }
 
@@ -85,8 +78,6 @@ public class CookingSystem : MonoBehaviour
                 current_recipe.Add("Lettuce");
                 Debug.Log(current_recipe[0]);
             }
-            
-            ingredient_added = true;
         }
     }
 }

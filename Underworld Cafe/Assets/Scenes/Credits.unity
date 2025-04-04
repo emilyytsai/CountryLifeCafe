@@ -508,7 +508,8 @@ MonoBehaviour:
   - Game Objective
   persistentGroupB:
   - Farm
-  - Half Kitchen & Half Window
+  - Day 1
+  - Day 2
 --- !u!4 &208761521
 Transform:
   m_ObjectHideFlags: 0

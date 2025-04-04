@@ -35,14 +35,6 @@ public class Customer : MonoBehaviour
     {
         customer_served = true;
 
-        //show feedback after order is validated
-        string feedback_message = game_manager.orderCorrect ? "This isn't my order." : "Thanks for the salad!";
-        //if orderCorrect = true -> "Thanks for the salad!
-        //if orderCorrect = false -> "This isn't my order."
-        Debug.Log("showing feedback");
-
-        UIManager.Instance.show_feedback(feedback_message);
-
         //destroy the patience bar/shadow & salad order after serving customer
         ////instead of destroying -> setactive(false) so these things can be reused
         UIManager.Instance.hide_order();

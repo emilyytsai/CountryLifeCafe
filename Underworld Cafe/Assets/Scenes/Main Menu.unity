@@ -5016,7 +5016,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Credits
-    clip: {fileID: 8300000, guid: 3d8d9b3eb41509240ad3cff2e87c0571, type: 3}
+    clip: {fileID: 8300000, guid: c993f111b25853141a55d3dedfce0020, type: 3}
     volume: 1
     pitch: 1
     loop: 1
