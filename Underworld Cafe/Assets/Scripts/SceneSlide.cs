@@ -58,7 +58,7 @@ public class SceneSlide : MonoBehaviour
         Vector2 start_pos = canvas.anchoredPosition;
         Vector2 target_pos = new Vector2(targetX, start_pos.y);
       
-        float duration = 1f; //1 sec animation
+        float duration = 0.6f; //animation length
         float time_elapsed = 0f;
         
         while (time_elapsed < duration)

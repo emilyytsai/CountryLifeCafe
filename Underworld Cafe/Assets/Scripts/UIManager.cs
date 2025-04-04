@@ -38,8 +38,9 @@ public class UIManager : MonoBehaviour
 	private GameObject input;
 
     //script references
-    //game manager 
-    private Day1 day1;
+    //game manager
+    [SerializeField]
+    private GameManager game_manager;
 
     //singleton pattern implementation = only one instance of the ui manager that can be used in any script
     //prevents multiple copies of ui managers to be made
@@ -71,8 +72,6 @@ public class UIManager : MonoBehaviour
             MoneyScript.Instance.moneyText = GameObject.Find("Money Text").GetComponent<TextMeshProUGUI>();
             MoneyScript.Instance.UpdateMoneyText();
         }
-
-        day1 = FindAnyObjectByType<Day1>();
 
         //still not interactable at start -> only after order is shown
         serve_button.interactable = false;
@@ -138,6 +137,6 @@ public class UIManager : MonoBehaviour
     //serve button logic - what is gonna happen when we press serve
     private void serve_pressed()
     {
-        day1.FirstCustomer();
+        game_manager.validate_order();
     }
 }

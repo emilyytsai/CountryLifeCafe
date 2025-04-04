@@ -9,9 +9,9 @@ public class Customer : MonoBehaviour
     public Animator animator; //reference to animator
 
     //script references
-    //**customer_manager -> day1 (day 1 game manager)
+    //game manager
     [SerializeField]
-    private Day1 game_manager1;
+    private GameManager game_manager;
     [SerializeField]
     private CustomerManager customer_manager;
     [SerializeField]
@@ -36,7 +36,7 @@ public class Customer : MonoBehaviour
         customer_served = true;
 
         //show feedback after order is validated
-        string feedback_message = game_manager1.orderCorrect ? "This isn't my order." : "Thanks for the salad!";
+        string feedback_message = game_manager.orderCorrect ? "This isn't my order." : "Thanks for the salad!";
         //if orderCorrect = true -> "Thanks for the salad!
         //if orderCorrect = false -> "This isn't my order."
         Debug.Log("showing feedback");

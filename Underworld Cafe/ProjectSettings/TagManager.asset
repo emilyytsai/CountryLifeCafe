@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bowl
   - Ingredient
+  - Soil
+  - Watering Can
+  - Seed
   layers:
   - Default
   - TransparentFX

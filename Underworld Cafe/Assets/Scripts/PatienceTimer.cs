@@ -12,6 +12,7 @@ using TMPro;
 public class PatienceTimer : MonoBehaviour
 
 {
+    [SerializeField]
     private Customer customer; //reference to customer script
     public Image patienceBar;
     public Image patienceBar2; //this is the shadow of the bar
@@ -36,7 +37,6 @@ public class PatienceTimer : MonoBehaviour
     {
         //intialize w/ day 1 time
         timer = day1_time;
-        customer = FindAnyObjectByType<Customer>();
     }
 
     private void Update()
@@ -81,10 +81,8 @@ public class PatienceTimer : MonoBehaviour
 
     void ColorChanger()
     {
-        //float current_patience = (float)customer.customer_patience / customer.max_patience;
         ////https://docs.unity3d.com/ScriptReference/Color.Lerp.html
 
-        //
         float patience_ratio = Mathf.Clamp(timer / day1_time, 0f, 1f);
 
         Color bar_color = Color.Lerp(start_color, end_color, 1f - patience_ratio); //lerpspeed is now based off the ratio

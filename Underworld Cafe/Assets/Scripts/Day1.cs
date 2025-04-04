@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;   //  The library System.Collections.Generic is needed for list
 using System.Linq;  //for SequenceEqual
 
-public class Day1 : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    //Day 1 Game Manager Script//
+    //Game Manager Script//
 
     //script references
+    [SerializeField]
     private Recipes recipe; //reference to recipes script
+    [SerializeField]
     private CookingSystem cookingSystem; //reference to cooking system script
+    [SerializeField]
     private MoneyScript moneyScript; //reference to money script
+    [SerializeField]
     private Customer customer; //reference to customer script
 
     //note** i moved this stuff into a sep customer manager script
@@ -37,12 +41,10 @@ public class Day1 : MonoBehaviour
     }
 
     //code flow//
-    //FirstCustomer()
-    //SecondCustomer()
-    //ThirdCustomer()
-    //next_customer()
+    //validate_order()
 
-    public void FirstCustomer() //orders a 5 token salad
+
+    public void validate_order()
     {
         customer.CustomerServed();
 
