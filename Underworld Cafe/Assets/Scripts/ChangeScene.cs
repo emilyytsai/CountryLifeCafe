@@ -48,6 +48,11 @@ public class MainMenu : MonoBehaviour
                  });
     }
 
+    void InitializeCurtainsOpen() {
+        left_curtain.localPosition = new Vector3(-slide_distance, left_curtain.localPosition.y, left_curtain.localPosition.z);
+        right_curtain.localPosition = new Vector3(slide_distance, right_curtain.localPosition.y, right_curtain.localPosition.z);
+    }
+
     public void OpenCreditsScene()
     {
         // // Activate the fader so it's visible
@@ -67,11 +72,11 @@ public class MainMenu : MonoBehaviour
         right_curtain.gameObject.SetActive(true);
 
         // Animate the left curtain to move to the left
-        LeanTween.moveLocalX(left_curtain.gameObject, -slide_distance, slide_duration)
+        LeanTween.moveLocalX(left_curtain.gameObject, -1, slide_duration)
                  .setEase(LeanTweenType.easeInOutQuad);
 
         // Animate the right curtain to move to the right
-        LeanTween.moveLocalX(right_curtain.gameObject, slide_distance, slide_duration)
+        LeanTween.moveLocalX(right_curtain.gameObject, 5, slide_duration)
                  .setEase(LeanTweenType.easeInOutQuad)
                  .setOnComplete(() =>
                  {
