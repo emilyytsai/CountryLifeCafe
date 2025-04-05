@@ -5352,7 +5352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Credits
   fader: {fileID: 0}
-  glow_effect: {fileID: 0}
+  glow_effect: {fileID: 33512122}
   left_curtain: {fileID: 1943172086}
   right_curtain: {fileID: 577375919}
   slide_distance: 1920
