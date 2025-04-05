@@ -5427,7 +5427,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 305630848}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OpenCreditsScene
+        m_MethodName: CloseCurtains
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6057,7 +6057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &577375917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13528,7 +13528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1943172084
 MonoBehaviour:
   m_ObjectHideFlags: 0

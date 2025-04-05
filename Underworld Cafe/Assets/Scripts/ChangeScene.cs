@@ -53,7 +53,7 @@ public class MainMenu : MonoBehaviour
         right_curtain.localPosition = new Vector3(slide_distance, right_curtain.localPosition.y, right_curtain.localPosition.z);
     }
 
-    public void OpenCreditsScene()
+    public void CloseCurtains()
     {
         // // Activate the fader so it's visible
         // fader.gameObject.SetActive(true);
