@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      teal_watering_can_0: 3101840735388931389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

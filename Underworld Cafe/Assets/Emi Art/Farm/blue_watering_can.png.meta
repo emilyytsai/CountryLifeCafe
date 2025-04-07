@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blue_watering_can_0: -4233972064851229820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
