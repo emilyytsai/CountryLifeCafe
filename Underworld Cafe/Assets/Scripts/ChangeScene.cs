@@ -131,17 +131,6 @@ public class MainMenu : MonoBehaviour
     }
 
     ///////////////////////////////////////////////////////////////////////////////////
-    //for switching between farm and restaurant (restaurant stuff must stay persistent)
-    public void load_farm()
-    {
-        SceneManager.LoadSceneAsync("Farm", LoadSceneMode.Additive);
-    }
-
-    public void unload_farm()
-    {
-        SceneManager.UnloadSceneAsync("Farm");
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
     //only for quit button**
     //moved from separate quit button script to here for better organization
     public void QuitGame() 

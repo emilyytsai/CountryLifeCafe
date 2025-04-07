@@ -8,6 +8,9 @@ public class Sound {
 
     public AudioClip clip;
 
+    //for pause menu volume slider
+    public AudioMixerGroup mixer_group;
+
     [Range(0f, 1f)]
     public float volume;
 

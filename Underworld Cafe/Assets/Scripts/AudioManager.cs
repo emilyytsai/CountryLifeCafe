@@ -38,6 +38,9 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
+
+            //for pause menu volume slider
+            sound.source.outputAudioMixerGroup = sound.mixer_group;
         }
 
         // Subscribe to scene loaded events.
