@@ -131,6 +131,15 @@ public class MainMenu : MonoBehaviour
     }
 
     ///////////////////////////////////////////////////////////////////////////////////
+    //only for back to main menu button in pause menu**
+
+    public void pause_back()
+    {
+        click_sound(); // Play the sound effect
+        SceneManager.LoadScene(Name); // Load the new scene after the delay
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////
     //only for quit button**
     //moved from separate quit button script to here for better organization
     public void QuitGame() 

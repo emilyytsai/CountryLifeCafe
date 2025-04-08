@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections; //for IEnum
+using TMPro;
 
 public class CustomerManager : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class CustomerManager : MonoBehaviour
     //for end of day, show day summary
     public GameObject day_summary;
     public GameObject prev_scene;
+
+    //day summary text
+    public TextMeshProUGUI summary_text;
 
     //every customer gets their own timer
     // public GameObject timer_prefab; 
@@ -66,6 +70,7 @@ public class CustomerManager : MonoBehaviour
             //show day summary and hide the restuarnt/kitchen
             prev_scene.SetActive(false);
             day_summary.SetActive(true);
+            summary_text.text = "Good job! Here are your statistics for the day!Money earned:/nCustomers served:n/Customers unhappy";  
             Debug.Log("day 1 complete");
         }
     }

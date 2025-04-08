@@ -729,7 +729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 394}
+  m_AnchoredPosition: {x: 0, y: 408}
   m_SizeDelta: {x: 1018.2877, y: 97.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &116784132
@@ -1384,6 +1384,7 @@ MonoBehaviour:
   customer_script: {fileID: 1088534182}
   day_summary: {fileID: 808596915}
   prev_scene: {fileID: 2107428212}
+  summary_text: {fileID: 607387413}
 --- !u!1 &183988994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,7 +3358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -86, y: 232}
+  m_AnchoredPosition: {x: -86, y: 245.99768}
   m_SizeDelta: {x: 805.4099, y: 307.8598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607387413
@@ -3380,8 +3381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Good work! Here are your earnings for the day!\n\nMoney earned: \nCustomers
-    served:\n"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f82ebfa1e350a746a2c55da888f0864, type: 2}
   m_sharedMaterial: {fileID: 8926724407714530597, guid: 2f82ebfa1e350a746a2c55da888f0864, type: 2}
@@ -4878,7 +4878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -420}
+  m_AnchoredPosition: {x: 21, y: -406.00232}
   m_SizeDelta: {x: 277.7359, y: 110.0399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855304613
@@ -8719,7 +8719,7 @@ Transform:
   m_GameObject: {fileID: 1551881060}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -181.38336, y: 87.53478, z: 3098.1643}
+  m_LocalPosition: {x: -181.38336, y: 101.53246, z: 3098.1643}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15051,24 +15051,28 @@ MonoBehaviour:
   sounds:
   - name: Button Click
     clip: {fileID: 8300000, guid: 783f97d791508b24ebea5c0348c75f96, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Main & Game Obj
     clip: {fileID: 8300000, guid: 3c78cf4d26022ac4e94f9a7afc33e362, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Farm & Kitchen
     clip: {fileID: 8300000, guid: 852b2781400dc864ab772b10421c6519, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Credits
     clip: {fileID: 8300000, guid: 3d8d9b3eb41509240ad3cff2e87c0571, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
