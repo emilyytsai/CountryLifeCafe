@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PauseMenu : MonoBehaviour
     public TMPro.TMP_Dropdown resolution_dropdown;
     public AudioMixer audio_mixer;
     Resolution[] resolutions;
+
+    [SerializeField]
+    private string Name;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -107,6 +111,14 @@ public class PauseMenu : MonoBehaviour
         {         
             pause();
         }
+    }
+
+    /////////////////////////////////////////////
+    //only for back to main menu button**
+    public void back()
+    {
+        SceneManager.LoadScene(Name);
+        resume();
     }
 
     //for the settings options//
