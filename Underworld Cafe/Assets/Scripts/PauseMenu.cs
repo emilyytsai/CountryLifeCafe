@@ -38,6 +38,18 @@ public class PauseMenu : MonoBehaviour
         List<string> options = new List<string>();
         //save
         int saved_resolutionIndex = PlayerPrefs.GetInt("Resolution", 0);
+        //deafult res is 1920 by 1080
+        if (saved_resolutionIndex == -1)
+        {
+            for (int i = 0; i < resolutions.Length; i++)
+            {
+                if (resolutions[i].width == 1920 && resolutions[i].height == 1080)
+                {
+                    saved_resolutionIndex = i;
+                    break;
+                }
+            }
+        }
         set_resolution(saved_resolutionIndex);
 
 
@@ -79,7 +91,7 @@ public class PauseMenu : MonoBehaviour
         //stop glow effect
         if (glow_effect != null)
         {
-            glow_effect.SetActive(false);
+            glow_effect.SetActive(!paused);
         }
         
         //show the menu
@@ -92,7 +104,7 @@ public class PauseMenu : MonoBehaviour
     public void resume()
     {
         if (paused)
-        {
+        {         
             pause();
         }
     }
