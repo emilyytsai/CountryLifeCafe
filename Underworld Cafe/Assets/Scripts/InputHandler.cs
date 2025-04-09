@@ -31,6 +31,7 @@ public class InputHandler : MonoBehaviour
             if (last_selected != null) //check if an ingredienet is selected
             {
                 cooking_system.AddIngredientToBowl(last_selected); //add the last selected ingredient
+                Reset(); //visually deselect
                 last_selected = null; //reset the last selected
             }
             return;

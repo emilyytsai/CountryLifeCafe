@@ -2399,8 +2399,8 @@ GameObject:
   - component: {fileID: 403232377}
   - component: {fileID: 403232382}
   - component: {fileID: 403232381}
-  - component: {fileID: 403232380}
   - component: {fileID: 403232379}
+  - component: {fileID: 403232380}
   - component: {fileID: 403232378}
   m_Layer: 0
   m_Name: Strawberry
@@ -2500,7 +2500,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 1669490993913548592, guid: cb6d46b156bf08740a59a7b1756ef275, type: 3}
-  m_Color: {r: 0.94509804, g: 0.89411765, b: 0.9121863, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -2559,7 +2559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9450981, g: 0.8941177, b: 0.91372555, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2639,8 +2639,8 @@ GameObject:
   - component: {fileID: 424653943}
   - component: {fileID: 424653946}
   - component: {fileID: 424653945}
-  - component: {fileID: 424653949}
   - component: {fileID: 424653947}
+  - component: {fileID: 424653949}
   - component: {fileID: 424653948}
   m_Layer: 0
   m_Name: Lettuce
@@ -2681,7 +2681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8235295, g: 0.9058824, b: 0.8470589, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2751,7 +2751,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 1476140979647752040, guid: 770f264b5218f1c41a5a3fe977502e07, type: 3}
-  m_Color: {r: 0.8244927, g: 0.9056604, b: 0.8476835, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -7311,8 +7311,8 @@ GameObject:
   - component: {fileID: 1212577182}
   - component: {fileID: 1212577185}
   - component: {fileID: 1212577184}
-  - component: {fileID: 1212577183}
   - component: {fileID: 1212577186}
+  - component: {fileID: 1212577183}
   - component: {fileID: 1212577187}
   m_Layer: 0
   m_Name: Tomato
@@ -7389,7 +7389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9245283, g: 0.81695735, b: 0.81695735, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7459,7 +7459,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -3962807554240710951, guid: 2945d937d4992d34689136a3b0eaa816, type: 3}
-  m_Color: {r: 0.9433962, g: 0.89444643, b: 0.89444643, a: 1}
+  m_Color: {r: 0.9559748, g: 0.9168941, b: 0.9168941, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -15861,8 +15861,8 @@ GameObject:
   - component: {fileID: 2105571498}
   - component: {fileID: 2105571503}
   - component: {fileID: 2105571502}
-  - component: {fileID: 2105571501}
   - component: {fileID: 2105571500}
+  - component: {fileID: 2105571501}
   - component: {fileID: 2105571499}
   m_Layer: 0
   m_Name: Grape
@@ -15962,7 +15962,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2998275146054922168, guid: 2f650aeb3a90ce9489163c85631315c0, type: 3}
-  m_Color: {r: 0.9249186, g: 0.89411765, b: 0.94509804, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -16021,7 +16021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.92549026, g: 0.8941177, b: 0.9450981, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

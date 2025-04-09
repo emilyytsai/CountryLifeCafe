@@ -16,10 +16,7 @@ public class OrderManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (salad_sprites.Length > - 1)
-        {
-            salad.sprite = salad_sprites[current_salad];
-        }
+        salad.sprite = null; //placeholder null sprite
     }
 
     //move thru the array only when this function is called
