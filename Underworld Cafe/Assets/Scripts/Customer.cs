@@ -35,7 +35,14 @@ public class Customer : MonoBehaviour
     
     public void CustomerServed()
     {
+        if (IsLeaving)
+        {
+            return;
+        }
+
         customer_served = true;
+        //track the customers served
+        customer_manager.served_success();
 
         //destroy the patience bar/shadow & salad order after serving customer
         ////instead of destroying -> setactive(false) so these things can be reused
@@ -69,8 +76,13 @@ public class Customer : MonoBehaviour
         animator.SetTrigger("IdleTrigger"); //trigger the "IdleTrigger" in the animator
     }
 
-    public IEnumerator Leave()
+    public IEnumerator Leave(bool timed_out = false)
     {
+        if (timed_out && customer_manager != null)
+        {
+            customer_manager.customer_timed_out();
+        }
+
         yield return new WaitForSeconds(2f);
         UIManager.Instance.hide_feedback();
         //trigger the "LeaveTrigger" in the animator to play the leaving animation

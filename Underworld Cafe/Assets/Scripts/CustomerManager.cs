@@ -16,6 +16,10 @@ public class CustomerManager : MonoBehaviour
     //customer counter
     private int current_customer = -1;
 
+    //tracking customers
+    private int customers_served = 0;
+    private int customers_timed_out = 0;
+
     //customer script
     [SerializeField]
     private Customer customer_script;
@@ -27,16 +31,14 @@ public class CustomerManager : MonoBehaviour
     //day summary text
     public TextMeshProUGUI summary_text;
 
-    //every customer gets their own timer
-    // public GameObject timer_prefab; 
-    // public Transform patience_bar_shadow;
-    // [SerializeField]
-    // private GameObject current_timer;
-    // private GameObject new_timer;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //reset counter at start of day
+        current_customer = -1;
+        customers_served = 0;
+        customers_timed_out = 0;
+
         next_customer();
     }
 
@@ -52,16 +54,6 @@ public class CustomerManager : MonoBehaviour
             customer_script.animator.Rebind();
             customer_script.animator.Update(0);
 
-            // //get rid of old timer
-            // if (current_timer != null)
-            // {
-            //     Destroy(current_timer);
-            // }
-
-            // //create a new patience timer for each new customer
-            // new_timer = Instantiate(timer_prefab, patience_bar_shadow);
-            // new_timer.SetActive(true);
-
             //start/restart the enter->idle->leave loop
             StartCoroutine(start_animations());//restart animations
         }
@@ -70,9 +62,26 @@ public class CustomerManager : MonoBehaviour
             //show day summary and hide the restuarnt/kitchen
             prev_scene.SetActive(false);
             day_summary.SetActive(true);
-            summary_text.text = "Good job! Here are your statistics for the day!Money earned:/nCustomers served:n/Customers unhappy";  
-            Debug.Log("day 1 complete");
+            summary_text.text = string.Format(
+                "Good job! Here are your statistics for the day!\nMoney earned: ${0}\nCustomers served: {1}\nCustomers unhappy: {2}", 
+                customers_served * 5, //temp implementation to get the earnings for the day -> get the actual player money later
+                customers_served,
+                customers_timed_out
+            );
+
+            Debug.Log("day complete");
         }
+    }
+
+    public void served_success()
+    {
+        customers_served++;
+    }
+    
+    // Call this when customer times out
+    public void customer_timed_out()
+    {
+        customers_timed_out++;
     }
 
     private IEnumerator start_animations()

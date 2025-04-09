@@ -29,6 +29,9 @@ public class PatienceTimer : MonoBehaviour
     //NOTE* for demo purposes day 1 is set to 10 sec temporarily
     private float day1_time = 10f;
 
+    //track if timer ran out
+    private bool timer_expired = false;
+
     //private float day1_time = 30f;
     //private float day2_time = 20f;
     //private float day3_time = 12f;
@@ -37,15 +40,11 @@ public class PatienceTimer : MonoBehaviour
     {
         //intialize w/ day 1 time
         timer = day1_time;
+        timer_expired = false;
     }
 
     private void Update()
     {
-        ////speed that the bar gets filled
-        //lerpSpeed = 3f * Time.deltaTime;
-        
-        //lerpSpeed += Time.deltaTime;
-
         BarFiller(); //call here to also update the filler
         ColorChanger(); //updates color
     }
@@ -66,11 +65,16 @@ public class PatienceTimer : MonoBehaviour
         patienceBar.fillAmount = current_patience;
 
         //stop decreasing at 0 sec
-        if (timer <= 0f)
+        if (timer <= 0f && !timer_expired)
         {
             timer = 0f;
+            timer_expired = true;
             feedback.SetActive(true);
-            StartCoroutine(customer.Leave());
+
+            if (customer != null)
+            {
+                StartCoroutine(customer.Leave(true));
+            }
 
             //destroy the patience bar/shadow, salad order, & text bubble after serving customer
             UIManager.Instance.hide_order();
@@ -90,6 +94,7 @@ public class PatienceTimer : MonoBehaviour
     public void reset_timer()
     {
         timer = day1_time;
+        timer_expired = false;
         
         patienceBar.fillAmount = 1f;
         patienceBar.color = start_color;
