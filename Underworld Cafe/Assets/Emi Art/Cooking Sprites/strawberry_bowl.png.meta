@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4cf1572272e4224b97382128cf7f290
+guid: efb3d34017e3ceb4d8e1ceb5acba9524
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7687866329459055350
-    second: mini_salad2_0
+      213: 5138270804983895199
+    second: strawberry_bowl_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mini_salad2_0
+      name: strawberry_bowl_0
       rect:
         serializedVersion: 2
-        x: 347
-        y: 143
-        width: 207
-        height: 203
+        x: 1071
+        y: 338
+        width: 710
+        height: 281
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0528ef2e463f4590800000000000000
-      internalID: -7687866329459055350
+      spriteID: f9453dac21ece4740800000000000000
+      internalID: 5138270804983895199
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bec09e6c5c989504e9331ccaf343322f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      mini_salad2_0: -7687866329459055350
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

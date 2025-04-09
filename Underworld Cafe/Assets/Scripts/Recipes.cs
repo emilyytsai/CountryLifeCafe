@@ -15,7 +15,7 @@ public class Recipes : MonoBehaviour
     public List<List<string>> five_token_recipes = new List<List<string>>()
     {
         new List<string> { "Lettuce", "Tomato" },
-        new List<string> { "Strawberries", "Grapes" }
+        new List<string> { "Strawberry", "Grape" }
     };
 
     //////////////////////
@@ -23,7 +23,7 @@ public class Recipes : MonoBehaviour
     public List<List<string>> ten_token_recipes = new List<List<string>>()
     {
         new List<string> { "Lettuce", "Tomato", "Carrots" },
-        new List<string> { "Strawberries", "Grapes", "Blueberries" }
+        new List<string> { "Strawberry", "Grape", "Blueberries" }
     };
 
     //////////////////////////
@@ -31,7 +31,7 @@ public class Recipes : MonoBehaviour
     public List<List<string>> fifteen_token_recipes = new List<List<string>>()
     {
         new List<string> { "Lettuce", "Tomato", "Carrots", "Cucumbers" },
-        new List<string> { "Strawberries", "Grapes", "Blueberries", "Cucumbers" }
+        new List<string> { "Strawberry", "Grape", "Blueberries", "Cucumbers" }
     };
     /////////////////////////
 

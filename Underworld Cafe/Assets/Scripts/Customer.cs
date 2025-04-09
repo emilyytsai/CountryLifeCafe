@@ -16,6 +16,8 @@ public class Customer : MonoBehaviour
     private CustomerManager customer_manager;
     [SerializeField]
     private CookingSystem cooking_system;
+    [SerializeField]
+    private OrderManager order_manager;
 
     //for defining which specific animator/customer
     public GameObject customer;
@@ -96,5 +98,6 @@ public class Customer : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         UIManager.Instance.show_order();
+        order_manager.next_order();
     }
 }

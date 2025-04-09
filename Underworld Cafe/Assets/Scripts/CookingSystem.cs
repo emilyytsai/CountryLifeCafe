@@ -8,8 +8,10 @@ public class CookingSystem : MonoBehaviour
     public InputHandler input_handler;   // Initialize input_handler to be a reference to the class InputHandler
 
     //sprites for how the ingredients look when added to the bowl
-    public GameObject tomato_bowl;
-    public GameObject lettuce_bowl;
+    public GameObject tomato_bowl = null;
+    public GameObject lettuce_bowl = null;
+    public GameObject strawberry_bowl = null;
+    public GameObject grape_bowl = null;
 
     public List<string> current_recipe = new List<string>();
 
@@ -42,6 +44,14 @@ public class CookingSystem : MonoBehaviour
 
             case "Lettuce":
                 enable_lettuce();
+                break;
+            
+            case "Strawberry":
+                enable_strawberry();
+                break;
+
+            case "Grape":
+                enable_grape();
                 break;
 
             default:
@@ -76,6 +86,36 @@ public class CookingSystem : MonoBehaviour
             if (lettuce_bowl.activeInHierarchy && !current_recipe.Contains("Lettuce"))
             {
                 current_recipe.Add("Lettuce");
+                Debug.Log(current_recipe[0]);
+            }
+        }
+    }
+
+    void enable_strawberry()
+    {
+        if (strawberry_bowl != null)
+        {
+            strawberry_bowl.SetActive(true);
+            Debug.Log("strawberry in bowl");
+
+            if (strawberry_bowl.activeInHierarchy && !current_recipe.Contains("Lettuce"))
+            {
+                current_recipe.Add("Strawberry");
+                Debug.Log(current_recipe[0]);
+            }
+        }
+    }
+
+    void enable_grape()
+    {
+        if (grape_bowl != null)
+        {
+            grape_bowl.SetActive(true);
+            Debug.Log("grape in bowl");
+
+            if (grape_bowl.activeInHierarchy && !current_recipe.Contains("Lettuce"))
+            {
+                current_recipe.Add("Grape");
                 Debug.Log(current_recipe[0]);
             }
         }

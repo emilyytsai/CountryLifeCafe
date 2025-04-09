@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     //for ingredients to show up inside bowl
     public GameObject tomato_bowl;
     public GameObject lettuce_bowl;
+    public GameObject strawberry_bowl;
+    public GameObject grape_bowl;
     
     //feedback text
     public TextMeshProUGUI feedback_text;
@@ -33,9 +35,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
 	private Button farm_button = null;
 
-    //disable ingredient interaction before game start
-    [SerializeField]
-	private GameObject input;
+    // //disable ingredient interaction before game start
+    // [SerializeField]
+	// private GameObject input;
 
     //script references
     //game manager
@@ -63,7 +65,7 @@ public class UIManager : MonoBehaviour
         //becomes interactable after the order is shown
         serve_button.interactable = false;
         farm_button.interactable = false;
-        input.SetActive(false);
+        // input.SetActive(false);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -79,7 +81,7 @@ public class UIManager : MonoBehaviour
         //still not interactable at start -> only after order is shown
         serve_button.interactable = false;
         farm_button.interactable = false;
-        input.SetActive(false);
+        // input.SetActive(false);
 
         //for serve button
         serve_button.onClick.AddListener(serve_pressed);
@@ -99,7 +101,7 @@ public class UIManager : MonoBehaviour
         //u can now use the buttons/ingredients
         serve_button.interactable = true;
         farm_button.interactable = true;
-        input.SetActive(true);
+        // input.SetActive(true);
 
         //reset timer for next customer
         patience_timer.reset_timer();
@@ -111,7 +113,7 @@ public class UIManager : MonoBehaviour
         patience_bar.SetActive(false);
         patience_bar_shadow.SetActive(false);
         serve_button.interactable = false;
-        input.SetActive(false);
+        // input.SetActive(false);
     }
     ///////////////////////////////////////
 
@@ -137,6 +139,8 @@ public class UIManager : MonoBehaviour
     {
         tomato_bowl.SetActive(false);
         lettuce_bowl.SetActive(false);
+        strawberry_bowl.SetActive(false);
+        grape_bowl.SetActive(false);
     }
 
     ///////////////////////////////////////////////////////////////
