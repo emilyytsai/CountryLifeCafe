@@ -5200,6 +5200,7 @@ MonoBehaviour:
   volume_slider: {fileID: 515234691}
   resolution_dropdown: {fileID: 1937608628}
   audio_mixer: {fileID: 24100000, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+  Name: 
 --- !u!1 &154232392
 GameObject:
   m_ObjectHideFlags: 0

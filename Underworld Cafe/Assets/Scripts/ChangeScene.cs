@@ -55,18 +55,6 @@ public class MainMenu : MonoBehaviour
 
     public void CloseCurtains()
     {
-        // // Activate the fader so it's visible
-        // fader.gameObject.SetActive(true);
-        // // Instantly set the scale to zero (hidden)
-        // LeanTween.scale(fader, Vector3.zero, 0f);
-        // // Scale the fader to (1,1,1) over 1 second with an ease in/out quad effect.
-        // LeanTween.scale(fader, new Vector3(1, 1, 1), 1.0f)
-        //          .setEase(LeanTweenType.easeInOutQuad)
-        //          .setOnComplete(() => {
-        //              // After scaling, wait another second before changing the scene.
-        //              Invoke("DelayedChangeScene", 1.0f);
-        //          });
-
         // Make sure the left and right curtains are active
         left_curtain.gameObject.SetActive(true);
         right_curtain.gameObject.SetActive(true);
