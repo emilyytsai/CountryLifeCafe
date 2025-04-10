@@ -1234,54 +1234,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131341959}
   m_CullTransparentMesh: 1
---- !u!1 &132474589
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 132474591}
-  - component: {fileID: 132474590}
-  m_Layer: 0
-  m_Name: Patience Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &132474590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132474589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 396d0ad3592832846a82aefb51b122be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customer: {fileID: 1088534182}
-  patienceBar: {fileID: 1007577403}
-  patienceBar2: {fileID: 1136598482}
-  feedback: {fileID: 37975014}
---- !u!4 &132474591
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132474589}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8319162, y: 0.75315636, z: 64.69834}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 467014854}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135106589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,7 +3133,6 @@ Transform:
   m_Children:
   - {fileID: 1208152470}
   - {fileID: 1646371575}
-  - {fileID: 132474591}
   - {fileID: 103843970}
   - {fileID: 641736288}
   - {fileID: 416637147}
@@ -5994,6 +5945,7 @@ GameObject:
   - component: {fileID: 1007577401}
   - component: {fileID: 1007577404}
   - component: {fileID: 1007577403}
+  - component: {fileID: 1007577402}
   m_Layer: 5
   m_Name: Patience Bar
   m_TagString: Untagged
@@ -6020,6 +5972,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 233.44, y: 19.18}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1007577402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007577400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396d0ad3592832846a82aefb51b122be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customer: {fileID: 1088534182}
+  patienceBar: {fileID: 1007577403}
+  patienceBar2: {fileID: 1136598482}
+  feedback: {fileID: 37975014}
 --- !u!114 &1007577403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9453,7 +9421,7 @@ MonoBehaviour:
   serve_button: {fileID: 798900188}
   farm_button: {fileID: 1035306889}
   game_manager: {fileID: 123252325}
-  patience_timer: {fileID: 132474590}
+  patience_timer: {fileID: 1007577402}
 --- !u!1 &1595442612
 GameObject:
   m_ObjectHideFlags: 0
