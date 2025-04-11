@@ -10,7 +10,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] RectTransform fader;
 
     //to stop the moon/sun glow particle effect during the salad transition
+    //hide the salad sprite as well
     public GameObject glow_effect;
+    public GameObject salad_sprite = null;
 
     // Left & Right Curtain Transition
     public RectTransform left_curtain;
@@ -110,11 +112,12 @@ public class MainMenu : MonoBehaviour
     //add a slight delay before the glow effect is stopped
     public IEnumerator stop_glow()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
         
         if (glow_effect != null)
         {
             glow_effect.SetActive(false);
+            salad_sprite.SetActive(false);
         }
     }
 
