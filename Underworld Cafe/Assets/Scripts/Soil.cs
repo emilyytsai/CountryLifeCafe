@@ -8,6 +8,10 @@ public class Soil : MonoBehaviour
     public GameObject growing2;
     public GameObject growing3;
 
+    public Sprite wet_soil;
+    [SerializeField]
+    private SpriteRenderer sprite_renderer;
+
     private bool is_planted = false;
     private bool is_grown = false;
 
@@ -16,11 +20,13 @@ public class Soil : MonoBehaviour
     //planting logic//
     public void plant_seed()
     {
+        if (is_planted) return;
+
         if (growing1 != null)
         {
             growing1.SetActive(true);
 
-            growing1.tag = "Planted";
+            growing1.tag = "Planted"; //make clickable for watering
         }
     }
 
@@ -28,6 +34,12 @@ public class Soil : MonoBehaviour
     public void water()
     {
         if (!is_planted || is_grown) return;
+
+        if (sprite_renderer != null && wet_soil != null)
+        {
+            sprite_renderer.sprite = wet_soil;
+        }
+
 
         StartCoroutine(grow_plant());
     }
@@ -37,9 +49,9 @@ public class Soil : MonoBehaviour
     //growing logic//
     IEnumerator grow_plant()
     {
-        // //make sure the obj is assigned in inspector
-        // if (growing1 == null || growing2 == null || growing3 == null)
-        //     yield break;
+        //make sure the obj is assigned in inspector
+        if (growing1 == null || growing2 == null || growing3 == null)
+            yield break;
 
         //hide prev stage, show nexrt
         growing1.SetActive(false);
@@ -49,7 +61,7 @@ public class Soil : MonoBehaviour
         growing2.SetActive(false);
         growing3.SetActive(true);
 
-        is_grown = true;
         growing3.tag = "Untagged";
+        is_grown = true;
     }
 }
