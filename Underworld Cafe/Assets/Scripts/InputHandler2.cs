@@ -24,9 +24,10 @@ public class InputHandler2 : MonoBehaviour
     // public GameObject tomato_grown = null;
     // public GameObject lettuce_grown = null;
 
-    public GameObject growing1 = null;
-    public GameObject growing2 = null;
-    public GameObject growing3 = null;
+    //moved to soil script
+    // public GameObject growing1 = null;
+    // public GameObject growing2 = null;
+    // public GameObject growing3 = null;
 
     private enum Tool 
     {
@@ -80,25 +81,22 @@ public class InputHandler2 : MonoBehaviour
             selected_tool = Tool.Seed;
             return;
         }
-        /////////////////////////
-        //handle planting logic//
-        if (selected_object.CompareTag("Soil") && selected_tool == Tool.Seed)
-        {
-            if (last_selected != null)
-            {
-                plant_seed();
-                Reset();
-                last_selected = null;
-                selected_tool = Tool.None;//reset tool
-            }
-            return;
-        }
 
         /////////////////////////
-        //water after plating//
-        if (selected_tool == Tool.Water && selected_object.CompareTag("Planted"))
+        //soil click handling//
+        //each soil obj has own soil script
+        Soil soil_logic = selected_object.GetComponent<Soil>();
+
+        if (soil_logic != null)
         {
-            StartCoroutine(grow_plant());
+            if (selected_tool == Tool.Seed)
+            {
+                soil_logic.plant_seed(); //growth stage 1
+            }
+            else if (selected_tool == Tool.Water && selected_object.CompareTag("Planted"))
+            {
+                soil_logic.water(); //2 n 3
+            }
 
             Reset();
             last_selected = null;
@@ -133,34 +131,23 @@ public class InputHandler2 : MonoBehaviour
         }
     }
 
-    ///////////////////////////////////
-    //planting logic//
-    void plant_seed()
-    {
-        if (growing1 != null)
-        {
-            growing1.SetActive(true);
+    //moved
+    // ///////////////////////////////////
+    // //growing logic//
+    // IEnumerator grow_plant()
+    // {
+    //     //make sure the obj is assigned in inspector
+    //     if (growing1 == null || growing2 == null || growing3 == null)
+    //         yield break;
 
-            growing1.tag = "Planted";
-        }
-    }
+    //     //hide prev stage, show nexrt
+    //     growing1.SetActive(false);
+    //     growing2.SetActive(true);
+    //     yield return new WaitForSeconds(0.5f);
 
-    ///////////////////////////////////
-    //growing logic//
-    IEnumerator grow_plant()
-    {
-        //make sure the obj is assigned in inspector
-        if (growing1 == null || growing2 == null || growing3 == null)
-            yield break;
+    //     growing2.SetActive(false);
+    //     growing3.SetActive(true);
 
-        //hide prev stage, show nexrt
-        growing1.SetActive(false);
-        growing2.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-
-        growing2.SetActive(false);
-        growing3.SetActive(true);
-
-        growing3.tag = "Untagged";
-    }
+    //     growing3.tag = "Untagged";
+    // }
 }
