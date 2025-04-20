@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class InputHandler2 : MonoBehaviour
 {
@@ -11,17 +12,30 @@ public class InputHandler2 : MonoBehaviour
     private Color initial_color;
 
     public GameObject soil;
-    private GameObject seed;
+    //private GameObject seed;
+    [SerializeField]
     private GameObject watering_can;
 
-    //planted seeds
-    public GameObject tomato_planted = null;
-    public GameObject lettuce_planted = null;
+    // //planted seeds
+    // public GameObject tomato_planted = null;
+    // public GameObject lettuce_planted = null;
 
-    //fully grown crops
-    //(triggered after watered)
-    public GameObject tomato_grown = null;
-    public GameObject lettuce_grown = null;
+    // //fully grown crops
+    // //(triggered after watered)
+    // public GameObject tomato_grown = null;
+    // public GameObject lettuce_grown = null;
+
+    //moved to soil script
+    // public GameObject growing1 = null;
+    // public GameObject growing2 = null;
+    // public GameObject growing3 = null;
+
+    private enum Tool 
+    {
+        None, Seed, Water
+    }
+
+    private Tool selected_tool = Tool.None;
 
     private void Awake()
     {
@@ -38,34 +52,58 @@ public class InputHandler2 : MonoBehaviour
         GameObject selected_object = rayHit.collider.gameObject;
         Debug.Log(selected_object.name);
 
-        //compare tags
-        if (selected_object.CompareTag("Soil"))
+        //watering can
+        if (selected_object == watering_can)
         {
-            if (last_selected != null)
-            {
-                plant_seed(last_selected);
-                last_selected = null; //reset the last selected
-            }
+            selected_tool = Tool.Water;
+            highlight(selected_object);
+            last_selected = watering_can;
+
             return;
         }
 
+        //seed select
         if (selected_object.CompareTag("Seed"))
         {
+            //deselect if player cliskc on same seed again
             if (last_selected == selected_object)
             {
                 Reset();
-                last_selected = null; //deselecting the object
+                last_selected = null;
+                selected_tool = Tool.None;
                 return;
             }
 
-            if (last_selected != null)
-            {
-                Reset();
-            }
-        }
-        highlight(selected_object); //hihglight the last object that was clicked on
+            Reset();
+            highlight(selected_object);
 
-        last_selected = selected_object;
+            //save seed obj, switch tool to seed
+            last_selected = selected_object;
+            selected_tool = Tool.Seed;
+            return;
+        }
+
+        /////////////////////////
+        //soil click handling//
+        //each soil obj has own soil script
+        Soil soil_logic = selected_object.GetComponent<Soil>();
+
+        if (soil_logic != null)
+        {
+            if (selected_tool == Tool.Seed)
+            {
+                soil_logic.plant_seed(); //growth stage 1
+            }
+            else if (selected_tool == Tool.Water)
+            {
+                soil_logic.water(); //2 n 3
+            }
+
+            Reset();
+            last_selected = null;
+            selected_tool = Tool.None;
+            return;
+        }
     }
 
     private void highlight(GameObject selected_object)
@@ -94,48 +132,23 @@ public class InputHandler2 : MonoBehaviour
         }
     }
 
-    ////////////////////////
-    //farming system logic//
-    public void plant_seed(GameObject seed)
-    {
-        if (seed != null && soil != null)
-        {
-            string seed_name = seed.name;
-            Debug.Log($"planted {seed.name}");
-            enable_seeds(seed_name);
-        }
-    }
+    //moved
+    // ///////////////////////////////////
+    // //growing logic//
+    // IEnumerator grow_plant()
+    // {
+    //     //make sure the obj is assigned in inspector
+    //     if (growing1 == null || growing2 == null || growing3 == null)
+    //         yield break;
 
-    void enable_seeds(string seed_name)
-    {
-        switch (seed_name)
-        {
-            case "Tomato Seeds":
-                enable_T_seeds();
-                break;
+    //     //hide prev stage, show nexrt
+    //     growing1.SetActive(false);
+    //     growing2.SetActive(true);
+    //     yield return new WaitForSeconds(0.5f);
 
-            case "Lettuce Seeds":
-                enable_L_seeds();
-                break;
+    //     growing2.SetActive(false);
+    //     growing3.SetActive(true);
 
-            default:
-                break;
-        }
-    }
-
-    void enable_T_seeds()
-    {
-        if (tomato_planted != null)
-        {
-            tomato_planted.SetActive(true);
-        }
-    }
-
-    void enable_L_seeds()
-    {
-        if (lettuce_planted != null)
-        {
-            lettuce_planted.SetActive(true);
-        }
-    }
+    //     growing3.tag = "Untagged";
+    // }
 }
