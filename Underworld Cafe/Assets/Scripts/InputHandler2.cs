@@ -94,7 +94,7 @@ public class InputHandler2 : MonoBehaviour
             {
                 soil_logic.plant_seed(); //growth stage 1
             }
-            else if (selected_tool == Tool.Water && selected_object.CompareTag("Planted"))
+            else if (selected_tool == Tool.Water)
             {
                 soil_logic.water(); //2 n 3
             }

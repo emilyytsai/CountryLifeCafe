@@ -12,8 +12,11 @@ public class SceneSlide : MonoBehaviour
     [SerializeField]
     private Button back_button = null;
 
-    // [SerializeField]
-    // private float animation_speed = 5f;
+    //input handlers
+    [SerializeField]
+    private GameObject input_main = null;
+    [SerializeField]
+    private GameObject input_farm = null;
 
     private bool on_farm = false;
     private Coroutine current_animation;
@@ -50,6 +53,10 @@ public class SceneSlide : MonoBehaviour
 
         float targetX = on_farm ? 0 : -1920;
         StartCoroutine(animate_pos(targetX));
+
+        input_main.SetActive(on_farm); //back to main
+        input_farm.SetActive(!on_farm); //farm
+
         on_farm = !on_farm;
     }
     

@@ -341,7 +341,7 @@ MonoBehaviour:
   growing2: {fileID: 9153850800167931292}
   growing3: {fileID: 6810673136127385001}
   wet_soil: {fileID: -3368507501390773329, guid: acdec04e80480224691fd2bd13b4c239, type: 3}
-  sprite_renderer: {fileID: 6963118384696303934}
+  dry_soil: {fileID: -530746978621384189, guid: 685a9d6365d2b914ba7c0f1473227c6e, type: 3}
 --- !u!1 &9153850800167931292
 GameObject:
   m_ObjectHideFlags: 0
