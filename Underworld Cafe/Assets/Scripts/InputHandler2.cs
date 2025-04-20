@@ -13,6 +13,7 @@ public class InputHandler2 : MonoBehaviour
 
     public GameObject soil;
     //private GameObject seed;
+    [SerializeField]
     private GameObject watering_can;
 
     // //planted seeds
