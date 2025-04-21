@@ -8,6 +8,9 @@ Country Life Cafe was made using Unity Version 6000.0.35f1
 * Kelsey Tang - Programmer, Writer
 * Emily Tsai - Programmer, Artist
 
+## Check It Out
+- [Watch our Game Trailer!](https://www.youtube.com/watch?v=SDdripJCK7I)
+
 # Game Progress
 
 Main Menu:
