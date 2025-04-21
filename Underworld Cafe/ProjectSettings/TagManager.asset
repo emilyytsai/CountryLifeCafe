@@ -9,6 +9,7 @@ TagManager:
   - Soil
   - Watering Can
   - Seed
+  - Planted
   layers:
   - Default
   - TransparentFX

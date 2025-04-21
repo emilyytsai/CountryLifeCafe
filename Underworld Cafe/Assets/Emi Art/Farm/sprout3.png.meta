@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprout3_0: -3254268933071842060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

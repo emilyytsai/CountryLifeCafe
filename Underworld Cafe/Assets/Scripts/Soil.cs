@@ -13,6 +13,10 @@ public class Soil : MonoBehaviour
     //[SerializeField]
     private SpriteRenderer sprite_renderer;
 
+    //corresponding ingredient in kitchen
+    [HideInInspector] 
+    public GameObject kitchen_crop;
+
     private bool is_planted = false;
     private bool is_grown = false;
 
@@ -28,7 +32,7 @@ public class Soil : MonoBehaviour
     //moved from the inputhandelr script
     ///////////////////////////////////
     //planting logic//
-    public void plant_seed()
+    public void plant_seed(GameObject crop)
     {
         if (is_planted) return;
 
@@ -37,6 +41,9 @@ public class Soil : MonoBehaviour
             growing1.SetActive(true);
             this.gameObject.tag = "Planted"; //make clickable for watering
             is_planted = true;
+
+            //store crop for harvest
+            kitchen_crop = crop;
         }
     }
 
@@ -85,11 +92,13 @@ public class Soil : MonoBehaviour
         growing2.SetActive(false);
         growing3.SetActive(true);
 
+        growing3.tag = "Harvestable";
+
         this.gameObject.tag = "Untagged"; //reset tag
         is_grown = true;
     }
 
-    //after 3 secs wet soil will dr
+    //after 3 secs wet soil will dry
     IEnumerator dry()
     {
         yield return new WaitForSeconds(3.0f);
@@ -101,5 +110,28 @@ public class Soil : MonoBehaviour
         // {
         //     sprite_renderer.sprite = dry_soil;
         // }
+    }
+
+    ///////////////////////////////////
+    //harvesting logic//
+    public void harvest()
+    {
+        if (!is_grown) return;
+
+        //reset farm/soil tile
+        growing1.SetActive(false);
+        growing2.SetActive(false);
+        growing3.SetActive(false);
+        is_planted = false;
+        is_grown = false;
+        sprite_renderer.sprite = dry_soil;
+        gameObject.tag = "Untagged";
+
+        if (kitchen_crop != null)
+        {
+            kitchen_crop.SetActive(true);
+        }
+
+        kitchen_crop = null;
     }
 }

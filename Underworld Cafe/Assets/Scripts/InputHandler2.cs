@@ -16,19 +16,11 @@ public class InputHandler2 : MonoBehaviour
     [SerializeField]
     private GameObject watering_can;
 
-    // //planted seeds
-    // public GameObject tomato_planted = null;
-    // public GameObject lettuce_planted = null;
-
-    // //fully grown crops
-    // //(triggered after watered)
-    // public GameObject tomato_grown = null;
-    // public GameObject lettuce_grown = null;
-
-    //moved to soil script
-    // public GameObject growing1 = null;
-    // public GameObject growing2 = null;
-    // public GameObject growing3 = null;
+    //kitchen crops/ingedients
+    public GameObject tomato_crop;
+    public GameObject lettuce_crop;
+    public GameObject strawberry_crop;
+    public GameObject grape_crop;
 
     private enum Tool 
     {
@@ -87,22 +79,42 @@ public class InputHandler2 : MonoBehaviour
         //soil click handling//
         //each soil obj has own soil script
         Soil soil_logic = selected_object.GetComponent<Soil>();
-
         if (soil_logic != null)
         {
             if (selected_tool == Tool.Seed)
             {
-                soil_logic.plant_seed(); //growth stage 1
+                //assign coresponding crop to appear after harvest
+                GameObject crop_to_give = null;
+                switch (last_selected.name)
+                {
+                    case "Tomato Seeds":
+                        crop_to_give = tomato_crop;
+                        break;
+                    case "Lettuce Seeds":
+                        crop_to_give = lettuce_crop;
+                        break;
+                    case "Strawberry Seeds":
+                        crop_to_give = strawberry_crop;
+                        break;
+                    case "Grape Seeds":
+                        crop_to_give = grape_crop;
+                        break;
+                }
+
+                soil_logic.plant_seed(crop_to_give);
             }
             else if (selected_tool == Tool.Water)
             {
-                soil_logic.water(); //2 n 3
+                soil_logic.water();
+            }
+            else if (selected_object.CompareTag("Harvestable"))
+            {
+                soil_logic.harvest();
             }
 
             Reset();
             last_selected = null;
             selected_tool = Tool.None;
-            return;
         }
     }
 
