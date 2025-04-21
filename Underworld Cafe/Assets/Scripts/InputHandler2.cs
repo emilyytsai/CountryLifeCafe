@@ -78,10 +78,17 @@ public class InputHandler2 : MonoBehaviour
         /////////////////////////
         //soil click handling//
         //each soil obj has own soil script
-        Soil soil_logic = selected_object.GetComponent<Soil>();
+        Soil soil_logic = selected_object.GetComponentInParent<Soil>();
+
         if (soil_logic != null)
         {
-            if (selected_tool == Tool.Seed)
+            //harvest//
+            if (selected_object.CompareTag("Harvestable"))
+            {
+                soil_logic.harvest();
+            }
+            //seed//
+            else if (selected_tool == Tool.Seed)
             {
                 //assign coresponding crop to appear after harvest
                 GameObject crop_to_give = null;
@@ -103,13 +110,10 @@ public class InputHandler2 : MonoBehaviour
 
                 soil_logic.plant_seed(crop_to_give);
             }
+            //water//
             else if (selected_tool == Tool.Water)
             {
                 soil_logic.water();
-            }
-            else if (selected_object.CompareTag("Harvestable"))
-            {
-                soil_logic.harvest();
             }
 
             Reset();

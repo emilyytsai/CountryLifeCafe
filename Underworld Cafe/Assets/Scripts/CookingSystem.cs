@@ -28,7 +28,7 @@ public class CookingSystem : MonoBehaviour
 
             //UNCOMMENT THIS AFTER FARM**
             //destroy the ingredient from the shelf after u add it
-            //Destroy(ingredient);
+            Destroy(ingredient);
         }
     }
 

@@ -113,7 +113,6 @@ public class UIManager : MonoBehaviour
         patience_bar.SetActive(false);
         patience_bar_shadow.SetActive(false);
         serve_button.interactable = false;
-        // input.SetActive(false);
     }
     ///////////////////////////////////////
 
