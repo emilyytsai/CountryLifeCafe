@@ -27,7 +27,7 @@ public class PatienceTimer : MonoBehaviour
 
     //timer for each day
     //NOTE* for demo purposes day 1 is set to 10 sec temporarily
-    private float day1_time = 10f;
+    private float day1_time = 30f;
 
     //private float day1_time = 30f;
     //private float day2_time = 20f;
