@@ -103,12 +103,12 @@ TextureImporter:
       name: girl_2_mad_0
       rect:
         serializedVersion: 2
-        x: 196
-        y: 54
-        width: 1541
-        height: 901
+        x: 165
+        y: 526
+        width: 450
+        height: 430
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 17a33fc54e7e77d498c7fc3d95fb0cce
     internalID: 0
     vertices: []
     indices: 

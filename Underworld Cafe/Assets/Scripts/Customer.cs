@@ -18,6 +18,8 @@ public class Customer : MonoBehaviour
     private CookingSystem cooking_system;
     [SerializeField]
     private OrderManager order_manager;
+    [SerializeField]
+    private PatienceTimer patience;
 
     //for defining which specific animator/customer
     public GameObject customer;
@@ -49,7 +51,7 @@ public class Customer : MonoBehaviour
 
         //customer leaves//
         //only call Leave once** so there are no double customer jumps
-        if (!IsLeaving)
+        if (!IsLeaving || patience.timer <= 0)
         {
             IsLeaving = true;
             StartCoroutine(Leave());

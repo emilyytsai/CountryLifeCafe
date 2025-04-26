@@ -106,12 +106,12 @@ TextureImporter:
       name: girl_1_neutral 1_0
       rect:
         serializedVersion: 2
-        x: 285
-        y: 480
-        width: 338
+        x: 219
+        y: 479
+        width: 450
         height: 451
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -133,7 +133,7 @@ TextureImporter:
         width: 11
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9db7c2ec606a5bd439330ad13d3ddadd
     internalID: 0
     vertices: []
     indices: 

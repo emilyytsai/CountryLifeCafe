@@ -1,9 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI; 
 using TMPro;
-
-//change lerpSpeed to the according customer patience per day
-//day 1 timer = 30 seconds, day 2 timer = 20 seconds, day 3 timer = 12 seconds
+using UnityEngine.SceneManagement; //getting scene name for time by day function
 
 //*low priority task* - implement logic to change customer emotion based on time left
 //(50% left = neutral face, 15% left = angry face)
@@ -23,11 +21,11 @@ public class PatienceTimer : MonoBehaviour
     private Color end_color = new Color(0.9f, 0.5f, 0.5f);
 
     private float lerpSpeed;
-    private float timer;
+    public float timer;
+    public float day_time;
 
     //timer for each day
     //NOTE* for demo purposes day 1 is set to 10 sec temporarily
-    private float day1_time = 30f;
 
     //private float day1_time = 30f;
     //private float day2_time = 20f;
@@ -35,8 +33,8 @@ public class PatienceTimer : MonoBehaviour
 
     private void Start()
     {
-        //intialize w/ day 1 time
-        timer = day1_time;
+        //intialize timer accoring to what day
+        time_by_day();
     }
 
     private void Update()
@@ -61,7 +59,7 @@ public class PatienceTimer : MonoBehaviour
         timer -= Time.deltaTime;
 
         //bar fill amount based off current timer and max patience
-        float current_patience = Mathf.Clamp(timer / day1_time, 0f, 1f);
+        float current_patience = Mathf.Clamp(timer / day_time, 0f, 1f);
 
         patienceBar.fillAmount = current_patience;
 
@@ -81,15 +79,43 @@ public class PatienceTimer : MonoBehaviour
     {
         ////https://docs.unity3d.com/ScriptReference/Color.Lerp.html
 
-        float patience_ratio = Mathf.Clamp(timer / day1_time, 0f, 1f);
+        float patience_ratio = Mathf.Clamp(timer / day_time, 0f, 1f);
 
         Color bar_color = Color.Lerp(start_color, end_color, 1f - patience_ratio); //lerpspeed is now based off the ratio
         patienceBar.color = bar_color;
     }
 
+    //set time by using what day it is/scene name
+    void time_by_day()
+    {
+        string scene_name = SceneManager.GetActiveScene().name;
+
+        if (scene_name.Contains("Day 1"))
+        {
+            timer = 30f;
+            day_time = 30f;
+        }
+        else if (scene_name.Contains("Day 2"))
+        {
+            timer = 20f;
+            day_time = 20f;
+        }
+        else if (scene_name.Contains("Day 3"))
+        {
+            timer = 12f;
+            day_time = 12f;
+        }
+        else
+        {
+            timer = 30f; //in case, set back to 30sec
+            day_time = 30f;
+        }
+    }
+
+
     public void reset_timer()
     {
-        timer = day1_time;
+        time_by_day();
         
         patienceBar.fillAmount = 1f;
         patienceBar.color = start_color;

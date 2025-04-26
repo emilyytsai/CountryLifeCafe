@@ -103,9 +103,9 @@ TextureImporter:
       name: mini_salad2_0
       rect:
         serializedVersion: 2
-        x: 347
+        x: 338
         y: 143
-        width: 207
+        width: 223
         height: 203
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
