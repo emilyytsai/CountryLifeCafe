@@ -12,6 +12,7 @@ public class CookingSystem : MonoBehaviour
     public GameObject lettuce_bowl = null;
     public GameObject strawberry_bowl = null;
     public GameObject grape_bowl = null;
+    public GameObject cucumber_bowl = null;
 
     public List<string> current_recipe = new List<string>();
 
@@ -52,6 +53,10 @@ public class CookingSystem : MonoBehaviour
 
             case "Grape":
                 enable_grape();
+                break;
+            
+            case "Cucumber":
+                enable_cucumber();
                 break;
 
             default:
@@ -98,7 +103,7 @@ public class CookingSystem : MonoBehaviour
             strawberry_bowl.SetActive(true);
             Debug.Log("strawberry in bowl");
 
-            if (strawberry_bowl.activeInHierarchy && !current_recipe.Contains("Lettuce"))
+            if (strawberry_bowl.activeInHierarchy && !current_recipe.Contains("Strawberry"))
             {
                 current_recipe.Add("Strawberry");
                 Debug.Log(current_recipe[0]);
@@ -113,9 +118,24 @@ public class CookingSystem : MonoBehaviour
             grape_bowl.SetActive(true);
             Debug.Log("grape in bowl");
 
-            if (grape_bowl.activeInHierarchy && !current_recipe.Contains("Lettuce"))
+            if (grape_bowl.activeInHierarchy && !current_recipe.Contains("Grape"))
             {
                 current_recipe.Add("Grape");
+                Debug.Log(current_recipe[0]);
+            }
+        }
+    }
+
+    void enable_cucumber()
+    {
+        if (cucumber_bowl != null)
+        {
+            cucumber_bowl.SetActive(true);
+            Debug.Log("cucumber in bowl");
+
+            if (cucumber_bowl.activeInHierarchy && !current_recipe.Contains("Cucumber"))
+            {
+                current_recipe.Add("Cucumber");
                 Debug.Log(current_recipe[0]);
             }
         }

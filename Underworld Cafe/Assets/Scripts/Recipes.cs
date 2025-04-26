@@ -18,21 +18,31 @@ public class Recipes : MonoBehaviour
         new List<string> { "Strawberry", "Grape" }
     };
 
-    //////////////////////
     //ten token recipes//
     public List<List<string>> ten_token_recipes = new List<List<string>>()
     {
+        new List<string> { "Strawberry", "Grape", "Cucumber" },
+        new List<string> { "Lettuce", "Tomato", "Cucumber" },
         new List<string> { "Lettuce", "Tomato", "Carrots" },
         new List<string> { "Strawberry", "Grape", "Blueberries" }
     };
 
-    //////////////////////////
-    //fifteen token recipes//
-    public List<List<string>> fifteen_token_recipes = new List<List<string>>()
-    {
-        new List<string> { "Lettuce", "Tomato", "Carrots", "Cucumbers" },
-        new List<string> { "Strawberry", "Grape", "Blueberries", "Cucumbers" }
-    };
+//UNCOMMENT LATER IF WE R ABLE TO GET CARROTS AND BLUEBERRIES IN
+    // //////////////////////
+    // //ten token recipes//
+    // public List<List<string>> ten_token_recipes = new List<List<string>>()
+    // {
+    //     new List<string> { "Lettuce", "Tomato", "Carrots" },
+    //     new List<string> { "Strawberry", "Grape", "Blueberries" }
+    // };
+
+    // //////////////////////////
+    // //fifteen token recipes//
+    // public List<List<string>> fifteen_token_recipes = new List<List<string>>()
+    // {
+    //     new List<string> { "Lettuce", "Tomato", "Carrots", "Cucumbers" },
+    //     new List<string> { "Strawberry", "Grape", "Blueberries", "Cucumbers" }
+    // };
     /////////////////////////
 
     public void recipe_value(List<string> salad)
