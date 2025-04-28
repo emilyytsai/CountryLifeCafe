@@ -49,10 +49,21 @@ public class InputHandler2 : MonoBehaviour
         //watering can
         if (selected_object == watering_can)
         {
-            selected_tool = Tool.Water;
-            highlight(selected_object);
-            last_selected = watering_can;
-
+            if (last_selected == watering_can)
+            {
+                //deselect if player clicks on watering can again
+                Reset();
+                last_selected = null;
+                selected_tool = Tool.None;
+            }
+            else
+            {
+                //selcting watering can
+                Reset();
+                highlight(selected_object);
+                last_selected = watering_can;
+                selected_tool = Tool.Water;
+            }
             return;
         }
 
@@ -123,7 +134,7 @@ public class InputHandler2 : MonoBehaviour
 
             Reset();
             last_selected = null;
-            selected_tool = Tool.None;
+            //selected_tool = Tool.None; <- removed to handle watering multiple soil tiles w/o reslecting
         }
     }
 

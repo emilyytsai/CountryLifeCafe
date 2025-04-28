@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 3006bbac294a4e6418a87053ddae4421
+guid: 4a7a41b8a3a9a40468ca0217ac7d4cb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6206639513749241145
-    second: mini_salad4_0
+      213: 4643186365370751545
+    second: carrot_bowl_0
+  - first:
+      213: 3011390034845667716
+    second: carrot_bowl_1
+  - first:
+      213: 1001946117729353720
+    second: carrot_bowl_2
+  - first:
+      213: 2477190109468373659
+    second: carrot_bowl_3
+  - first:
+      213: -3547786634748798935
+    second: carrot_bowl_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mini_salad4_0
+      name: carrot_bowl_0
       rect:
         serializedVersion: 2
-        x: 346
-        y: 143
-        width: 209
-        height: 190
+        x: 1234
+        y: 467
+        width: 53
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c2c2161f369dd9a0800000000000000
-      internalID: -6206639513749241145
+      spriteID: 93a5cdd0669ef6040800000000000000
+      internalID: 4643186365370751545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot_bowl_1
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 484
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481902b184b9ac920800000000000000
+      internalID: 3011390034845667716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot_bowl_2
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 455
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fff65f7fa0a7ed00800000000000000
+      internalID: 1001946117729353720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot_bowl_3
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 403
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9239f3a74fb06220800000000000000
+      internalID: 2477190109468373659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot_bowl_4
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 386
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9285be84adab3cec0800000000000000
+      internalID: -3547786634748798935
       vertices: []
       indices: 
       edges: []
@@ -134,8 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      mini_salad4_0: -6206639513749241145
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
