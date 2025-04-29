@@ -129,4 +129,18 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("game quit");
     }
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    //only for day 3 summary continue button**
+    public void game_end()
+    {
+        if (MoneyScript.Instance.tokens < 100)
+        {
+            SceneManager.LoadScene("Lose");
+        }
+        else
+        {
+            SceneManager.LoadScene("Win");
+        }
+    }
 }
