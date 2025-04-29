@@ -31,8 +31,8 @@ public class Recipes : MonoBehaviour
     //fifteen token recipes//
     public List<List<string>> fifteen_token_recipes = new List<List<string>>()
     {
-        new List<string> { "Lettuce", "Tomato", "Carrot", "Cucumbers" },
-        new List<string> { "Strawberry", "Grape", "Blueberries", "Cucumbers" }
+        new List<string> { "Lettuce", "Tomato", "Carrot", "Cucumber" },
+        new List<string> { "Strawberry", "Grape", "Blueberries", "Cucumber" }
     };
     ///////////////////////
 
@@ -47,7 +47,7 @@ public class Recipes : MonoBehaviour
         {
             MoneyScript.Instance.AddTenTokens();
         }
-        else if (salad.Count >= 4)
+        else if (salad.Count == 4)
         {
             MoneyScript.Instance.AddFifteenTokens();
         }

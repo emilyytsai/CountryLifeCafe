@@ -344,6 +344,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6631985
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5560821
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0028409958
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.009417355
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963118384696303934, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7718839726224065951, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
       propertyPath: m_Name
       value: Soil (4)
@@ -2642,8 +2662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5083333, y: 0.5}
-  m_AnchoredPosition: {x: 20.8246, y: -3.5835}
-  m_SizeDelta: {x: 116.7655, y: 60.6881}
+  m_AnchoredPosition: {x: 20.8611, y: -3.5877}
+  m_SizeDelta: {x: 124.6385, y: 73.1033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337369221
 MonoBehaviour:
@@ -10807,6 +10827,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6584969
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5475888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.005191803
+      objectReference: {fileID: 0}
+    - target: {fileID: 1305047561126535573, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0055431128
+      objectReference: {fileID: 0}
     - target: {fileID: 7718839726224065951, guid: e3d9bf131e267a64b97159c770154f94, type: 3}
       propertyPath: m_Name
       value: Soil (9)
@@ -12707,7 +12743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.76626396, g: 0.6084906, b: 1, a: 1}
+  m_Color: {r: 0.67716235, g: 0.60784316, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18991,7 +19027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10.999998}
+  m_AnchoredPosition: {x: 0, y: -11}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032489708

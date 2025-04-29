@@ -103,12 +103,12 @@ TextureImporter:
       name: mini_salad4_0
       rect:
         serializedVersion: 2
-        x: 346
+        x: 338
         y: 143
-        width: 209
-        height: 190
+        width: 223
+        height: 203
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6733af53add334a4e8a1f5f974445dda
     internalID: 0
     vertices: []
     indices: 
