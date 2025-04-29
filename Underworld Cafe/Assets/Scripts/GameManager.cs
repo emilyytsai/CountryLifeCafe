@@ -49,6 +49,12 @@ public class GameManager : MonoBehaviour
             feedback_message = "Wow! Thanks for the great salad!";
 
         }
+        else if (recipe.fifteen_token_recipes.Any(r => new HashSet<string>(r).SetEquals(cookingSystem.current_recipe)))
+        {
+            recipe.recipe_value(cookingSystem.current_recipe);
+            feedback_message = "YUMMY! Thanks for the amazing salad!";
+
+        }
         else
         {
             Debug.Log("Salad is wrong order");

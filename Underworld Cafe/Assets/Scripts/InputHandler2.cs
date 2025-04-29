@@ -22,6 +22,8 @@ public class InputHandler2 : MonoBehaviour
     public GameObject strawberry_crop;
     public GameObject grape_crop;
     public GameObject cucumber_crop;
+    public GameObject blueberries_crop;
+    public GameObject carrot_crop;
 
 
     private enum Tool 
@@ -121,6 +123,14 @@ public class InputHandler2 : MonoBehaviour
                         break;
                     case "Cucumber Seeds":
                         crop_to_give = cucumber_crop;
+                        break;
+
+                    case "Blueberries Seeds":
+                        crop_to_give = blueberries_crop;
+                        break;
+
+                    case "Carrot Seeds":
+                        crop_to_give = carrot_crop;
                         break;
                 }
 

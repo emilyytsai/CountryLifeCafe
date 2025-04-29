@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
     public GameObject strawberry_bowl;
     public GameObject grape_bowl;
     public GameObject cucumber_bowl;
+    public GameObject blueberries_bowl;
+    public GameObject carrot_bowl;
     
     //feedback text
     public TextMeshProUGUI feedback_text;
@@ -142,6 +144,8 @@ public class UIManager : MonoBehaviour
         strawberry_bowl.SetActive(false);
         grape_bowl.SetActive(false);
         cucumber_bowl.SetActive(false);
+        blueberries_bowl.SetActive(false);
+        carrot_bowl.SetActive(false);
     }
 
     ///////////////////////////////////////////////////////////////

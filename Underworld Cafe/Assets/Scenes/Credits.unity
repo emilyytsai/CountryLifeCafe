@@ -406,24 +406,28 @@ MonoBehaviour:
   sounds:
   - name: Button Click
     clip: {fileID: 8300000, guid: 783f97d791508b24ebea5c0348c75f96, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Main & Game Obj
     clip: {fileID: 8300000, guid: 3c78cf4d26022ac4e94f9a7afc33e362, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Farm & Kitchen
     clip: {fileID: 8300000, guid: 852b2781400dc864ab772b10421c6519, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Credits
     clip: {fileID: 8300000, guid: c993f111b25853141a55d3dedfce0020, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
@@ -1333,6 +1337,7 @@ MonoBehaviour:
   Name: Main Menu
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  salad_sprite: {fileID: 0}
   left_curtain: {fileID: 680132038}
   right_curtain: {fileID: 1200975246}
   slide_distance: 1920
