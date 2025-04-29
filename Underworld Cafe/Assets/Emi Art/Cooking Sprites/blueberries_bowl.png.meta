@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 4a7a41b8a3a9a40468ca0217ac7d4cb9
+guid: 9bc02a7bd1c9d194184b69ad3eaf8e4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4643186365370751545
-    second: carrot_bowl_0
+      213: -4861383982491071603
+    second: blueberries_bowl_0
   - first:
-      213: 3011390034845667716
-    second: carrot_bowl_1
+      213: 3618734166090101136
+    second: blueberries_bowl_1
   - first:
-      213: 1001946117729353720
-    second: carrot_bowl_2
+      213: 1718739241174753423
+    second: blueberries_bowl_2
   - first:
-      213: 2477190109468373659
-    second: carrot_bowl_3
+      213: 6385035129834697018
+    second: blueberries_bowl_3
   - first:
-      213: -3547786634748798935
-    second: carrot_bowl_4
+      213: 2682962030611229512
+    second: blueberries_bowl_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carrot_bowl_0
+      name: blueberries_bowl_0
       rect:
         serializedVersion: 2
-        x: 1234
-        y: 386
-        width: 358
-        height: 194
+        x: 1211
+        y: 382
+        width: 451
+        height: 245
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93a5cdd0669ef6040800000000000000
-      internalID: 4643186365370751545
+      spriteID: d8b88de4605e88cb0800000000000000
+      internalID: -4861383982491071603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carrot_bowl_1
+      name: blueberries_bowl_1
       rect:
         serializedVersion: 2
-        x: 1449
-        y: 484
-        width: 53
-        height: 53
+        x: 1222
+        y: 453
+        width: 70
+        height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 481902b184b9ac920800000000000000
-      internalID: 3011390034845667716
+      spriteID: 091be5a1d83583230800000000000000
+      internalID: 3618734166090101136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carrot_bowl_2
+      name: blueberries_bowl_2
       rect:
         serializedVersion: 2
-        x: 1539
-        y: 455
-        width: 53
-        height: 53
+        x: 1464
+        y: 414
+        width: 70
+        height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fff65f7fa0a7ed00800000000000000
-      internalID: 1001946117729353720
+      spriteID: f80eebbcb303ad710800000000000000
+      internalID: 1718739241174753423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carrot_bowl_3
+      name: blueberries_bowl_3
       rect:
         serializedVersion: 2
-        x: 1317
-        y: 403
-        width: 53
-        height: 53
+        x: 1575
+        y: 461
+        width: 70
+        height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9239f3a74fb06220800000000000000
-      internalID: 2477190109468373659
+      spriteID: a31ff280f933c9850800000000000000
+      internalID: 6385035129834697018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carrot_bowl_4
+      name: blueberries_bowl_4
       rect:
         serializedVersion: 2
-        x: 1458
-        y: 386
-        width: 53
-        height: 53
+        x: 1332
+        y: 390
+        width: 70
+        height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9285be84adab3cec0800000000000000
-      internalID: -3547786634748798935
+      spriteID: 84b617c70cbcb3520800000000000000
+      internalID: 2682962030611229512
       vertices: []
       indices: 
       edges: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cf3a0be440d7bf0478005b2c3d430d0b
+    spriteID: 8e840e138b2b1ba41afd189c66444c7f
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      carrot_bowl_0: 4643186365370751545
-      carrot_bowl_1: 3011390034845667716
-      carrot_bowl_2: 1001946117729353720
-      carrot_bowl_3: 2477190109468373659
-      carrot_bowl_4: -3547786634748798935
+      blueberries_bowl_0: -4861383982491071603
+      blueberries_bowl_1: 3618734166090101136
+      blueberries_bowl_2: 1718739241174753423
+      blueberries_bowl_3: 6385035129834697018
+      blueberries_bowl_4: 2682962030611229512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

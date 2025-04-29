@@ -77,6 +77,9 @@ public class Dialogue : MonoBehaviour
 
     public void PrepareForNewText (Object obj)
     {
+        if (obj != _textBox) //allow for objects/text outsde of textbox to not be affected
+        return;
+
         if (!_readyForNewText)
             return;
         
