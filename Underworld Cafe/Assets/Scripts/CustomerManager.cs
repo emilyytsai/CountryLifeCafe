@@ -20,6 +20,9 @@ public class CustomerManager : MonoBehaviour
     [SerializeField]
     private Customer customer_script;
 
+    [SerializeField]
+    private MoneyScript money_script;
+
     //for end of day, show day summary
     public GameObject day_summary;
     public GameObject prev_scene;
@@ -70,8 +73,9 @@ public class CustomerManager : MonoBehaviour
             //show day summary and hide the restuarnt/kitchen
             prev_scene.SetActive(false);
             day_summary.SetActive(true);
-            summary_text.text = "Good job! Here are your statistics for the day!Money earned:/nCustomers served:n/Customers unhappy";  
             Debug.Log("day 1 complete");
+            summary_text.text = "Good job! Here are your statistics for the day!\n\nTotal Money Earned: " + money_script.tokens + "\nCustomers Satisfied: " + customer_script.customer_satisfaction
+                                + "\nCustomers Unhappy:" + (customer_sprites.Length - customer_script.customer_satisfaction);
         }
     }
 

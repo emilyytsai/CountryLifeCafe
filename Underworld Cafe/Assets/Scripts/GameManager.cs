@@ -41,19 +41,19 @@ public class GameManager : MonoBehaviour
         {
             recipe.recipe_value(cookingSystem.current_recipe);
             feedback_message = "Thanks for the salad!";
-
+            customer.customer_satisfaction++;
         }
         else if (recipe.ten_token_recipes.Any(r => new HashSet<string>(r).SetEquals(cookingSystem.current_recipe)))
         {
             recipe.recipe_value(cookingSystem.current_recipe);
             feedback_message = "Wow! Thanks for the great salad!";
-
+            customer.customer_satisfaction++;
         }
         else if (recipe.fifteen_token_recipes.Any(r => new HashSet<string>(r).SetEquals(cookingSystem.current_recipe)))
         {
             recipe.recipe_value(cookingSystem.current_recipe);
             feedback_message = "YUMMY! Thanks for the amazing salad!";
-
+            customer.customer_satisfaction++;
         }
         else
         {
