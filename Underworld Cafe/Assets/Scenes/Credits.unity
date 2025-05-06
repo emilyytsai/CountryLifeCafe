@@ -433,11 +433,11 @@ RectTransform:
   - {fileID: 705867166}
   - {fileID: 19832365}
   - {fileID: 1033511453}
-  - {fileID: 680132038}
-  - {fileID: 1200975246}
   - {fileID: 1091537455}
   - {fileID: 1332336673}
   - {fileID: 202308158}
+  - {fileID: 680132038}
+  - {fileID: 1200975246}
   m_Father: {fileID: 1431285196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1030508114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1506,7 +1506,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!95 &1030508118
 Animator:
