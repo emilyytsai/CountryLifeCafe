@@ -29,6 +29,8 @@ public class Customer : MonoBehaviour
     public bool customer_served = false;
     private bool IsLeaving = false;
 
+    public int customer_satisfaction = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
