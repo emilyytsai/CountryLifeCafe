@@ -8,7 +8,7 @@ Country Life Cafe was made using Unity Version 6000.0.35f1
 * Kelsey Tang - Programmer, Writer
 * Emily Tsai - Programmer, Artist
   
-<img src="https://github.com/user-attachments/assets/db30c680-4f84-4f7b-b93f-15e828ab47c9" height="120" width="100"><img src="https://github.com/user-attachments/assets/91292dec-11c6-433d-9dc3-8892b47c40ce" height="120" width="100"><img src="https://github.com/user-attachments/assets/8888084b-247f-4ea5-8c2b-7b8ee9b1910a" height="120" width="100">
+<img src="https://github.com/user-attachments/assets/db30c680-4f84-4f7b-b93f-15e828ab47c9" height="120" width="100"><img src="https://github.com/user-attachments/assets/91292dec-11c6-433d-9dc3-8892b47c40ce" height="130" width="100"><img src="https://github.com/user-attachments/assets/8888084b-247f-4ea5-8c2b-7b8ee9b1910a" height="120" width="100">
 
 ## Check It Out
 - [Watch our Game Trailer!](https://www.youtube.com/watch?v=SDdripJCK7I)
