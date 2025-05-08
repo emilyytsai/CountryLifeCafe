@@ -75,7 +75,7 @@ public class CustomerManager : MonoBehaviour
             day_summary.SetActive(true);
             Debug.Log("day 1 complete");
             summary_text.text = "Good job! Here are your statistics for the day!\n\nTotal Money Earned: " + money_script.tokens + "\nCustomers Satisfied: " + customer_script.customer_satisfaction
-                                + "\nCustomers Unhappy:" + (customer_sprites.Length - customer_script.customer_satisfaction);
+                                + "\nCustomers Unhappy: " + (customer_sprites.Length - customer_script.customer_satisfaction);
         }
     }
 

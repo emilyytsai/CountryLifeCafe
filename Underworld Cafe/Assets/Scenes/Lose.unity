@@ -1176,6 +1176,100 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d94344a69cd24249b3b410e01b65cad, type: 3}
+--- !u!1 &323814784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323814785}
+  - component: {fileID: 323814786}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323814785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323814784}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 985.06635, y: 582.006, z: 3.1344113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604751022}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &323814786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323814784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07f643123b470341aece9db4c42196a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Button Click
+    clip: {fileID: 8300000, guid: 783f97d791508b24ebea5c0348c75f96, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Main & Game Obj
+    clip: {fileID: 8300000, guid: 58e692fe3dce4a54faf23137486cdfa5, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Farm & Kitchen
+    clip: {fileID: 8300000, guid: bf8217db750004742b98d8ae383961e9, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Credits
+    clip: {fileID: 8300000, guid: c993f111b25853141a55d3dedfce0020, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Dialogue
+    clip: {fileID: 8300000, guid: 7661586b6e1a8954b850c4124d410f7b, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: fc75db996a669964fb67011ee7da203b, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  persistentGroupA:
+  - Main Menu
+  - Game Objective
+  persistentGroupB:
+  - Farm
+  - Day 1
+  - Day 2
 --- !u!1 &409445702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,93 +1730,6 @@ Transform:
   - {fileID: 140936968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &661634179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 661634180}
-  - component: {fileID: 661634181}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &661634180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661634179}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 985.06635, y: 582.006, z: 3.1344113}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1604751022}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &661634181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661634179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07f643123b470341aece9db4c42196a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Button Click
-    clip: {fileID: 8300000, guid: 783f97d791508b24ebea5c0348c75f96, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Main & Game Obj
-    clip: {fileID: 8300000, guid: 3c78cf4d26022ac4e94f9a7afc33e362, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Farm & Kitchen
-    clip: {fileID: 8300000, guid: 852b2781400dc864ab772b10421c6519, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Credits
-    clip: {fileID: 8300000, guid: c993f111b25853141a55d3dedfce0020, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Lose
-    clip: {fileID: 8300000, guid: fc75db996a669964fb67011ee7da203b, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  persistentGroupA:
-  - Main Menu
-  - Game Objective
-  persistentGroupB:
-  - Farm
-  - Day 1
-  - Day 2
 --- !u!1 &671643310
 GameObject:
   m_ObjectHideFlags: 0
@@ -8725,7 +8732,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 842688252}
-  - {fileID: 661634180}
+  - {fileID: 323814785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619652218

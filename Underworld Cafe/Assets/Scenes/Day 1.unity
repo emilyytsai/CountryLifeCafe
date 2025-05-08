@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82, y: 340}
+  m_AnchoredPosition: {x: -82, y: 314}
   m_SizeDelta: {x: 805.4099, y: 307.8598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86717
@@ -10498,6 +10498,100 @@ MonoBehaviour:
   blueberries_bowl: {fileID: 531523100}
   carrot_bowl: {fileID: 358098570}
   current_recipe: []
+--- !u!1 &701744925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 701744926}
+  - component: {fileID: 701744927}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &701744926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701744925}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 986.83746, y: 582.5012, z: 5.2158337}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1682848991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &701744927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701744925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07f643123b470341aece9db4c42196a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Button Click
+    clip: {fileID: 8300000, guid: 783f97d791508b24ebea5c0348c75f96, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Main & Game Obj
+    clip: {fileID: 8300000, guid: 58e692fe3dce4a54faf23137486cdfa5, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Farm & Kitchen
+    clip: {fileID: 8300000, guid: bf8217db750004742b98d8ae383961e9, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Credits
+    clip: {fileID: 8300000, guid: c993f111b25853141a55d3dedfce0020, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Dialogue
+    clip: {fileID: 8300000, guid: 7661586b6e1a8954b850c4124d410f7b, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: fc75db996a669964fb67011ee7da203b, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  persistentGroupA:
+  - Main Menu
+  - Game Objective
+  persistentGroupB:
+  - Farm
+  - Day 1
+  - Day 2
 --- !u!1 &708891448
 GameObject:
   m_ObjectHideFlags: 0
@@ -10797,86 +10891,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762265129}
   m_CullTransparentMesh: 1
---- !u!1 &807588141
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 807588142}
-  - component: {fileID: 807588143}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &807588142
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807588141}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 986.83746, y: 582.5012, z: 5.2158337}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1682848991}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &807588143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807588141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07f643123b470341aece9db4c42196a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Button Click
-    clip: {fileID: 8300000, guid: 783f97d791508b24ebea5c0348c75f96, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Main & Game Obj
-    clip: {fileID: 8300000, guid: 3c78cf4d26022ac4e94f9a7afc33e362, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Farm & Kitchen
-    clip: {fileID: 8300000, guid: bf8217db750004742b98d8ae383961e9, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Credits
-    clip: {fileID: 8300000, guid: c993f111b25853141a55d3dedfce0020, type: 3}
-    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  persistentGroupA:
-  - Main Menu
-  - Game Objective
-  persistentGroupB:
-  - Farm
-  - Day 1
-  - Day 2
 --- !u!1 &808932939
 GameObject:
   m_ObjectHideFlags: 0
@@ -16576,7 +16590,7 @@ Transform:
   - {fileID: 240342261}
   - {fileID: 889912172}
   - {fileID: 1127740710}
-  - {fileID: 807588142}
+  - {fileID: 701744926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703442339
