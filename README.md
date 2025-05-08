@@ -13,8 +13,8 @@ Country Life Cafe was made using Unity Version 6000.0.35f1
 # Game Objective
 A 2D point-and-click restaurant and farming game where the player is tasked to serve the residents of Hell with salads made from self-grown ingredients. The goal is to earn enough gold to pay Charon, Ferryman of the Underworld, for a ride back to the Land of the Living. 
 
-# How-To-Play
-Check out the customer's order and then go to the farm to get the corresponding crops by clicking on the seed packs. After the crop has been planted, go to the restaurant to assemble the salad by clicking the ingredient/crop and then the bowl to add it to the salad order. Serve the salad to the customer for feedback, and good luck!
+# How To Play
+Check out the customer's order and then go to the farm to get the corresponding crops by clicking on the seed packs. After the crop has been planted, go to the restaurant to assemble the salad by clicking the ingredient/crop and then the bowl to add it to the salad order. Serve the salad to the customer for feedback. Good luck!
 
 # Check It Out
 - [Watch our Game Trailer!](https://www.youtube.com/watch?v=SDdripJCK7I)
