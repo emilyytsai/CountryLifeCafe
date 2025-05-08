@@ -29,7 +29,7 @@ Main Menu:
 Cafe & Farm:
 (Sped-up gameplay)
 
-<img src="https://github.com/user-attachments/assets/433bf807-ca34-48e2-9d7f-31a7445b3f6e" height="432" width="768">
+<img src="https://github.com/user-attachments/assets/9e005291-6954-4ba6-959f-2b3279e3052d" height="432" width="768">
 
 
 
