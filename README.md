@@ -10,8 +10,10 @@ Country Life Cafe was made using Unity Version 6000.0.35f1
   
 <img src="https://github.com/user-attachments/assets/db30c680-4f84-4f7b-b93f-15e828ab47c9" height="120" width="100"><img src="https://github.com/user-attachments/assets/22dbce9d-250c-476c-a11e-4679eb1a0bec" height="120" width="100"><img src="https://github.com/user-attachments/assets/8888084b-247f-4ea5-8c2b-7b8ee9b1910a" height="120" width="100">
 
+# Game Objective
+A 2D point-and-click restaurant and farming game where the player is tasked to serve the residents of Hell with salads made from self-grown ingredients. The goal is to earn enough gold to pay Charon, Ferryman of the Underworld, for a ride back to the Land of the Living. 
 
-## Check It Out
+# Check It Out
 - [Watch our Game Trailer!](https://www.youtube.com/watch?v=SDdripJCK7I)
 
 # Game Progress
