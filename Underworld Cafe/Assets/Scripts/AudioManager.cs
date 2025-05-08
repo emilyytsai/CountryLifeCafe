@@ -80,6 +80,11 @@ public class AudioManager : MonoBehaviour
             {
                 Play("Credits");
             }
+
+            if (scene.name == "Dialogue") 
+            {
+                Play("Dialogue");
+            }
         }
     }
 

@@ -5410,6 +5410,13 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Dialogue
+    clip: {fileID: 8300000, guid: 7661586b6e1a8954b850c4124d410f7b, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   persistentGroupA:
   - Main Menu
   - Game Objective
