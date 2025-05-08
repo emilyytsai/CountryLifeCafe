@@ -17,8 +17,9 @@ A 2D point-and-click restaurant and farming game where the player is tasked to s
 Check out the customer's order and then go to the farm to get the corresponding crops by clicking on the seed packs. After the crop has been planted, go to the restaurant to assemble the salad by clicking the ingredient/crop and then the bowl to add it to the salad order. Serve the salad to the customer for feedback. Good luck!
 
 # Check It Out
-- [Watch our Game Trailer!](https://www.youtube.com/watch?v=SDdripJCK7I)
-- [Watch our Full Gameplay Demo!](https://www.youtube.com/watch?v=Vb7xCwOkYAs)
+- [Watch our Game Trailer](https://www.youtube.com/watch?v=SDdripJCK7I)
+- [Watch our Full Gameplay Demo](https://www.youtube.com/watch?v=Vb7xCwOkYAs)
+- [Final Presentation](https://www.canva.com/design/DAGmOZJheP0/E6IFtfqVpwVTka625psaVQ/view?utm_content=DAGmOZJheP0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5f121b982c#1)
 
 # Game Progress
 
