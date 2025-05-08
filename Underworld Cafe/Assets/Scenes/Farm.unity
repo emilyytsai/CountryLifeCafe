@@ -1523,6 +1523,9 @@ MonoBehaviour:
   lettuce_bowl: {fileID: 0}
   strawberry_bowl: {fileID: 0}
   grape_bowl: {fileID: 0}
+  cucumber_bowl: {fileID: 0}
+  blueberries_bowl: {fileID: 0}
+  carrot_bowl: {fileID: 0}
   current_recipe: []
 --- !u!4 &378626089
 Transform:
@@ -1743,6 +1746,13 @@ MonoBehaviour:
   last_selected: {fileID: 0}
   soil: {fileID: 0}
   watering_can: {fileID: 211434645}
+  tomato_crop: {fileID: 0}
+  lettuce_crop: {fileID: 0}
+  strawberry_crop: {fileID: 0}
+  grape_crop: {fileID: 0}
+  cucumber_crop: {fileID: 0}
+  blueberries_crop: {fileID: 0}
+  carrot_crop: {fileID: 0}
 --- !u!114 &429565834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4612,6 +4622,7 @@ MonoBehaviour:
   - {fileID: 648413924672568827, guid: 22a628cd643a10a4682b87556a01e081, type: 3}
   customer_sprite: {fileID: 0}
   customer_script: {fileID: 0}
+  money_script: {fileID: 0}
   day_summary: {fileID: 267647171}
   prev_scene: {fileID: 1973465442}
   summary_text: {fileID: 1031676576}
@@ -5098,6 +5109,13 @@ MonoBehaviour:
   last_selected: {fileID: 0}
   soil: {fileID: 0}
   watering_can: {fileID: 211434645}
+  tomato_crop: {fileID: 0}
+  lettuce_crop: {fileID: 0}
+  strawberry_crop: {fileID: 0}
+  grape_crop: {fileID: 0}
+  cucumber_crop: {fileID: 0}
+  blueberries_crop: {fileID: 0}
+  carrot_crop: {fileID: 0}
 --- !u!1001 &1186774071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6188,6 +6206,9 @@ MonoBehaviour:
   lettuce_bowl: {fileID: 0}
   strawberry_bowl: {fileID: 0}
   grape_bowl: {fileID: 0}
+  cucumber_bowl: {fileID: 0}
+  blueberries_bowl: {fileID: 0}
+  carrot_bowl: {fileID: 0}
   feedback_text: {fileID: 0}
   serve_button: {fileID: 0}
   farm_button: {fileID: 0}
@@ -7793,7 +7814,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Farm & Kitchen
-    clip: {fileID: 8300000, guid: 852b2781400dc864ab772b10421c6519, type: 3}
+    clip: {fileID: 8300000, guid: bf8217db750004742b98d8ae383961e9, type: 3}
     mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
     volume: 1
     pitch: 1

@@ -13819,7 +13819,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Farm & Kitchen
-    clip: {fileID: 8300000, guid: 852b2781400dc864ab772b10421c6519, type: 3}
+    clip: {fileID: 8300000, guid: bf8217db750004742b98d8ae383961e9, type: 3}
     mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
     volume: 1
     pitch: 1
@@ -14266,6 +14266,7 @@ MonoBehaviour:
   - {fileID: 5327120128985668334, guid: c2ed66f9be6d4cd49ab801987388db62, type: 3}
   customer_sprite: {fileID: 717416800}
   customer_script: {fileID: 717416799}
+  money_script: {fileID: 0}
   day_summary: {fileID: 259361121}
   prev_scene: {fileID: 1720363767}
   summary_text: {fileID: 1784483623}

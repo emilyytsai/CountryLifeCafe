@@ -560,7 +560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e1577fbdd19ca498fd057b46825b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderCorrect: 0
+  recipe: {fileID: 0}
+  cookingSystem: {fileID: 0}
+  customer: {fileID: 0}
 --- !u!4 &252930981
 Transform:
   m_ObjectHideFlags: 0
@@ -794,8 +796,10 @@ MonoBehaviour:
   - {fileID: 648413924672568827, guid: 22a628cd643a10a4682b87556a01e081, type: 3}
   customer_sprite: {fileID: 720695536}
   customer_script: {fileID: 720695532}
+  money_script: {fileID: 0}
   day_summary: {fileID: 1718693639}
   prev_scene: {fileID: 1120504360}
+  summary_text: {fileID: 0}
 --- !u!1 &362255231
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,9 +6310,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396d0ad3592832846a82aefb51b122be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customer: {fileID: 0}
   patienceBar: {fileID: 628869883}
   patienceBar2: {fileID: 2074432982}
   feedback: {fileID: 1837922713}
+  timer: 0
+  day_time: 0
 --- !u!114 &628869883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6494,6 +6501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c857f3ed223034594071efcf8a48a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyScript: {fileID: 0}
 --- !u!1 &864387710
 GameObject:
   m_ObjectHideFlags: 0
@@ -7466,6 +7474,7 @@ MonoBehaviour:
   Name: 
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  salad_sprite: {fileID: 0}
   left_curtain: {fileID: 0}
   right_curtain: {fileID: 0}
   slide_distance: 1920
@@ -7482,7 +7491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e1577fbdd19ca498fd057b46825b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderCorrect: 1
+  recipe: {fileID: 0}
+  cookingSystem: {fileID: 0}
+  customer: {fileID: 0}
 --- !u!114 &1091724574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7738,24 +7749,28 @@ MonoBehaviour:
   sounds:
   - name: Button Click
     clip: {fileID: 8300000, guid: 783f97d791508b24ebea5c0348c75f96, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Main & Game Obj
     clip: {fileID: 8300000, guid: 3c78cf4d26022ac4e94f9a7afc33e362, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Farm & Kitchen
-    clip: {fileID: 8300000, guid: 852b2781400dc864ab772b10421c6519, type: 3}
+    clip: {fileID: 8300000, guid: bf8217db750004742b98d8ae383961e9, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Credits
     clip: {fileID: 8300000, guid: 3d8d9b3eb41509240ad3cff2e87c0571, type: 3}
+    mixer_group: {fileID: 0}
     volume: 1
     pitch: 1
     loop: 1
@@ -7833,6 +7848,11 @@ MonoBehaviour:
   input_handler: {fileID: 494127673}
   tomato_bowl: {fileID: 864387710}
   lettuce_bowl: {fileID: 984965978}
+  strawberry_bowl: {fileID: 0}
+  grape_bowl: {fileID: 0}
+  cucumber_bowl: {fileID: 0}
+  blueberries_bowl: {fileID: 0}
+  carrot_bowl: {fileID: 0}
   current_recipe: []
 --- !u!4 &1160014872
 Transform:
@@ -8112,6 +8132,7 @@ MonoBehaviour:
   Name: Day 2
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  salad_sprite: {fileID: 0}
   left_curtain: {fileID: 0}
   right_curtain: {fileID: 0}
   slide_distance: 1920
@@ -8875,6 +8896,7 @@ MonoBehaviour:
   Name: Farm
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
+  salad_sprite: {fileID: 0}
   left_curtain: {fileID: 0}
   right_curtain: {fileID: 0}
   slide_distance: 1920
@@ -9949,10 +9971,16 @@ MonoBehaviour:
   salad_order: {fileID: 1618132843}
   tomato_bowl: {fileID: 864387710}
   lettuce_bowl: {fileID: 984965978}
+  strawberry_bowl: {fileID: 0}
+  grape_bowl: {fileID: 0}
+  cucumber_bowl: {fileID: 0}
+  blueberries_bowl: {fileID: 0}
+  carrot_bowl: {fileID: 0}
   feedback_text: {fileID: 1837922714}
   serve_button: {fileID: 1091724574}
   farm_button: {fileID: 1816545498}
-  input: {fileID: 494127671}
+  game_manager: {fileID: 0}
+  patience_timer: {fileID: 0}
 --- !u!1 &2025767122
 GameObject:
   m_ObjectHideFlags: 0
