@@ -23,13 +23,12 @@ Check out the customer's order and then go to the farm to get the corresponding 
 # Game Progress
 
 Main Menu:
-![Main Menu Final](https://github.com/user-attachments/assets/dbd658d8-a751-4d5a-b58c-67b22e5e3161)
+<img src="https://github.com/user-attachments/assets/db30c680-4f84-4f7b-b93f-15e828ab47c9" height="216" width="384">
 
-
-Cafe & Farm
+Cafe & Farm:
 (Sped-up gameplay)
+<img src="https://github.com/user-attachments/assets/433bf807-ca34-48e2-9d7f-31a7445b3f6e" height="216" width="384">
 
-![Demo Final](https://github.com/user-attachments/assets/433bf807-ca34-48e2-9d7f-31a7445b3f6e)
 
 
 
