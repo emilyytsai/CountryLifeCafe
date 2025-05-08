@@ -18,18 +18,19 @@ Check out the customer's order and then go to the farm to get the corresponding 
 
 # Check It Out
 - [Watch our Game Trailer!](https://www.youtube.com/watch?v=SDdripJCK7I)
+- [Watch our Full Gameplay Demo!](https://www.youtube.com/watch?v=Vb7xCwOkYAs)
 
 # Game Progress
 
 Main Menu:
+![Main Menu Final](https://github.com/user-attachments/assets/dbd658d8-a751-4d5a-b58c-67b22e5e3161)
 
-![Main Menu #2](https://github.com/user-attachments/assets/9c9b8623-626c-4fb7-b681-b94fe0d62663)
 
-
-Restaurant + Kitchen Scene:
+Cafe & Farm
 (Sped-up gameplay)
 
-![Restaurant Kitchen #2](https://github.com/user-attachments/assets/6de7f4b8-12cf-4f6a-99c7-1714b8df6caa)
+![Demo Final](https://github.com/user-attachments/assets/433bf807-ca34-48e2-9d7f-31a7445b3f6e)
+
 
 
 
