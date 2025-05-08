@@ -5417,6 +5417,13 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: fc75db996a669964fb67011ee7da203b, type: 3}
+    mixer_group: {fileID: 24300002, guid: dc12f7189c2baea4ca397dcd2218b734, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   persistentGroupA:
   - Main Menu
   - Game Objective

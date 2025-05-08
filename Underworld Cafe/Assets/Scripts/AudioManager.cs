@@ -85,6 +85,11 @@ public class AudioManager : MonoBehaviour
             {
                 Play("Dialogue");
             }
+
+            if (scene.name == "Lose")
+            {
+                Play("Lose");
+            }
         }
     }
 
