@@ -10381,7 +10381,7 @@ MonoBehaviour:
   - {fileID: 5327120128985668334, guid: c2ed66f9be6d4cd49ab801987388db62, type: 3}
   customer_sprite: {fileID: 717416800}
   customer_script: {fileID: 717416799}
-  money_script: {fileID: 0}
+  money_script: {fileID: 1371917551}
   day_summary: {fileID: 1182324519}
   prev_scene: {fileID: 1720363767}
   summary_text: {fileID: 715180516}
@@ -14576,7 +14576,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customer_sprites:
-  - {fileID: 5327120128985668334, guid: c2ed66f9be6d4cd49ab801987388db62, type: 3}
+  - {fileID: 6740152759973110383, guid: 510be7e0ed4a3764aa7a6d89501906e9, type: 3}
+  - {fileID: 5521687391992278944, guid: c767770084d90944b8caacc91bcf27b3, type: 3}
+  - {fileID: 1468678901523222786, guid: 7dba1718f22e244409231ca953eafa35, type: 3}
+  - {fileID: 5521687391992278944, guid: c767770084d90944b8caacc91bcf27b3, type: 3}
+  - {fileID: 6740152759973110383, guid: 510be7e0ed4a3764aa7a6d89501906e9, type: 3}
+  - {fileID: 1468678901523222786, guid: 7dba1718f22e244409231ca953eafa35, type: 3}
   customer_sprite: {fileID: 717416800}
   customer_script: {fileID: 717416799}
   money_script: {fileID: 0}
@@ -15937,7 +15942,7 @@ GameObject:
   - component: {fileID: 1562881326}
   - component: {fileID: 1562881325}
   - component: {fileID: 1562881324}
-  - component: {fileID: 1562881323}
+  - component: {fileID: 1562881327}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -15965,26 +15970,6 @@ RectTransform:
   m_AnchoredPosition: {x: 21, y: -406.00232}
   m_SizeDelta: {x: 277.7359, y: 110.0399}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1562881323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562881321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Day 2
-  fader: {fileID: 0}
-  glow_effect: {fileID: 0}
-  salad_sprite: {fileID: 0}
-  left_curtain: {fileID: 0}
-  right_curtain: {fileID: 0}
-  slide_distance: 1920
-  slide_duration: 1
 --- !u!114 &1562881324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16029,9 +16014,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562881323}
+      - m_Target: {fileID: 1562881327}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: game_end
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16079,6 +16064,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562881321}
   m_CullTransparentMesh: 1
+--- !u!114 &1562881327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562881321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  fader: {fileID: 0}
+  glow_effect: {fileID: 0}
+  salad_sprite: {fileID: 0}
+  left_curtain: {fileID: 0}
+  right_curtain: {fileID: 0}
+  slide_distance: 1920
+  slide_duration: 1
 --- !u!1 &1569907153
 GameObject:
   m_ObjectHideFlags: 0

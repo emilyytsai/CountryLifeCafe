@@ -97,13 +97,13 @@ public class PatienceTimer : MonoBehaviour
         }
         else if (scene_name.Contains("Day 2"))
         {
-            timer = 20f;
-            day_time = 20f;
+            timer = 25f;
+            day_time = 25f;
         }
         else if (scene_name.Contains("Day 3"))
         {
-            timer = 12f;
-            day_time = 12f;
+            timer = 20f;
+            day_time = 20f;
         }
         else
         {

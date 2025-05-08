@@ -150,10 +150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customer_sprites:
   - {fileID: 5327120128985668334, guid: c2ed66f9be6d4cd49ab801987388db62, type: 3}
-  - {fileID: 1468678901523222786, guid: 7dba1718f22e244409231ca953eafa35, type: 3}
+  - {fileID: 161886215173178593, guid: 5556e23a0eee4814a914fc5b5d5f5df2, type: 3}
   - {fileID: -3296910401724937214, guid: 1120c7066be743f44b9dde2e50d5a735, type: 3}
-  - {fileID: 648413924672568827, guid: 22a628cd643a10a4682b87556a01e081, type: 3}
-  - {fileID: 5521687391992278944, guid: c767770084d90944b8caacc91bcf27b3, type: 3}
+  - {fileID: 5327120128985668334, guid: c2ed66f9be6d4cd49ab801987388db62, type: 3}
+  - {fileID: -3296910401724937214, guid: 1120c7066be743f44b9dde2e50d5a735, type: 3}
   - {fileID: 161886215173178593, guid: 5556e23a0eee4814a914fc5b5d5f5df2, type: 3}
   customer_sprite: {fileID: 14527962}
   customer_script: {fileID: 14527960}
@@ -4048,7 +4048,7 @@ MonoBehaviour:
   - {fileID: 161886215173178593, guid: 5556e23a0eee4814a914fc5b5d5f5df2, type: 3}
   customer_sprite: {fileID: 14527962}
   customer_script: {fileID: 14527960}
-  money_script: {fileID: 0}
+  money_script: {fileID: 1967582691}
   day_summary: {fileID: 1123229038}
   prev_scene: {fileID: 1937410943}
   summary_text: {fileID: 1277331764}
@@ -6825,7 +6825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e716f055f5c747a8d26a2cb2dd8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Day 2
+  Name: Day 3
   fader: {fileID: 0}
   glow_effect: {fileID: 0}
   salad_sprite: {fileID: 0}
